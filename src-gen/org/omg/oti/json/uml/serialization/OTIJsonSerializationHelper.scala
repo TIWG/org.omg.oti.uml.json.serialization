@@ -64,237 +64,137 @@ import scalaz.@@
 object OTIJsonSerializationHelper {
 
   implicit def toOTI
-  (value: uml.read.api.UMLParameterDirectionKind.UMLParameterDirectionKind)
-  : json.uml.enums.UMLParameterDirectionKind
+  (value: uml.read.api.UMLAggregationKind.UMLAggregationKind)
+  : json.uml.enums.UMLAggregationKind
   = value match {
-    case _return =>
-      _return
+    case uml.read.api.UMLAggregationKind.composite =>
+      json.uml.enums.UMLAggregationKind.composite
 
-    case in =>
-      in
+    case uml.read.api.UMLAggregationKind.none =>
+      json.uml.enums.UMLAggregationKind.none
 
-    case inout =>
-      inout
-
-    case out =>
-      out
+    case uml.read.api.UMLAggregationKind.shared =>
+      json.uml.enums.UMLAggregationKind.shared
   }
 
   implicit def toOTI
   (value: uml.read.api.UMLCallConcurrencyKind.UMLCallConcurrencyKind)
   : json.uml.enums.UMLCallConcurrencyKind
   = value match {
-    case concurrent =>
-      concurrent
+    case uml.read.api.UMLCallConcurrencyKind.concurrent =>
+      json.uml.enums.UMLCallConcurrencyKind.concurrent
 
-    case guarded =>
-      guarded
+    case uml.read.api.UMLCallConcurrencyKind.guarded =>
+      json.uml.enums.UMLCallConcurrencyKind.guarded
 
-    case sequential =>
-      sequential
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLTransitionKind.UMLTransitionKind)
-  : json.uml.enums.UMLTransitionKind
-  = value match {
-    case external =>
-      external
-
-    case internal =>
-      internal
-
-    case local =>
-      local
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLParameterEffectKind.UMLParameterEffectKind)
-  : json.uml.enums.UMLParameterEffectKind
-  = value match {
-    case create =>
-      create
-
-    case delete =>
-      delete
-
-    case read =>
-      read
-
-    case update =>
-      update
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLAggregationKind.UMLAggregationKind)
-  : json.uml.enums.UMLAggregationKind
-  = value match {
-    case composite =>
-      composite
-
-    case none =>
-      none
-
-    case shared =>
-      shared
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLMessageSort.UMLMessageSort)
-  : json.uml.enums.UMLMessageSort
-  = value match {
-    case asynchCall =>
-      asynchCall
-
-    case asynchSignal =>
-      asynchSignal
-
-    case createMessage =>
-      createMessage
-
-    case deleteMessage =>
-      deleteMessage
-
-    case reply =>
-      reply
-
-    case synchCall =>
-      synchCall
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLMessageKind.UMLMessageKind)
-  : json.uml.enums.UMLMessageKind
-  = value match {
-    case complete =>
-      complete
-
-    case found =>
-      found
-
-    case lost =>
-      lost
-
-    case unknown =>
-      unknown
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLInteractionOperatorKind.UMLInteractionOperatorKind)
-  : json.uml.enums.UMLInteractionOperatorKind
-  = value match {
-    case alt =>
-      alt
-
-    case assert =>
-      assert
-
-    case break =>
-      break
-
-    case consider =>
-      consider
-
-    case critical =>
-      critical
-
-    case ignore =>
-      ignore
-
-    case loop =>
-      loop
-
-    case neg =>
-      neg
-
-    case opt =>
-      opt
-
-    case par =>
-      par
-
-    case seq =>
-      seq
-
-    case strict =>
-      strict
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLVisibilityKind.UMLVisibilityKind)
-  : json.uml.enums.UMLVisibilityKind
-  = value match {
-    case _package =>
-      _package
-
-    case _private =>
-      _private
-
-    case _protected =>
-      _protected
-
-    case public =>
-      public
+    case uml.read.api.UMLCallConcurrencyKind.sequential =>
+      json.uml.enums.UMLCallConcurrencyKind.sequential
   }
 
   implicit def toOTI
   (value: uml.read.api.UMLConnectorKind.UMLConnectorKind)
   : json.uml.enums.UMLConnectorKind
   = value match {
-    case assembly =>
-      assembly
+    case uml.read.api.UMLConnectorKind.assembly =>
+      json.uml.enums.UMLConnectorKind.assembly
 
-    case delegation =>
-      delegation
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLPseudostateKind.UMLPseudostateKind)
-  : json.uml.enums.UMLPseudostateKind
-  = value match {
-    case choice =>
-      choice
-
-    case deepHistory =>
-      deepHistory
-
-    case entryPoint =>
-      entryPoint
-
-    case exitPoint =>
-      exitPoint
-
-    case fork =>
-      fork
-
-    case initial =>
-      initial
-
-    case join =>
-      join
-
-    case junction =>
-      junction
-
-    case shallowHistory =>
-      shallowHistory
-
-    case terminate =>
-      terminate
+    case uml.read.api.UMLConnectorKind.delegation =>
+      json.uml.enums.UMLConnectorKind.delegation
   }
 
   implicit def toOTI
   (value: uml.read.api.UMLExpansionKind.UMLExpansionKind)
   : json.uml.enums.UMLExpansionKind
   = value match {
-    case iterative =>
-      iterative
+    case uml.read.api.UMLExpansionKind.iterative =>
+      json.uml.enums.UMLExpansionKind.iterative
 
-    case parallel =>
-      parallel
+    case uml.read.api.UMLExpansionKind.parallel =>
+      json.uml.enums.UMLExpansionKind.parallel
 
-    case stream =>
-      stream
+    case uml.read.api.UMLExpansionKind.stream =>
+      json.uml.enums.UMLExpansionKind.stream
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLInteractionOperatorKind.UMLInteractionOperatorKind)
+  : json.uml.enums.UMLInteractionOperatorKind
+  = value match {
+    case uml.read.api.UMLInteractionOperatorKind.alt =>
+      json.uml.enums.UMLInteractionOperatorKind.alt
+
+    case uml.read.api.UMLInteractionOperatorKind.assert =>
+      json.uml.enums.UMLInteractionOperatorKind.assert
+
+    case uml.read.api.UMLInteractionOperatorKind.break =>
+      json.uml.enums.UMLInteractionOperatorKind.break
+
+    case uml.read.api.UMLInteractionOperatorKind.consider =>
+      json.uml.enums.UMLInteractionOperatorKind.consider
+
+    case uml.read.api.UMLInteractionOperatorKind.critical =>
+      json.uml.enums.UMLInteractionOperatorKind.critical
+
+    case uml.read.api.UMLInteractionOperatorKind.ignore =>
+      json.uml.enums.UMLInteractionOperatorKind.ignore
+
+    case uml.read.api.UMLInteractionOperatorKind.loop =>
+      json.uml.enums.UMLInteractionOperatorKind.loop
+
+    case uml.read.api.UMLInteractionOperatorKind.neg =>
+      json.uml.enums.UMLInteractionOperatorKind.neg
+
+    case uml.read.api.UMLInteractionOperatorKind.opt =>
+      json.uml.enums.UMLInteractionOperatorKind.opt
+
+    case uml.read.api.UMLInteractionOperatorKind.par =>
+      json.uml.enums.UMLInteractionOperatorKind.par
+
+    case uml.read.api.UMLInteractionOperatorKind.seq =>
+      json.uml.enums.UMLInteractionOperatorKind.seq
+
+    case uml.read.api.UMLInteractionOperatorKind.strict =>
+      json.uml.enums.UMLInteractionOperatorKind.strict
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLMessageKind.UMLMessageKind)
+  : json.uml.enums.UMLMessageKind
+  = value match {
+    case uml.read.api.UMLMessageKind.complete =>
+      json.uml.enums.UMLMessageKind.complete
+
+    case uml.read.api.UMLMessageKind.found =>
+      json.uml.enums.UMLMessageKind.found
+
+    case uml.read.api.UMLMessageKind.lost =>
+      json.uml.enums.UMLMessageKind.lost
+
+    case uml.read.api.UMLMessageKind.unknown =>
+      json.uml.enums.UMLMessageKind.unknown
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLMessageSort.UMLMessageSort)
+  : json.uml.enums.UMLMessageSort
+  = value match {
+    case uml.read.api.UMLMessageSort.asynchCall =>
+      json.uml.enums.UMLMessageSort.asynchCall
+
+    case uml.read.api.UMLMessageSort.asynchSignal =>
+      json.uml.enums.UMLMessageSort.asynchSignal
+
+    case uml.read.api.UMLMessageSort.createMessage =>
+      json.uml.enums.UMLMessageSort.createMessage
+
+    case uml.read.api.UMLMessageSort.deleteMessage =>
+      json.uml.enums.UMLMessageSort.deleteMessage
+
+    case uml.read.api.UMLMessageSort.reply =>
+      json.uml.enums.UMLMessageSort.reply
+
+    case uml.read.api.UMLMessageSort.synchCall =>
+      json.uml.enums.UMLMessageSort.synchCall
   }
 
   implicit def toOTI
@@ -304,14 +204,114 @@ object OTIJsonSerializationHelper {
     case uml.read.api.UMLObjectNodeOrderingKind.FIFO =>
       json.uml.enums.UMLObjectNodeOrderingKind.FIFO
 
-    case LIFO =>
-      LIFO
+    case uml.read.api.UMLObjectNodeOrderingKind.LIFO =>
+      json.uml.enums.UMLObjectNodeOrderingKind.LIFO
 
-    case ordered =>
-      ordered
+    case uml.read.api.UMLObjectNodeOrderingKind.ordered =>
+      json.uml.enums.UMLObjectNodeOrderingKind.ordered
 
-    case unordered =>
-      unordered
+    case uml.read.api.UMLObjectNodeOrderingKind.unordered =>
+      json.uml.enums.UMLObjectNodeOrderingKind.unordered
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLParameterDirectionKind.UMLParameterDirectionKind)
+  : json.uml.enums.UMLParameterDirectionKind
+  = value match {
+    case uml.read.api.UMLParameterDirectionKind._return =>
+      json.uml.enums.UMLParameterDirectionKind._return
+
+    case uml.read.api.UMLParameterDirectionKind.in =>
+      json.uml.enums.UMLParameterDirectionKind.in
+
+    case uml.read.api.UMLParameterDirectionKind.inout =>
+      json.uml.enums.UMLParameterDirectionKind.inout
+
+    case uml.read.api.UMLParameterDirectionKind.out =>
+      json.uml.enums.UMLParameterDirectionKind.out
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLParameterEffectKind.UMLParameterEffectKind)
+  : json.uml.enums.UMLParameterEffectKind
+  = value match {
+    case uml.read.api.UMLParameterEffectKind.create =>
+      json.uml.enums.UMLParameterEffectKind.create
+
+    case uml.read.api.UMLParameterEffectKind.delete =>
+      json.uml.enums.UMLParameterEffectKind.delete
+
+    case uml.read.api.UMLParameterEffectKind.read =>
+      json.uml.enums.UMLParameterEffectKind.read
+
+    case uml.read.api.UMLParameterEffectKind.update =>
+      json.uml.enums.UMLParameterEffectKind.update
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLPseudostateKind.UMLPseudostateKind)
+  : json.uml.enums.UMLPseudostateKind
+  = value match {
+    case uml.read.api.UMLPseudostateKind.choice =>
+      json.uml.enums.UMLPseudostateKind.choice
+
+    case uml.read.api.UMLPseudostateKind.deepHistory =>
+      json.uml.enums.UMLPseudostateKind.deepHistory
+
+    case uml.read.api.UMLPseudostateKind.entryPoint =>
+      json.uml.enums.UMLPseudostateKind.entryPoint
+
+    case uml.read.api.UMLPseudostateKind.exitPoint =>
+      json.uml.enums.UMLPseudostateKind.exitPoint
+
+    case uml.read.api.UMLPseudostateKind.fork =>
+      json.uml.enums.UMLPseudostateKind.fork
+
+    case uml.read.api.UMLPseudostateKind.initial =>
+      json.uml.enums.UMLPseudostateKind.initial
+
+    case uml.read.api.UMLPseudostateKind.join =>
+      json.uml.enums.UMLPseudostateKind.join
+
+    case uml.read.api.UMLPseudostateKind.junction =>
+      json.uml.enums.UMLPseudostateKind.junction
+
+    case uml.read.api.UMLPseudostateKind.shallowHistory =>
+      json.uml.enums.UMLPseudostateKind.shallowHistory
+
+    case uml.read.api.UMLPseudostateKind.terminate =>
+      json.uml.enums.UMLPseudostateKind.terminate
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLTransitionKind.UMLTransitionKind)
+  : json.uml.enums.UMLTransitionKind
+  = value match {
+    case uml.read.api.UMLTransitionKind.external =>
+      json.uml.enums.UMLTransitionKind.external
+
+    case uml.read.api.UMLTransitionKind.internal =>
+      json.uml.enums.UMLTransitionKind.internal
+
+    case uml.read.api.UMLTransitionKind.local =>
+      json.uml.enums.UMLTransitionKind.local
+  }
+
+  implicit def toOTI
+  (value: uml.read.api.UMLVisibilityKind.UMLVisibilityKind)
+  : json.uml.enums.UMLVisibilityKind
+  = value match {
+    case uml.read.api.UMLVisibilityKind._package =>
+      json.uml.enums.UMLVisibilityKind._package
+
+    case uml.read.api.UMLVisibilityKind._private =>
+      json.uml.enums.UMLVisibilityKind._private
+
+    case uml.read.api.UMLVisibilityKind._protected =>
+      json.uml.enums.UMLVisibilityKind._protected
+
+    case uml.read.api.UMLVisibilityKind.public =>
+      json.uml.enums.UMLVisibilityKind.public
   }
 
   def toOTI[Uml <: UML]
