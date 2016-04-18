@@ -49,11 +49,17 @@ package org.omg.oti.json.uml.serialization
 import org.omg.oti._
 import org.omg.oti.uml.read.api._
 import org.omg.oti.uml.read.operations._
-
+import org.omg.oti.json.common.ToolSpecificElementDocumentURL
 import org.omg.oti.json.common.OTIPrimitiveTypes.TOOL_SPECIFIC_ID
 import org.omg.oti.json.uml._
+import org.omg.oti.json.uml.OTIMOFLink._
+import org.omg.oti.json.extent._
+import org.omg.oti.uml.canonicalXMI.{DocumentOps,DocumentSet}
+import org.omg.oti.uml.canonicalXMI.helper.OTIDocumentSetAdapter
+import org.omg.oti.uml.characteristics.OTICharacteristicsProvider
+import org.omg.oti.uml.write.api.{UMLFactory, UMLUpdate}
 
-import scala.{Boolean,Double,Function1,Int,Option}
+import scala.{Boolean, Double, Function1, Int, Option}
 import scala.Predef.Integer2int
 // <!-- End of user code imports -->
 
@@ -75,6 +81,12 @@ case class OTIJsonSerializationHelper
 ( odsa: OTIDocumentSetAdapter[Uml, Uo, Ch, Uf, Uu, Do, Ds]) {
 
   // <!-- Start of user code additions -->
+  def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  (u : U, v : V, ctor: (ToolSpecificElementDocumentURL, ToolSpecificElementDocumentURL) => OTIMOFCompositeLink)
+  : OTIMOFCompositeLink
+  = ctor(
+    ToolSpecificElementDocumentURL(u.toolSpecific_id, u.toolSpecific_url),
+    ToolSpecificElementDocumentURL(v.toolSpecific_id, v.toolSpecific_url))
   // <!-- End of user code additions -->
 
   implicit def toOTI
@@ -341,7 +353,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAbstraction(
             toolSpecific_id = u.toolSpecific_id,
@@ -359,7 +371,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -369,7 +381,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAcceptCallAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -414,7 +426,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -424,7 +436,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAcceptEventAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -465,7 +477,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -475,7 +487,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLActionExecutionSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -497,7 +509,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -507,7 +519,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLActionInputPin(
             toolSpecific_id = u.toolSpecific_id,
@@ -547,7 +559,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -557,7 +569,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivity(
             toolSpecific_id = u.toolSpecific_id,
@@ -674,7 +686,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e25.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e26  
+    result = e26
   } yield result
 
   def toOTI
@@ -684,7 +696,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivityFinalNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -703,7 +715,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e2.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -713,7 +725,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivityParameterNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -738,7 +750,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -748,7 +760,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivityPartition(
             toolSpecific_id = u.toolSpecific_id,
@@ -776,7 +788,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e4.referenceLinkExtent +
         toReferenceLinkExtent(u, u.node, OTIUMLA_inPartition_node)
-    result = e5  
+    result = e5
   } yield result
 
   def toOTI
@@ -786,7 +798,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLActor(
             toolSpecific_id = u.toolSpecific_id,
@@ -851,7 +863,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e13.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e14  
+    result = e14
   } yield result
 
   def toOTI
@@ -861,7 +873,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAddStructuralFeatureValueAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -910,7 +922,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e9.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e10  
+    result = e10
   } yield result
 
   def toOTI
@@ -920,7 +932,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAddVariableValueAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -961,7 +973,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -971,7 +983,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAnyReceiveEvent(
             toolSpecific_id = u.toolSpecific_id,
@@ -985,7 +997,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -995,7 +1007,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLArtifact(
             toolSpecific_id = u.toolSpecific_id,
@@ -1069,7 +1081,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e15.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e16  
+    result = e16
   } yield result
 
   def toOTI
@@ -1079,7 +1091,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAssociation(
             toolSpecific_id = u.toolSpecific_id,
@@ -1141,7 +1153,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e12.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e13  
+    result = e13
   } yield result
 
   def toOTI
@@ -1151,7 +1163,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLAssociationClass(
             toolSpecific_id = u.toolSpecific_id,
@@ -1242,7 +1254,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e19.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e20  
+    result = e20
   } yield result
 
   def toOTI
@@ -1252,7 +1264,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLBehaviorExecutionSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -1274,7 +1286,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -1284,7 +1296,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLBroadcastSignalAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -1320,7 +1332,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -1330,7 +1342,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCallBehaviorAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -1371,7 +1383,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -1381,7 +1393,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCallEvent(
             toolSpecific_id = u.toolSpecific_id,
@@ -1395,7 +1407,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -1405,7 +1417,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCallOperationAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -1450,7 +1462,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -1460,7 +1472,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCentralBufferNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -1485,7 +1497,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -1495,7 +1507,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLChangeEvent(
             toolSpecific_id = u.toolSpecific_id,
@@ -1513,7 +1525,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -1523,7 +1535,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLClass(
             toolSpecific_id = u.toolSpecific_id,
@@ -1609,7 +1621,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e18.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e19  
+    result = e19
   } yield result
 
   def toOTI
@@ -1619,7 +1631,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLClassifierTemplateParameter(
             toolSpecific_id = u.toolSpecific_id,
@@ -1640,7 +1652,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.parameteredElement, OTIUMLA_classifier_templateParameter_parameteredElement)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -1650,7 +1662,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLClause(
             toolSpecific_id = u.toolSpecific_id))
@@ -1662,7 +1674,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e1.referenceLinkExtent +
         toReferenceLinkExtent(u, u.predecessorClause, OTIUMLA_predecessorClause_successorClause)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -1672,7 +1684,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLClearAssociationAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -1708,7 +1720,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -1718,7 +1730,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLClearStructuralFeatureAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -1758,7 +1770,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -1768,7 +1780,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLClearVariableAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -1800,7 +1812,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e5.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e6  
+    result = e6
   } yield result
 
   def toOTI
@@ -1810,7 +1822,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCollaboration(
             toolSpecific_id = u.toolSpecific_id,
@@ -1883,7 +1895,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e15.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e16  
+    result = e16
   } yield result
 
   def toOTI
@@ -1893,7 +1905,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCollaborationUse(
             toolSpecific_id = u.toolSpecific_id,
@@ -1911,7 +1923,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.roleBinding, OTIUMLA_roleBinding_collaborationUse)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -1921,7 +1933,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCombinedFragment(
             toolSpecific_id = u.toolSpecific_id,
@@ -1952,7 +1964,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e5.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e6  
+    result = e6
   } yield result
 
   def toOTI
@@ -1962,7 +1974,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLComment(
             toolSpecific_id = u.toolSpecific_id,
@@ -1971,7 +1983,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -1981,7 +1993,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCommunicationPath(
             toolSpecific_id = u.toolSpecific_id,
@@ -2043,7 +2055,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e12.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e13  
+    result = e13
   } yield result
 
   def toOTI
@@ -2053,7 +2065,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLComponent(
             toolSpecific_id = u.toolSpecific_id,
@@ -2148,7 +2160,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e20.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e21  
+    result = e21
   } yield result
 
   def toOTI
@@ -2158,7 +2170,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLComponentRealization(
             toolSpecific_id = u.toolSpecific_id,
@@ -2176,7 +2188,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -2186,7 +2198,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLConditionalNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -2257,7 +2269,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e14.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e15  
+    result = e15
   } yield result
 
   def toOTI
@@ -2267,7 +2279,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnectableElementTemplateParameter(
             toolSpecific_id = u.toolSpecific_id))
@@ -2283,7 +2295,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -2293,7 +2305,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnectionPointReference(
             toolSpecific_id = u.toolSpecific_id,
@@ -2307,7 +2319,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -2317,7 +2329,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnector(
             toolSpecific_id = u.toolSpecific_id,
@@ -2337,7 +2349,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -2347,7 +2359,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnectorEnd(
             toolSpecific_id = u.toolSpecific_id,
@@ -2365,7 +2377,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.upperValue, OTIUMLA_upperValue_owningUpper)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -2375,7 +2387,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLConsiderIgnoreFragment(
             toolSpecific_id = u.toolSpecific_id,
@@ -2406,7 +2418,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e5.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e6  
+    result = e6
   } yield result
 
   def toOTI
@@ -2416,7 +2428,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLConstraint(
             toolSpecific_id = u.toolSpecific_id,
@@ -2434,7 +2446,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.specification, OTIUMLA_specification_owningConstraint)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -2444,7 +2456,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLContinuation(
             toolSpecific_id = u.toolSpecific_id,
@@ -2467,7 +2479,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -2477,7 +2489,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLControlFlow(
             toolSpecific_id = u.toolSpecific_id,
@@ -2512,7 +2524,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.target, OTIUMLA_incoming_target_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -2522,7 +2534,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCreateLinkAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -2562,7 +2574,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -2572,7 +2584,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCreateLinkObjectAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -2616,7 +2628,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -2626,7 +2638,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLCreateObjectAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -2662,7 +2674,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -2672,7 +2684,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDataStoreNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -2697,7 +2709,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -2707,7 +2719,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDataType(
             toolSpecific_id = u.toolSpecific_id,
@@ -2772,7 +2784,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e13.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e14  
+    result = e14
   } yield result
 
   def toOTI
@@ -2782,7 +2794,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDecisionNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -2801,7 +2813,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e2.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -2811,7 +2823,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDependency(
             toolSpecific_id = u.toolSpecific_id,
@@ -2825,7 +2837,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -2835,7 +2847,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDeployment(
             toolSpecific_id = u.toolSpecific_id,
@@ -2853,7 +2865,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -2863,7 +2875,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDeploymentSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -2939,7 +2951,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e15.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e16  
+    result = e16
   } yield result
 
   def toOTI
@@ -2949,7 +2961,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDestroyLinkAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -2989,7 +3001,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -2999,7 +3011,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDestroyObjectAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -3037,7 +3049,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -3047,7 +3059,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDestructionOccurrenceSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -3065,7 +3077,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -3075,7 +3087,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDevice(
             toolSpecific_id = u.toolSpecific_id,
@@ -3169,7 +3181,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e20.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e21  
+    result = e21
   } yield result
 
   def toOTI
@@ -3179,7 +3191,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDuration(
             toolSpecific_id = u.toolSpecific_id,
@@ -3197,7 +3209,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -3207,7 +3219,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDurationConstraint(
             toolSpecific_id = u.toolSpecific_id,
@@ -3226,7 +3238,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.specification, OTIUMLA_specification_durationConstraint)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -3236,7 +3248,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDurationInterval(
             toolSpecific_id = u.toolSpecific_id,
@@ -3250,7 +3262,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -3260,7 +3272,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLDurationObservation(
             toolSpecific_id = u.toolSpecific_id,
@@ -3275,7 +3287,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -3285,7 +3297,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLElementImport(
             toolSpecific_id = u.toolSpecific_id,
@@ -3295,7 +3307,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -3305,7 +3317,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLEnumeration(
             toolSpecific_id = u.toolSpecific_id,
@@ -3374,7 +3386,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e14.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e15  
+    result = e15
   } yield result
 
   def toOTI
@@ -3384,7 +3396,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLEnumerationLiteral(
             toolSpecific_id = u.toolSpecific_id,
@@ -3410,7 +3422,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e4.compositeLinkExtent +
         toCompositeLinkExtent(u, u.specification, OTIUMLA_specification_owningInstanceSpec)
-    result = e5  
+    result = e5
   } yield result
 
   def toOTI
@@ -3420,7 +3432,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExceptionHandler(
             toolSpecific_id = u.toolSpecific_id))
@@ -3428,7 +3440,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -3438,7 +3450,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExecutionEnvironment(
             toolSpecific_id = u.toolSpecific_id,
@@ -3532,7 +3544,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e20.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e21  
+    result = e21
   } yield result
 
   def toOTI
@@ -3542,7 +3554,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExecutionOccurrenceSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -3560,7 +3572,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -3570,7 +3582,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExpansionNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -3603,7 +3615,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e5.referenceLinkExtent +
         toReferenceLinkExtent(u, u.regionAsOutput, OTIUMLA_outputElement_regionAsOutput)
-    result = e6  
+    result = e6
   } yield result
 
   def toOTI
@@ -3613,7 +3625,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExpansionRegion(
             toolSpecific_id = u.toolSpecific_id,
@@ -3679,7 +3691,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e13.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e14  
+    result = e14
   } yield result
 
   def toOTI
@@ -3689,7 +3701,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExpression(
             toolSpecific_id = u.toolSpecific_id,
@@ -3708,7 +3720,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -3718,7 +3730,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtend(
             toolSpecific_id = u.toolSpecific_id,
@@ -3736,7 +3748,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -3746,7 +3758,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtension(
             toolSpecific_id = u.toolSpecific_id,
@@ -3808,7 +3820,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e12.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e13  
+    result = e13
   } yield result
 
   def toOTI
@@ -3818,7 +3830,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtensionEnd(
             toolSpecific_id = u.toolSpecific_id,
@@ -3869,7 +3881,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -3879,7 +3891,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtensionPoint(
             toolSpecific_id = u.toolSpecific_id,
@@ -3894,7 +3906,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -3904,7 +3916,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLFinalState(
             toolSpecific_id = u.toolSpecific_id,
@@ -3963,7 +3975,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e12.referenceLinkExtent +
         toReferenceLinkExtent(u, u.submachine, OTIUMLA_submachineState_submachine)
-    result = e13  
+    result = e13
   } yield result
 
   def toOTI
@@ -3973,7 +3985,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLFlowFinalNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -3992,7 +4004,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e2.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -4002,7 +4014,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLForkNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -4021,7 +4033,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e2.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -4031,7 +4043,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLFunctionBehavior(
             toolSpecific_id = u.toolSpecific_id,
@@ -4128,7 +4140,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e20.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e21  
+    result = e21
   } yield result
 
   def toOTI
@@ -4138,7 +4150,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLGate(
             toolSpecific_id = u.toolSpecific_id,
@@ -4152,7 +4164,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -4162,7 +4174,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLGeneralOrdering(
             toolSpecific_id = u.toolSpecific_id,
@@ -4184,7 +4196,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.before, OTIUMLA_before_toAfter)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -4194,7 +4206,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLGeneralization(
             toolSpecific_id = u.toolSpecific_id,
@@ -4207,7 +4219,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e1.referenceLinkExtent +
         toReferenceLinkExtent(u, u.generalizationSet, OTIUMLA_generalizationSet_generalization)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -4217,7 +4229,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLGeneralizationSet(
             toolSpecific_id = u.toolSpecific_id,
@@ -4237,7 +4249,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e2.referenceLinkExtent +
         toReferenceLinkExtent(u, u.powertype, OTIUMLA_powertypeExtent_powertype)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -4247,7 +4259,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLImage(
             toolSpecific_id = u.toolSpecific_id,
@@ -4258,7 +4270,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -4268,7 +4280,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInclude(
             toolSpecific_id = u.toolSpecific_id,
@@ -4282,7 +4294,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -4292,7 +4304,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInformationFlow(
             toolSpecific_id = u.toolSpecific_id,
@@ -4306,7 +4318,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -4316,7 +4328,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInformationItem(
             toolSpecific_id = u.toolSpecific_id,
@@ -4373,7 +4385,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e11.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e12  
+    result = e12
   } yield result
 
   def toOTI
@@ -4383,7 +4395,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInitialNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -4402,7 +4414,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e2.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -4412,7 +4424,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInputPin(
             toolSpecific_id = u.toolSpecific_id,
@@ -4448,7 +4460,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e5.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e6  
+    result = e6
   } yield result
 
   def toOTI
@@ -4458,7 +4470,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInstanceSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -4484,7 +4496,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e4.compositeLinkExtent +
         toCompositeLinkExtent(u, u.specification, OTIUMLA_specification_owningInstanceSpec)
-    result = e5  
+    result = e5
   } yield result
 
   def toOTI
@@ -4494,7 +4506,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInstanceValue(
             toolSpecific_id = u.toolSpecific_id,
@@ -4508,7 +4520,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -4518,7 +4530,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteraction(
             toolSpecific_id = u.toolSpecific_id,
@@ -4641,7 +4653,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e27.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e28  
+    result = e28
   } yield result
 
   def toOTI
@@ -4651,7 +4663,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteractionConstraint(
             toolSpecific_id = u.toolSpecific_id,
@@ -4677,7 +4689,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e4.compositeLinkExtent +
         toCompositeLinkExtent(u, u.specification, OTIUMLA_specification_owningConstraint)
-    result = e5  
+    result = e5
   } yield result
 
   def toOTI
@@ -4687,7 +4699,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteractionOperand(
             toolSpecific_id = u.toolSpecific_id,
@@ -4729,7 +4741,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -4739,7 +4751,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteractionUse(
             toolSpecific_id = u.toolSpecific_id,
@@ -4773,7 +4785,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -4783,7 +4795,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterface(
             toolSpecific_id = u.toolSpecific_id,
@@ -4860,7 +4872,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e16.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e17  
+    result = e17
   } yield result
 
   def toOTI
@@ -4870,7 +4882,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterfaceRealization(
             toolSpecific_id = u.toolSpecific_id,
@@ -4888,7 +4900,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -4898,7 +4910,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterruptibleActivityRegion(
             toolSpecific_id = u.toolSpecific_id,
@@ -4912,7 +4924,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -4922,7 +4934,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterval(
             toolSpecific_id = u.toolSpecific_id,
@@ -4936,7 +4948,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -4946,7 +4958,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLIntervalConstraint(
             toolSpecific_id = u.toolSpecific_id,
@@ -4964,7 +4976,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.specification, OTIUMLA_specification_intervalConstraint)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -4974,7 +4986,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLJoinNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -4998,7 +5010,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -5008,7 +5020,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLifeline(
             toolSpecific_id = u.toolSpecific_id,
@@ -5026,7 +5038,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.selector, OTIUMLA_selector_lifeline)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -5036,7 +5048,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLinkEndCreationData(
             toolSpecific_id = u.toolSpecific_id,
@@ -5049,7 +5061,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.qualifier, OTIUMLA_qualifier_linkEndData)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5059,7 +5071,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLinkEndData(
             toolSpecific_id = u.toolSpecific_id))
@@ -5071,7 +5083,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.qualifier, OTIUMLA_qualifier_linkEndData)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5081,7 +5093,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLinkEndDestructionData(
             toolSpecific_id = u.toolSpecific_id,
@@ -5094,7 +5106,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.qualifier, OTIUMLA_qualifier_linkEndData)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5104,7 +5116,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralBoolean(
             toolSpecific_id = u.toolSpecific_id,
@@ -5119,7 +5131,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5129,7 +5141,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralInteger(
             toolSpecific_id = u.toolSpecific_id,
@@ -5144,7 +5156,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5154,7 +5166,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralNull(
             toolSpecific_id = u.toolSpecific_id,
@@ -5168,7 +5180,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5178,7 +5190,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralReal(
             toolSpecific_id = u.toolSpecific_id,
@@ -5193,7 +5205,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5203,7 +5215,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralString(
             toolSpecific_id = u.toolSpecific_id,
@@ -5218,7 +5230,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5228,7 +5240,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralUnlimitedNatural(
             toolSpecific_id = u.toolSpecific_id,
@@ -5243,7 +5255,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5253,7 +5265,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLLoopNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -5323,7 +5335,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e14.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e15  
+    result = e15
   } yield result
 
   def toOTI
@@ -5333,7 +5345,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLManifestation(
             toolSpecific_id = u.toolSpecific_id,
@@ -5351,7 +5363,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -5361,7 +5373,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLMergeNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -5380,7 +5392,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e2.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -5390,7 +5402,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLMessage(
             toolSpecific_id = u.toolSpecific_id,
@@ -5409,7 +5421,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -5419,7 +5431,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLMessageOccurrenceSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -5437,7 +5449,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -5447,7 +5459,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLModel(
             toolSpecific_id = u.toolSpecific_id,
@@ -5495,7 +5507,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e9.compositeLinkExtent +
         toCompositeLinkExtent(u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
-    result = e10  
+    result = e10
   } yield result
 
   def toOTI
@@ -5505,7 +5517,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -5599,7 +5611,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e20.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e21  
+    result = e21
   } yield result
 
   def toOTI
@@ -5609,7 +5621,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLObjectFlow(
             toolSpecific_id = u.toolSpecific_id,
@@ -5646,7 +5658,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.target, OTIUMLA_incoming_target_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -5656,7 +5668,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLOccurrenceSpecification(
             toolSpecific_id = u.toolSpecific_id,
@@ -5674,7 +5686,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -5684,7 +5696,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLOpaqueAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -5726,7 +5738,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -5736,7 +5748,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLOpaqueBehavior(
             toolSpecific_id = u.toolSpecific_id,
@@ -5833,7 +5845,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e20.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e21  
+    result = e21
   } yield result
 
   def toOTI
@@ -5843,7 +5855,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLOpaqueExpression(
             toolSpecific_id = u.toolSpecific_id,
@@ -5859,7 +5871,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -5869,7 +5881,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLOperation(
             toolSpecific_id = u.toolSpecific_id,
@@ -5924,7 +5936,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e10.referenceLinkExtent +
         toReferenceLinkExtent(u, u.templateParameter, OTIUMLA_operation_templateParameter_parameteredElement)
-    result = e11  
+    result = e11
   } yield result
 
   def toOTI
@@ -5934,7 +5946,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLOperationTemplateParameter(
             toolSpecific_id = u.toolSpecific_id))
@@ -5950,7 +5962,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -5960,7 +5972,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLOutputPin(
             toolSpecific_id = u.toolSpecific_id,
@@ -5996,7 +6008,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e5.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e6  
+    result = e6
   } yield result
 
   def toOTI
@@ -6006,7 +6018,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLPackage(
             toolSpecific_id = u.toolSpecific_id,
@@ -6053,7 +6065,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e9.compositeLinkExtent +
         toCompositeLinkExtent(u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
-    result = e10  
+    result = e10
   } yield result
 
   def toOTI
@@ -6063,7 +6075,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLPackageImport(
             toolSpecific_id = u.toolSpecific_id,
@@ -6072,7 +6084,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -6082,7 +6094,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLPackageMerge(
             toolSpecific_id = u.toolSpecific_id))
@@ -6090,7 +6102,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -6100,7 +6112,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLParameter(
             toolSpecific_id = u.toolSpecific_id,
@@ -6140,7 +6152,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -6150,7 +6162,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLParameterSet(
             toolSpecific_id = u.toolSpecific_id,
@@ -6168,7 +6180,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -6178,7 +6190,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLPartDecomposition(
             toolSpecific_id = u.toolSpecific_id,
@@ -6212,7 +6224,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.covered, OTIUMLA_covered_coveredBy)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -6222,7 +6234,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLPort(
             toolSpecific_id = u.toolSpecific_id,
@@ -6276,7 +6288,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -6286,7 +6298,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLPrimitiveType(
             toolSpecific_id = u.toolSpecific_id,
@@ -6351,7 +6363,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e13.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e14  
+    result = e14
   } yield result
 
   def toOTI
@@ -6361,7 +6373,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLProfile(
             toolSpecific_id = u.toolSpecific_id,
@@ -6408,7 +6420,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e9.compositeLinkExtent +
         toCompositeLinkExtent(u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
-    result = e10  
+    result = e10
   } yield result
 
   def toOTI
@@ -6418,7 +6430,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLProfileApplication(
             toolSpecific_id = u.toolSpecific_id,
@@ -6427,7 +6439,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -6437,7 +6449,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLProperty(
             toolSpecific_id = u.toolSpecific_id,
@@ -6488,7 +6500,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -6498,7 +6510,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLProtocolConformance(
             toolSpecific_id = u.toolSpecific_id))
@@ -6506,7 +6518,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -6516,7 +6528,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLProtocolStateMachine(
             toolSpecific_id = u.toolSpecific_id,
@@ -6623,7 +6635,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e23.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e24  
+    result = e24
   } yield result
 
   def toOTI
@@ -6633,7 +6645,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLProtocolTransition(
             toolSpecific_id = u.toolSpecific_id,
@@ -6673,7 +6685,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e7.compositeLinkExtent +
         toCompositeLinkExtent(u, u.trigger, OTIUMLA_trigger_transition)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -6683,7 +6695,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLPseudostate(
             toolSpecific_id = u.toolSpecific_id,
@@ -6698,7 +6710,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -6708,7 +6720,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLQualifierValue(
             toolSpecific_id = u.toolSpecific_id))
@@ -6716,7 +6728,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e0.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e1  
+    result = e1
   } yield result
 
   def toOTI
@@ -6726,7 +6738,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLRaiseExceptionAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -6762,7 +6774,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -6772,7 +6784,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadExtentAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -6808,7 +6820,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -6818,7 +6830,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadIsClassifiedObjectAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -6859,7 +6871,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -6869,7 +6881,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadLinkAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -6913,7 +6925,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -6923,7 +6935,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadLinkObjectEndAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -6963,7 +6975,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -6973,7 +6985,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadLinkObjectEndQualifierAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7013,7 +7025,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7023,7 +7035,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadSelfAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7059,7 +7071,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -7069,7 +7081,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadStructuralFeatureAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7109,7 +7121,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7119,7 +7131,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadVariableAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7155,7 +7167,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -7165,7 +7177,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLRealization(
             toolSpecific_id = u.toolSpecific_id,
@@ -7183,7 +7195,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -7193,7 +7205,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReception(
             toolSpecific_id = u.toolSpecific_id,
@@ -7235,7 +7247,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.method, OTIUMLA_method_specification)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7245,7 +7257,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReclassifyObjectAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7282,7 +7294,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -7292,7 +7304,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLRedefinableTemplateSignature(
             toolSpecific_id = u.toolSpecific_id,
@@ -7311,7 +7323,7 @@ case class OTIJsonSerializationHelper
       compositeFirstEndOrderedLinkExtent =
         e2.compositeFirstEndOrderedLinkExtent +
         toCompositeFirstEndOrderedLinkExtent(u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -7321,7 +7333,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReduceAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7362,7 +7374,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7372,7 +7384,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLRegion(
             toolSpecific_id = u.toolSpecific_id,
@@ -7407,7 +7419,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e6.compositeLinkExtent +
         toCompositeLinkExtent(u, u.transition, OTIUMLA_transition_container)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -7417,7 +7429,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLRemoveStructuralFeatureValueAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7466,7 +7478,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e9.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e10  
+    result = e10
   } yield result
 
   def toOTI
@@ -7476,7 +7488,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLRemoveVariableValueAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7517,7 +7529,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7527,7 +7539,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLReplyAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7567,7 +7579,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7577,7 +7589,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLSendObjectAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7617,7 +7629,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7627,7 +7639,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLSendSignalAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7667,7 +7679,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -7677,7 +7689,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLSequenceNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -7742,7 +7754,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e13.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e14  
+    result = e14
   } yield result
 
   def toOTI
@@ -7752,7 +7764,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLSignal(
             toolSpecific_id = u.toolSpecific_id,
@@ -7813,7 +7825,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e12.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e13  
+    result = e13
   } yield result
 
   def toOTI
@@ -7823,7 +7835,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLSignalEvent(
             toolSpecific_id = u.toolSpecific_id,
@@ -7837,7 +7849,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -7847,7 +7859,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLSlot(
             toolSpecific_id = u.toolSpecific_id))
@@ -7859,7 +7871,7 @@ case class OTIJsonSerializationHelper
       compositeFirstEndOrderedLinkExtent =
         e1.compositeFirstEndOrderedLinkExtent +
         toCompositeFirstEndOrderedLinkExtent(u, u.value, OTIUMLA_value_owningSlot)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -7869,7 +7881,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLStartClassifierBehaviorAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7905,7 +7917,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -7915,7 +7927,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLStartObjectBehaviorAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -7960,7 +7972,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -7970,7 +7982,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLState(
             toolSpecific_id = u.toolSpecific_id,
@@ -8029,7 +8041,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e12.referenceLinkExtent +
         toReferenceLinkExtent(u, u.submachine, OTIUMLA_submachineState_submachine)
-    result = e13  
+    result = e13
   } yield result
 
   def toOTI
@@ -8039,7 +8051,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLStateInvariant(
             toolSpecific_id = u.toolSpecific_id,
@@ -8061,7 +8073,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e3.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -8071,7 +8083,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLStateMachine(
             toolSpecific_id = u.toolSpecific_id,
@@ -8174,7 +8186,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e22.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e23  
+    result = e23
   } yield result
 
   def toOTI
@@ -8184,7 +8196,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLStereotype(
             toolSpecific_id = u.toolSpecific_id,
@@ -8274,7 +8286,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e19.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e20  
+    result = e20
   } yield result
 
   def toOTI
@@ -8284,7 +8296,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLStringExpression(
             toolSpecific_id = u.toolSpecific_id,
@@ -8315,7 +8327,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e5.compositeLinkExtent +
         toCompositeLinkExtent(u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
-    result = e6  
+    result = e6
   } yield result
 
   def toOTI
@@ -8325,7 +8337,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLStructuredActivityNode(
             toolSpecific_id = u.toolSpecific_id,
@@ -8390,7 +8402,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e13.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e14  
+    result = e14
   } yield result
 
   def toOTI
@@ -8400,7 +8412,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLSubstitution(
             toolSpecific_id = u.toolSpecific_id,
@@ -8418,7 +8430,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -8428,7 +8440,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateBinding(
             toolSpecific_id = u.toolSpecific_id))
@@ -8440,7 +8452,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.parameterSubstitution, OTIUMLA_parameterSubstitution_templateBinding)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -8450,7 +8462,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateParameter(
             toolSpecific_id = u.toolSpecific_id))
@@ -8470,7 +8482,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e3.referenceLinkExtent +
         toReferenceLinkExtent(u, u.parameteredElement, OTIUMLA_parameteredElement_templateParameter)
-    result = e4  
+    result = e4
   } yield result
 
   def toOTI
@@ -8480,7 +8492,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateParameterSubstitution(
             toolSpecific_id = u.toolSpecific_id))
@@ -8492,7 +8504,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -8502,7 +8514,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateSignature(
             toolSpecific_id = u.toolSpecific_id))
@@ -8514,7 +8526,7 @@ case class OTIJsonSerializationHelper
       compositeFirstEndOrderedLinkExtent =
         e1.compositeFirstEndOrderedLinkExtent +
         toCompositeFirstEndOrderedLinkExtent(u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -8524,7 +8536,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTestIdentityAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -8568,7 +8580,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e8.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e9  
+    result = e9
   } yield result
 
   def toOTI
@@ -8578,7 +8590,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeConstraint(
             toolSpecific_id = u.toolSpecific_id,
@@ -8597,7 +8609,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.specification, OTIUMLA_specification_timeConstraint)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -8607,7 +8619,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeEvent(
             toolSpecific_id = u.toolSpecific_id,
@@ -8626,7 +8638,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.when, OTIUMLA_when_timeEvent)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -8636,7 +8648,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeExpression(
             toolSpecific_id = u.toolSpecific_id,
@@ -8654,7 +8666,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e2.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e3  
+    result = e3
   } yield result
 
   def toOTI
@@ -8664,7 +8676,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeInterval(
             toolSpecific_id = u.toolSpecific_id,
@@ -8678,7 +8690,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -8688,7 +8700,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeObservation(
             toolSpecific_id = u.toolSpecific_id,
@@ -8703,7 +8715,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -8713,7 +8725,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTransition(
             toolSpecific_id = u.toolSpecific_id,
@@ -8749,7 +8761,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e6.compositeLinkExtent +
         toCompositeLinkExtent(u, u.trigger, OTIUMLA_trigger_transition)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -8759,7 +8771,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLTrigger(
             toolSpecific_id = u.toolSpecific_id,
@@ -8773,7 +8785,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -8783,7 +8795,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLUnmarshallAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -8823,7 +8835,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -8833,7 +8845,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLUsage(
             toolSpecific_id = u.toolSpecific_id,
@@ -8847,7 +8859,7 @@ case class OTIJsonSerializationHelper
       compositeLinkExtent =
         e1.compositeLinkExtent +
         toCompositeLinkExtent(u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
-    result = e2  
+    result = e2
   } yield result
 
   def toOTI
@@ -8857,7 +8869,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLUseCase(
             toolSpecific_id = u.toolSpecific_id,
@@ -8934,7 +8946,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e16.referenceLinkExtent +
         toReferenceLinkExtent(u, u.useCase, OTIUMLA_subject_useCase)
-    result = e17  
+    result = e17
   } yield result
 
   def toOTI
@@ -8944,7 +8956,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLValuePin(
             toolSpecific_id = u.toolSpecific_id,
@@ -8984,7 +8996,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e6.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e7  
+    result = e7
   } yield result
 
   def toOTI
@@ -8994,7 +9006,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLValueSpecificationAction(
             toolSpecific_id = u.toolSpecific_id,
@@ -9034,7 +9046,7 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e7.referenceLinkExtent +
         toReferenceLinkExtent(u, u.inInterruptibleRegion, OTIUMLA_inInterruptibleRegion_node)
-    result = e8  
+    result = e8
   } yield result
 
   def toOTI
@@ -9044,7 +9056,7 @@ case class OTIJsonSerializationHelper
   : OTIDocumentExtent
   = for {
     e0 <- extent.copy(
-      elementExtent = 
+      elementExtent =
         extent.elementExtent +
           OTIMOFElement.OTIUMLVariable(
             toolSpecific_id = u.toolSpecific_id,
@@ -9072,5 +9084,5 @@ case class OTIJsonSerializationHelper
       referenceLinkExtent =
         e4.referenceLinkExtent +
         toReferenceLinkExtent(u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
-    result = e5  
+    result = e5
   } yield result

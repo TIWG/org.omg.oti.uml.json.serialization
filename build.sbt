@@ -155,12 +155,12 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
 
   )
   .dependsOnSourceProjectOrLibraryArtifacts(
-    "oti-uml-core",
-    "org.omg.oti.uml.core",
+    "oti-uml-canonical_xmi-serialization",
+    "org.omg.oti.uml.canonical_xmi.serialization",
     Seq(
-      "org.omg.tiwg" %% "oti-uml-core"
-        % Versions_oti_uml_core.version % "compile" withSources() withJavadoc() artifacts
-        Artifact("oti-uml-core", "zip", "zip", Some("resource"), Seq(), None, Map())
+      "org.omg.tiwg" %% "oti-uml-canonical_xmi-serialization"
+        % Versions_oti_uml_canonical_xmi_serialization.version % "compile" withSources() withJavadoc() artifacts
+        Artifact("oti-uml-canonical_xmi-serialization", "zip", "zip", Some("resource"), Seq(), None, Map())
     )
   )
 
