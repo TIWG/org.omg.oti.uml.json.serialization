@@ -50,15 +50,11 @@ import org.omg.oti._
 import org.omg.oti.uml.read.api._
 import org.omg.oti.uml.read.operations._
 
-import org.omg.oti.json.common._
 import org.omg.oti.json.common.OTIPrimitiveTypes.TOOL_SPECIFIC_ID
 import org.omg.oti.json.uml._
-import org.omg.oti.json.uml.enums._
 
-import scala.collection.immutable._
-import scala.{Boolean,Double,Int,Option}
-import scala.Predef.String
-import scalaz.@@
+import scala.{Boolean,Double,Function1,Int,Option}
+import scala.Predef.Integer2int
 // <!-- End of user code imports -->
 
 object OTIJsonSerializationHelper {
@@ -313,6 +309,12 @@ object OTIJsonSerializationHelper {
     case uml.read.api.UMLVisibilityKind.public =>
       json.uml.enums.UMLVisibilityKind.public
   }
+
+  implicit def optionToOTI[U,V]
+  (value: Option[U])
+  (implicit u2v: Function1[U,V])
+  : Option[V]
+  = value.map(u2v)
 
   def toOTI[Uml <: UML]
   (u : UMLAbstraction[Uml])
