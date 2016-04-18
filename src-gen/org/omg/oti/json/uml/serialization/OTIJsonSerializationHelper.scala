@@ -82,7 +82,10 @@ case class OTIJsonSerializationHelper
 
   // <!-- Start of user code additions -->
   def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
-  (u : U, v : V, ctor: (ToolSpecificElementDocumentURL, ToolSpecificElementDocumentURL) => OTIMOFCompositeLink)
+  (ud: Document[Uml],
+   u : U, 
+   v : V, 
+   ctor: (ToolSpecificElementDocumentURL, ToolSpecificElementDocumentURL) => OTIMOFCompositeLink)
   : OTIMOFCompositeLink
   = ctor(
     ToolSpecificElementDocumentURL(u.toolSpecific_id, u.toolSpecific_url),
@@ -348,7 +351,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAbstraction[Uml])
+   u: UMLAbstraction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -371,7 +374,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAcceptCallAction[Uml])
+   u: UMLAcceptCallAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -409,7 +412,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAcceptEventAction[Uml])
+   u: UMLAcceptEventAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -445,7 +448,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLActionExecutionSpecification[Uml])
+   u: UMLActionExecutionSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -470,7 +473,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLActionInputPin[Uml])
+   u: UMLActionInputPin[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -507,7 +510,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLActivity[Uml])
+   u: UMLActivity[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -583,7 +586,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLActivityFinalNode[Uml])
+   u: UMLActivityFinalNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -607,7 +610,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLActivityParameterNode[Uml])
+   u: UMLActivityParameterNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -635,7 +638,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLActivityPartition[Uml])
+   u: UMLActivityPartition[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -664,7 +667,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLActor[Uml])
+   u: UMLActor[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -712,7 +715,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAddStructuralFeatureValueAction[Uml])
+   u: UMLAddStructuralFeatureValueAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -752,7 +755,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAddVariableValueAction[Uml])
+   u: UMLAddVariableValueAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -788,7 +791,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAnyReceiveEvent[Uml])
+   u: UMLAnyReceiveEvent[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -809,7 +812,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLArtifact[Uml])
+   u: UMLArtifact[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -862,7 +865,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAssociation[Uml])
+   u: UMLAssociation[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -909,7 +912,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLAssociationClass[Uml])
+   u: UMLAssociationClass[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -971,7 +974,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLBehaviorExecutionSpecification[Uml])
+   u: UMLBehaviorExecutionSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -996,7 +999,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLBroadcastSignalAction[Uml])
+   u: UMLBroadcastSignalAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1029,7 +1032,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCallBehaviorAction[Uml])
+   u: UMLCallBehaviorAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1065,7 +1068,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCallEvent[Uml])
+   u: UMLCallEvent[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1086,7 +1089,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCallOperationAction[Uml])
+   u: UMLCallOperationAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1124,7 +1127,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCentralBufferNode[Uml])
+   u: UMLCentralBufferNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1152,7 +1155,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLChangeEvent[Uml])
+   u: UMLChangeEvent[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1175,7 +1178,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLClass[Uml])
+   u: UMLClass[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1234,7 +1237,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLClassifierTemplateParameter[Uml])
+   u: UMLClassifierTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1258,7 +1261,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLClause[Uml])
+   u: UMLClause[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1277,7 +1280,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLClearAssociationAction[Uml])
+   u: UMLClearAssociationAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1310,7 +1313,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLClearStructuralFeatureAction[Uml])
+   u: UMLClearStructuralFeatureAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1345,7 +1348,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLClearVariableAction[Uml])
+   u: UMLClearVariableAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1376,7 +1379,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCollaboration[Uml])
+   u: UMLCollaboration[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1428,7 +1431,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCollaborationUse[Uml])
+   u: UMLCollaborationUse[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1451,7 +1454,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCombinedFragment[Uml])
+   u: UMLCombinedFragment[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1481,7 +1484,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLComment[Uml])
+   u: UMLComment[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1499,7 +1502,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCommunicationPath[Uml])
+   u: UMLCommunicationPath[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1546,7 +1549,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLComponent[Uml])
+   u: UMLComponent[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1610,7 +1613,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLComponentRealization[Uml])
+   u: UMLComponentRealization[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1633,7 +1636,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLConditionalNode[Uml])
+   u: UMLConditionalNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1685,7 +1688,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLConnectableElementTemplateParameter[Uml])
+   u: UMLConnectableElementTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1706,7 +1709,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLConnectionPointReference[Uml])
+   u: UMLConnectionPointReference[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1727,7 +1730,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLConnector[Uml])
+   u: UMLConnector[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1752,7 +1755,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLConnectorEnd[Uml])
+   u: UMLConnectorEnd[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1775,7 +1778,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLConsiderIgnoreFragment[Uml])
+   u: UMLConsiderIgnoreFragment[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1805,7 +1808,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLConstraint[Uml])
+   u: UMLConstraint[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1828,7 +1831,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLContinuation[Uml])
+   u: UMLContinuation[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1854,7 +1857,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLControlFlow[Uml])
+   u: UMLControlFlow[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1886,7 +1889,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCreateLinkAction[Uml])
+   u: UMLCreateLinkAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1921,7 +1924,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCreateLinkObjectAction[Uml])
+   u: UMLCreateLinkObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1958,7 +1961,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLCreateObjectAction[Uml])
+   u: UMLCreateObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -1991,7 +1994,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDataStoreNode[Uml])
+   u: UMLDataStoreNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2019,7 +2022,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDataType[Uml])
+   u: UMLDataType[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2067,7 +2070,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDecisionNode[Uml])
+   u: UMLDecisionNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2091,7 +2094,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDependency[Uml])
+   u: UMLDependency[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2112,7 +2115,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDeployment[Uml])
+   u: UMLDeployment[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2135,7 +2138,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDeploymentSpecification[Uml])
+   u: UMLDeploymentSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2190,7 +2193,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDestroyLinkAction[Uml])
+   u: UMLDestroyLinkAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2225,7 +2228,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDestroyObjectAction[Uml])
+   u: UMLDestroyObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2260,7 +2263,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDestructionOccurrenceSpecification[Uml])
+   u: UMLDestructionOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2283,7 +2286,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDevice[Uml])
+   u: UMLDevice[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2346,7 +2349,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDuration[Uml])
+   u: UMLDuration[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2369,7 +2372,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDurationConstraint[Uml])
+   u: UMLDurationConstraint[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2393,7 +2396,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDurationInterval[Uml])
+   u: UMLDurationInterval[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2414,7 +2417,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLDurationObservation[Uml])
+   u: UMLDurationObservation[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2436,7 +2439,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLElementImport[Uml])
+   u: UMLElementImport[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2455,7 +2458,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLEnumeration[Uml])
+   u: UMLEnumeration[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2505,7 +2508,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLEnumerationLiteral[Uml])
+   u: UMLEnumerationLiteral[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2532,7 +2535,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExceptionHandler[Uml])
+   u: UMLExceptionHandler[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2549,7 +2552,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExecutionEnvironment[Uml])
+   u: UMLExecutionEnvironment[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2612,7 +2615,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExecutionOccurrenceSpecification[Uml])
+   u: UMLExecutionOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2635,7 +2638,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExpansionNode[Uml])
+   u: UMLExpansionNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2667,7 +2670,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExpansionRegion[Uml])
+   u: UMLExpansionRegion[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2716,7 +2719,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExpression[Uml])
+   u: UMLExpression[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2740,7 +2743,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExtend[Uml])
+   u: UMLExtend[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2763,7 +2766,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExtension[Uml])
+   u: UMLExtension[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2810,7 +2813,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExtensionEnd[Uml])
+   u: UMLExtensionEnd[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2854,7 +2857,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLExtensionPoint[Uml])
+   u: UMLExtensionPoint[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2876,7 +2879,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLFinalState[Uml])
+   u: UMLFinalState[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2920,7 +2923,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLFlowFinalNode[Uml])
+   u: UMLFlowFinalNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2944,7 +2947,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLForkNode[Uml])
+   u: UMLForkNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -2968,7 +2971,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLFunctionBehavior[Uml])
+   u: UMLFunctionBehavior[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3034,7 +3037,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLGate[Uml])
+   u: UMLGate[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3055,7 +3058,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLGeneralOrdering[Uml])
+   u: UMLGeneralOrdering[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3080,7 +3083,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLGeneralization[Uml])
+   u: UMLGeneralization[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3100,7 +3103,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLGeneralizationSet[Uml])
+   u: UMLGeneralizationSet[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3125,7 +3128,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLImage[Uml])
+   u: UMLImage[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3145,7 +3148,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInclude[Uml])
+   u: UMLInclude[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3166,7 +3169,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInformationFlow[Uml])
+   u: UMLInformationFlow[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3187,7 +3190,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInformationItem[Uml])
+   u: UMLInformationItem[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3231,7 +3234,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInitialNode[Uml])
+   u: UMLInitialNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3255,7 +3258,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInputPin[Uml])
+   u: UMLInputPin[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3290,7 +3293,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInstanceSpecification[Uml])
+   u: UMLInstanceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3317,7 +3320,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInstanceValue[Uml])
+   u: UMLInstanceValue[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3338,7 +3341,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInteraction[Uml])
+   u: UMLInteraction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3416,7 +3419,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInteractionConstraint[Uml])
+   u: UMLInteractionConstraint[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3443,7 +3446,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInteractionOperand[Uml])
+   u: UMLInteractionOperand[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3478,7 +3481,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInteractionUse[Uml])
+   u: UMLInteractionUse[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3509,7 +3512,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInterface[Uml])
+   u: UMLInterface[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3563,7 +3566,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInterfaceRealization[Uml])
+   u: UMLInterfaceRealization[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3586,7 +3589,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInterruptibleActivityRegion[Uml])
+   u: UMLInterruptibleActivityRegion[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3607,7 +3610,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLInterval[Uml])
+   u: UMLInterval[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3628,7 +3631,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLIntervalConstraint[Uml])
+   u: UMLIntervalConstraint[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3651,7 +3654,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLJoinNode[Uml])
+   u: UMLJoinNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3678,7 +3681,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLifeline[Uml])
+   u: UMLLifeline[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3701,7 +3704,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLinkEndCreationData[Uml])
+   u: UMLLinkEndCreationData[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3721,7 +3724,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLinkEndData[Uml])
+   u: UMLLinkEndData[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3740,7 +3743,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLinkEndDestructionData[Uml])
+   u: UMLLinkEndDestructionData[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3760,7 +3763,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLiteralBoolean[Uml])
+   u: UMLLiteralBoolean[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3782,7 +3785,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLiteralInteger[Uml])
+   u: UMLLiteralInteger[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3804,7 +3807,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLiteralNull[Uml])
+   u: UMLLiteralNull[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3825,7 +3828,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLiteralReal[Uml])
+   u: UMLLiteralReal[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3847,7 +3850,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLiteralString[Uml])
+   u: UMLLiteralString[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3869,7 +3872,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLiteralUnlimitedNatural[Uml])
+   u: UMLLiteralUnlimitedNatural[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3891,7 +3894,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLLoopNode[Uml])
+   u: UMLLoopNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3942,7 +3945,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLManifestation[Uml])
+   u: UMLManifestation[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3965,7 +3968,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLMergeNode[Uml])
+   u: UMLMergeNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -3989,7 +3992,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLMessage[Uml])
+   u: UMLMessage[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4013,7 +4016,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLMessageOccurrenceSpecification[Uml])
+   u: UMLMessageOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4036,7 +4039,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLModel[Uml])
+   u: UMLModel[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4075,7 +4078,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLNode[Uml])
+   u: UMLNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4138,7 +4141,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLObjectFlow[Uml])
+   u: UMLObjectFlow[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4172,7 +4175,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLOccurrenceSpecification[Uml])
+   u: UMLOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4195,7 +4198,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLOpaqueAction[Uml])
+   u: UMLOpaqueAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4232,7 +4235,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLOpaqueBehavior[Uml])
+   u: UMLOpaqueBehavior[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4298,7 +4301,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLOpaqueExpression[Uml])
+   u: UMLOpaqueExpression[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4321,7 +4324,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLOperation[Uml])
+   u: UMLOperation[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4365,7 +4368,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLOperationTemplateParameter[Uml])
+   u: UMLOperationTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4386,7 +4389,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLOutputPin[Uml])
+   u: UMLOutputPin[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4421,7 +4424,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLPackage[Uml])
+   u: UMLPackage[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4459,7 +4462,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLPackageImport[Uml])
+   u: UMLPackageImport[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4477,7 +4480,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLPackageMerge[Uml])
+   u: UMLPackageMerge[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4494,7 +4497,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLParameter[Uml])
+   u: UMLParameter[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4531,7 +4534,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLParameterSet[Uml])
+   u: UMLParameterSet[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4554,7 +4557,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLPartDecomposition[Uml])
+   u: UMLPartDecomposition[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4585,7 +4588,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLPort[Uml])
+   u: UMLPort[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4632,7 +4635,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLPrimitiveType[Uml])
+   u: UMLPrimitiveType[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4680,7 +4683,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLProfile[Uml])
+   u: UMLProfile[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4718,7 +4721,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLProfileApplication[Uml])
+   u: UMLProfileApplication[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4736,7 +4739,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLProperty[Uml])
+   u: UMLProperty[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4780,7 +4783,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLProtocolConformance[Uml])
+   u: UMLProtocolConformance[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4797,7 +4800,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLProtocolStateMachine[Uml])
+   u: UMLProtocolStateMachine[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4867,7 +4870,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLProtocolTransition[Uml])
+   u: UMLProtocolTransition[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4902,7 +4905,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLPseudostate[Uml])
+   u: UMLPseudostate[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4924,7 +4927,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLQualifierValue[Uml])
+   u: UMLQualifierValue[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4941,7 +4944,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLRaiseExceptionAction[Uml])
+   u: UMLRaiseExceptionAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -4974,7 +4977,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadExtentAction[Uml])
+   u: UMLReadExtentAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5007,7 +5010,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadIsClassifiedObjectAction[Uml])
+   u: UMLReadIsClassifiedObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5043,7 +5046,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadLinkAction[Uml])
+   u: UMLReadLinkAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5080,7 +5083,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadLinkObjectEndAction[Uml])
+   u: UMLReadLinkObjectEndAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5115,7 +5118,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadLinkObjectEndQualifierAction[Uml])
+   u: UMLReadLinkObjectEndQualifierAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5150,7 +5153,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadSelfAction[Uml])
+   u: UMLReadSelfAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5183,7 +5186,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadStructuralFeatureAction[Uml])
+   u: UMLReadStructuralFeatureAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5218,7 +5221,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReadVariableAction[Uml])
+   u: UMLReadVariableAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5251,7 +5254,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLRealization[Uml])
+   u: UMLRealization[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5274,7 +5277,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReception[Uml])
+   u: UMLReception[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5311,7 +5314,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReclassifyObjectAction[Uml])
+   u: UMLReclassifyObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5345,7 +5348,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLRedefinableTemplateSignature[Uml])
+   u: UMLRedefinableTemplateSignature[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5369,7 +5372,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReduceAction[Uml])
+   u: UMLReduceAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5405,7 +5408,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLRegion[Uml])
+   u: UMLRegion[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5437,7 +5440,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLRemoveStructuralFeatureValueAction[Uml])
+   u: UMLRemoveStructuralFeatureValueAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5477,7 +5480,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLRemoveVariableValueAction[Uml])
+   u: UMLRemoveVariableValueAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5513,7 +5516,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLReplyAction[Uml])
+   u: UMLReplyAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5548,7 +5551,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLSendObjectAction[Uml])
+   u: UMLSendObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5583,7 +5586,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLSendSignalAction[Uml])
+   u: UMLSendSignalAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5618,7 +5621,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLSequenceNode[Uml])
+   u: UMLSequenceNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5666,7 +5669,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLSignal[Uml])
+   u: UMLSignal[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5712,7 +5715,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLSignalEvent[Uml])
+   u: UMLSignalEvent[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5733,7 +5736,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLSlot[Uml])
+   u: UMLSlot[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5752,7 +5755,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLStartClassifierBehaviorAction[Uml])
+   u: UMLStartClassifierBehaviorAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5785,7 +5788,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLStartObjectBehaviorAction[Uml])
+   u: UMLStartObjectBehaviorAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5823,7 +5826,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLState[Uml])
+   u: UMLState[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5867,7 +5870,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLStateInvariant[Uml])
+   u: UMLStateInvariant[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5892,7 +5895,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLStateMachine[Uml])
+   u: UMLStateMachine[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -5960,7 +5963,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLStereotype[Uml])
+   u: UMLStereotype[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6021,7 +6024,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLStringExpression[Uml])
+   u: UMLStringExpression[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6051,7 +6054,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLStructuredActivityNode[Uml])
+   u: UMLStructuredActivityNode[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6099,7 +6102,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLSubstitution[Uml])
+   u: UMLSubstitution[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6122,7 +6125,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTemplateBinding[Uml])
+   u: UMLTemplateBinding[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6141,7 +6144,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTemplateParameter[Uml])
+   u: UMLTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6164,7 +6167,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTemplateParameterSubstitution[Uml])
+   u: UMLTemplateParameterSubstitution[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6183,7 +6186,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTemplateSignature[Uml])
+   u: UMLTemplateSignature[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6202,7 +6205,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTestIdentityAction[Uml])
+   u: UMLTestIdentityAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6239,7 +6242,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTimeConstraint[Uml])
+   u: UMLTimeConstraint[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6263,7 +6266,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTimeEvent[Uml])
+   u: UMLTimeEvent[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6287,7 +6290,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTimeExpression[Uml])
+   u: UMLTimeExpression[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6310,7 +6313,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTimeInterval[Uml])
+   u: UMLTimeInterval[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6331,7 +6334,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTimeObservation[Uml])
+   u: UMLTimeObservation[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6353,7 +6356,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTransition[Uml])
+   u: UMLTransition[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6386,7 +6389,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLTrigger[Uml])
+   u: UMLTrigger[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6407,7 +6410,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLUnmarshallAction[Uml])
+   u: UMLUnmarshallAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6442,7 +6445,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLUsage[Uml])
+   u: UMLUsage[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6463,7 +6466,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLUseCase[Uml])
+   u: UMLUseCase[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6517,7 +6520,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLValuePin[Uml])
+   u: UMLValuePin[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6554,7 +6557,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLValueSpecificationAction[Uml])
+   u: UMLValueSpecificationAction[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
@@ -6589,7 +6592,7 @@ case class OTIJsonSerializationHelper
 
   def toOTI
   (extent: OTIDocumentExtent,
-   u : UMLVariable[Uml])
+   u: UMLVariable[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
