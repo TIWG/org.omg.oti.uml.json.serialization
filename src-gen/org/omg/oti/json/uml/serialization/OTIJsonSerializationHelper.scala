@@ -84,6 +84,11 @@ case class OTIJsonSerializationHelper
 
   // <!-- Start of user code additions -->
 
+  def allExcluded[V <: UMLElement[Uml]]
+  (vExcludes: scala.collection.Seq[scala.collection.Iterable[V]])
+  : Set[V]
+  = ( Set.empty[V] /: vExcludes ) { _ ++ _ }
+
   def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
@@ -104,23 +109,61 @@ case class OTIJsonSerializationHelper
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
-   v : Option[V],
-   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeLink)
+   v : scala.collection.Iterable[V],
+   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeLink,
+   vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
-  = v.fold[OTIDocumentExtent](extent) { uv =>
-    toCompositeLinkExtent(extent, ud, u, uv, ctor)
+  = {
+    val excluded = allExcluded[V](vExcludes)
+
+    ( extent /: v ) { (ei, uv) =>
+      if (excluded.contains(uv))
+        ei
+      else
+        toCompositeLinkExtent(ei, ud, u, uv, ctor)
+    }
   }
 
-  def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  // ============
+
+  def toCompositeFirstEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
-   v : scala.collection.Iterable[V],
-   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeLink)
+   v : V,
+   vIndex: Int,
+   ctor: (ToolSpecificElementID_OTIDocumentURL, Int, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeFirstEndOrderedLink)
   : OTIDocumentExtent
-  = ( extent /: v ) { (ei, uv) =>
-    toCompositeLinkExtent(ei, ud, u, uv, ctor)
+  = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
+    extent.copy(
+      compositeFirstEndOrderedLinkExtent =
+        extent.compositeFirstEndOrderedLinkExtent +
+          ctor(
+            ToolSpecificElementID_OTIDocumentURL(u.toolSpecific_id, ud.info.documentURL),
+            vIndex,
+            ToolSpecificElementID_OTIDocumentURL(v.toolSpecific_id, vd.info.documentURL)))
   }
+
+  def toCompositeFirstEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  (extent: OTIDocumentExtent,
+   ud: Document[Uml],
+   u : U,
+   v : Seq[V],
+   ctor: (ToolSpecificElementID_OTIDocumentURL, Int, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeFirstEndOrderedLink,
+   vExcludes: scala.collection.Iterable[V]*)
+  : OTIDocumentExtent
+  = {
+    val excluded = allExcluded[V](vExcludes)
+
+    ( extent /: v.zipWithIndex ) { case (ei, (uv, uvIndex)) =>
+      if (excluded.contains(uv))
+        ei
+      else
+        toCompositeFirstEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
+    }
+  }
+
+  // ============
 
   def toCompositeSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
@@ -144,12 +187,22 @@ case class OTIJsonSerializationHelper
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
-   v : Seq[V],
-   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL, Int) => OTIMOFCompositeSecondEndOrderedLink)
+   v : scala.collection.Iterable[V],
+   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL, Int) => OTIMOFCompositeSecondEndOrderedLink,
+   vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
-  = ( extent /: v.zipWithIndex.toSeq ) { case (ei, (uv, uvIndex)) =>
-    toCompositeSecondEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
+  = {
+    val excluded = allExcluded[V](vExcludes)
+
+    ( extent /: v.zipWithIndex ) { case (ei, (uv, uvIndex)) =>
+      if (excluded.contains(uv))
+        ei
+      else
+        toCompositeSecondEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
+    }
   }
+
+  // ============
 
   def toReferenceLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
@@ -171,23 +224,22 @@ case class OTIJsonSerializationHelper
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
-   v : Option[V],
-   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFReferenceLink)
+   v : scala.collection.Iterable[V],
+   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFReferenceLink,
+   vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
-  = v.fold[OTIDocumentExtent](extent) { uv =>
-    toReferenceLinkExtent(extent, ud, u, uv, ctor)
+  = {
+    val excluded = allExcluded[V](vExcludes)
+
+    ( extent /: v ) { (ei, uv) =>
+      if (excluded.contains(uv))
+        ei
+      else
+        toReferenceLinkExtent(ei, ud, u, uv, ctor)
+    }
   }
 
-  def toReferenceLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
-  (extent: OTIDocumentExtent,
-   ud: Document[Uml],
-   u : U,
-   v : scala.collection.Iterable[V],
-   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFReferenceLink)
-  : OTIDocumentExtent
-  = ( extent /: v ) { (ei, uv) =>
-    toReferenceLinkExtent(ei, ud, u, uv, ctor)
-  }
+  // ============
 
   def toReferenceSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
@@ -212,10 +264,18 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U,
    v : Seq[V],
-   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL, Int) => OTIMOFReferenceSecondEndOrderedLink)
+   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL, Int) => OTIMOFReferenceSecondEndOrderedLink,
+   vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
-  = ( extent /: v.zipWithIndex.toSeq ) { case (ei, (uv, uvIndex)) =>
-    toReferenceSecondEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
+  = {
+    val excluded = allExcluded[V](vExcludes)
+
+    ( extent /: v.zipWithIndex ) { case (ei, (uv, uvIndex)) =>
+      if (excluded.contains(uv))
+        ei
+      else
+        toReferenceSecondEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
+    }
   }
 
   // <!-- End of user code additions -->
