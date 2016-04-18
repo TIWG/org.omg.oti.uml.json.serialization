@@ -1,0 +1,11 @@
+.cache*
+.ensime*
+.idea
+*.iml
+*.bak
+*~
+bin
+links.json
+project/project
+project/target
+target
