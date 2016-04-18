@@ -387,7 +387,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAbstraction(
@@ -410,7 +410,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAcceptCallAction(
@@ -448,7 +448,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAcceptEventAction(
@@ -484,7 +484,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLActionExecutionSpecification(
@@ -509,7 +509,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLActionInputPin(
@@ -546,7 +546,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivity(
@@ -622,7 +622,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivityFinalNode(
@@ -646,7 +646,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivityParameterNode(
@@ -674,7 +674,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLActivityPartition(
@@ -703,7 +703,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLActor(
@@ -751,7 +751,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAddStructuralFeatureValueAction(
@@ -791,7 +791,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAddVariableValueAction(
@@ -827,7 +827,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAnyReceiveEvent(
@@ -848,7 +848,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLArtifact(
@@ -901,7 +901,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAssociation(
@@ -948,7 +948,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLAssociationClass(
@@ -1010,7 +1010,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLBehaviorExecutionSpecification(
@@ -1035,7 +1035,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLBroadcastSignalAction(
@@ -1068,7 +1068,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCallBehaviorAction(
@@ -1104,7 +1104,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCallEvent(
@@ -1125,7 +1125,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCallOperationAction(
@@ -1163,7 +1163,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCentralBufferNode(
@@ -1191,7 +1191,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLChangeEvent(
@@ -1214,7 +1214,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLClass(
@@ -1273,7 +1273,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLClassifierTemplateParameter(
@@ -1297,7 +1297,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLClause(
@@ -1316,7 +1316,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLClearAssociationAction(
@@ -1349,7 +1349,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLClearStructuralFeatureAction(
@@ -1384,7 +1384,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLClearVariableAction(
@@ -1415,7 +1415,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCollaboration(
@@ -1467,7 +1467,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCollaborationUse(
@@ -1490,7 +1490,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCombinedFragment(
@@ -1520,7 +1520,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLComment(
@@ -1538,7 +1538,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCommunicationPath(
@@ -1585,7 +1585,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLComponent(
@@ -1649,7 +1649,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLComponentRealization(
@@ -1672,7 +1672,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLConditionalNode(
@@ -1724,7 +1724,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnectableElementTemplateParameter(
@@ -1745,7 +1745,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnectionPointReference(
@@ -1766,7 +1766,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnector(
@@ -1791,7 +1791,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLConnectorEnd(
@@ -1814,7 +1814,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLConsiderIgnoreFragment(
@@ -1844,7 +1844,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLConstraint(
@@ -1867,7 +1867,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLContinuation(
@@ -1893,7 +1893,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLControlFlow(
@@ -1925,7 +1925,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCreateLinkAction(
@@ -1960,7 +1960,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCreateLinkObjectAction(
@@ -1997,7 +1997,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLCreateObjectAction(
@@ -2030,7 +2030,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDataStoreNode(
@@ -2058,7 +2058,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDataType(
@@ -2106,7 +2106,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDecisionNode(
@@ -2130,7 +2130,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDependency(
@@ -2151,7 +2151,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDeployment(
@@ -2174,7 +2174,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDeploymentSpecification(
@@ -2229,7 +2229,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDestroyLinkAction(
@@ -2264,7 +2264,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDestroyObjectAction(
@@ -2299,7 +2299,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDestructionOccurrenceSpecification(
@@ -2322,7 +2322,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDevice(
@@ -2385,7 +2385,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDuration(
@@ -2408,7 +2408,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDurationConstraint(
@@ -2432,7 +2432,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDurationInterval(
@@ -2453,7 +2453,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLDurationObservation(
@@ -2475,7 +2475,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLElementImport(
@@ -2494,7 +2494,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLEnumeration(
@@ -2544,7 +2544,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLEnumerationLiteral(
@@ -2571,7 +2571,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExceptionHandler(
@@ -2588,7 +2588,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExecutionEnvironment(
@@ -2651,7 +2651,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExecutionOccurrenceSpecification(
@@ -2674,7 +2674,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExpansionNode(
@@ -2706,7 +2706,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExpansionRegion(
@@ -2755,7 +2755,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExpression(
@@ -2779,7 +2779,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtend(
@@ -2802,7 +2802,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtension(
@@ -2849,7 +2849,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtensionEnd(
@@ -2893,7 +2893,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLExtensionPoint(
@@ -2915,7 +2915,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLFinalState(
@@ -2959,7 +2959,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLFlowFinalNode(
@@ -2983,7 +2983,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLForkNode(
@@ -3007,7 +3007,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLFunctionBehavior(
@@ -3073,7 +3073,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLGate(
@@ -3094,7 +3094,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLGeneralOrdering(
@@ -3119,7 +3119,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLGeneralization(
@@ -3139,7 +3139,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLGeneralizationSet(
@@ -3164,7 +3164,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLImage(
@@ -3184,7 +3184,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInclude(
@@ -3205,7 +3205,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInformationFlow(
@@ -3226,7 +3226,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInformationItem(
@@ -3270,7 +3270,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInitialNode(
@@ -3294,7 +3294,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInputPin(
@@ -3329,7 +3329,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInstanceSpecification(
@@ -3356,7 +3356,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInstanceValue(
@@ -3377,7 +3377,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteraction(
@@ -3455,7 +3455,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteractionConstraint(
@@ -3482,7 +3482,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteractionOperand(
@@ -3517,7 +3517,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInteractionUse(
@@ -3548,7 +3548,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterface(
@@ -3602,7 +3602,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterfaceRealization(
@@ -3625,7 +3625,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterruptibleActivityRegion(
@@ -3646,7 +3646,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLInterval(
@@ -3667,7 +3667,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLIntervalConstraint(
@@ -3690,7 +3690,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLJoinNode(
@@ -3717,7 +3717,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLifeline(
@@ -3740,7 +3740,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLinkEndCreationData(
@@ -3760,7 +3760,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLinkEndData(
@@ -3779,7 +3779,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLinkEndDestructionData(
@@ -3799,7 +3799,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralBoolean(
@@ -3821,7 +3821,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralInteger(
@@ -3843,7 +3843,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralNull(
@@ -3864,7 +3864,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralReal(
@@ -3886,7 +3886,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralString(
@@ -3908,7 +3908,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLiteralUnlimitedNatural(
@@ -3930,7 +3930,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLLoopNode(
@@ -3981,7 +3981,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLManifestation(
@@ -4004,7 +4004,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLMergeNode(
@@ -4028,7 +4028,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLMessage(
@@ -4052,7 +4052,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLMessageOccurrenceSpecification(
@@ -4075,7 +4075,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLModel(
@@ -4114,7 +4114,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLNode(
@@ -4177,7 +4177,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLObjectFlow(
@@ -4211,7 +4211,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLOccurrenceSpecification(
@@ -4234,7 +4234,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLOpaqueAction(
@@ -4271,7 +4271,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLOpaqueBehavior(
@@ -4337,7 +4337,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLOpaqueExpression(
@@ -4360,7 +4360,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLOperation(
@@ -4404,7 +4404,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLOperationTemplateParameter(
@@ -4425,7 +4425,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLOutputPin(
@@ -4460,7 +4460,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLPackage(
@@ -4498,7 +4498,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLPackageImport(
@@ -4516,7 +4516,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLPackageMerge(
@@ -4533,7 +4533,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLParameter(
@@ -4570,7 +4570,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLParameterSet(
@@ -4593,7 +4593,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLPartDecomposition(
@@ -4624,7 +4624,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLPort(
@@ -4671,7 +4671,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLPrimitiveType(
@@ -4719,7 +4719,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLProfile(
@@ -4757,7 +4757,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLProfileApplication(
@@ -4775,7 +4775,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLProperty(
@@ -4819,7 +4819,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLProtocolConformance(
@@ -4836,7 +4836,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLProtocolStateMachine(
@@ -4906,7 +4906,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLProtocolTransition(
@@ -4941,7 +4941,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLPseudostate(
@@ -4963,7 +4963,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLQualifierValue(
@@ -4980,7 +4980,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLRaiseExceptionAction(
@@ -5013,7 +5013,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadExtentAction(
@@ -5046,7 +5046,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadIsClassifiedObjectAction(
@@ -5082,7 +5082,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadLinkAction(
@@ -5119,7 +5119,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadLinkObjectEndAction(
@@ -5154,7 +5154,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadLinkObjectEndQualifierAction(
@@ -5189,7 +5189,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadSelfAction(
@@ -5222,7 +5222,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadStructuralFeatureAction(
@@ -5257,7 +5257,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReadVariableAction(
@@ -5290,7 +5290,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLRealization(
@@ -5313,7 +5313,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReception(
@@ -5350,7 +5350,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReclassifyObjectAction(
@@ -5384,7 +5384,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLRedefinableTemplateSignature(
@@ -5408,7 +5408,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReduceAction(
@@ -5444,7 +5444,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLRegion(
@@ -5476,7 +5476,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLRemoveStructuralFeatureValueAction(
@@ -5516,7 +5516,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLRemoveVariableValueAction(
@@ -5552,7 +5552,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLReplyAction(
@@ -5587,7 +5587,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLSendObjectAction(
@@ -5622,7 +5622,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLSendSignalAction(
@@ -5657,7 +5657,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLSequenceNode(
@@ -5705,7 +5705,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLSignal(
@@ -5751,7 +5751,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLSignalEvent(
@@ -5772,7 +5772,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLSlot(
@@ -5791,7 +5791,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLStartClassifierBehaviorAction(
@@ -5824,7 +5824,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLStartObjectBehaviorAction(
@@ -5862,7 +5862,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLState(
@@ -5906,7 +5906,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLStateInvariant(
@@ -5931,7 +5931,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLStateMachine(
@@ -5999,7 +5999,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLStereotype(
@@ -6060,7 +6060,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLStringExpression(
@@ -6090,7 +6090,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLStructuredActivityNode(
@@ -6138,7 +6138,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLSubstitution(
@@ -6161,7 +6161,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateBinding(
@@ -6180,7 +6180,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateParameter(
@@ -6203,7 +6203,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateParameterSubstitution(
@@ -6222,7 +6222,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTemplateSignature(
@@ -6241,7 +6241,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTestIdentityAction(
@@ -6278,7 +6278,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeConstraint(
@@ -6302,7 +6302,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeEvent(
@@ -6326,7 +6326,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeExpression(
@@ -6349,7 +6349,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeInterval(
@@ -6370,7 +6370,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTimeObservation(
@@ -6392,7 +6392,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTransition(
@@ -6425,7 +6425,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLTrigger(
@@ -6446,7 +6446,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLUnmarshallAction(
@@ -6481,7 +6481,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLUsage(
@@ -6502,7 +6502,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLUseCase(
@@ -6556,7 +6556,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLValuePin(
@@ -6593,7 +6593,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLValueSpecificationAction(
@@ -6628,7 +6628,7 @@ case class OTIJsonSerializationHelper
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(u).fold[OTIDocumentExtent](extent){ ud =>
-    val v0 = extent.copy(
+    val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent +
           OTIMOFElement.OTIUMLVariable(
