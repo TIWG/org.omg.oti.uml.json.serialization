@@ -49,7 +49,7 @@ package org.omg.oti.json.uml.serialization
 import org.omg.oti._
 import org.omg.oti.uml.read.api._
 import org.omg.oti.uml.read.operations._
-import org.omg.oti.json.common.ToolSpecificElementDocumentURL
+import org.omg.oti.json.common.ToolSpecificElementID_OTIDocumentURL
 import org.omg.oti.json.common.OTIPrimitiveTypes.TOOL_SPECIFIC_ID
 import org.omg.oti.json.uml._
 import org.omg.oti.json.uml.OTIMOFLink._
@@ -58,7 +58,9 @@ import org.omg.oti.uml.canonicalXMI.{DocumentOps,DocumentSet}
 import org.omg.oti.uml.canonicalXMI.helper.OTIDocumentSetAdapter
 import org.omg.oti.uml.characteristics.OTICharacteristicsProvider
 import org.omg.oti.uml.write.api.{UMLFactory, UMLUpdate}
+import org.omg.oti.uml.xmi.Document
 
+import scala.collection.immutable._
 import scala.{Boolean, Double, Function1, Int, Option}
 import scala.Predef.Integer2int
 // <!-- End of user code imports -->
@@ -81,15 +83,45 @@ case class OTIJsonSerializationHelper
 ( odsa: OTIDocumentSetAdapter[Uml, Uo, Ch, Uf, Uu, Do, Ds]) {
 
   // <!-- Start of user code additions -->
+
   def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
-  (ud: Document[Uml],
+  (extent: OTIDocumentExtent,
+   ud: Document[Uml],
    u : U, 
    v : V, 
-   ctor: (ToolSpecificElementDocumentURL, ToolSpecificElementDocumentURL) => OTIMOFCompositeLink)
-  : OTIMOFCompositeLink
-  = ctor(
-    ToolSpecificElementDocumentURL(u.toolSpecific_id, u.toolSpecific_url),
-    ToolSpecificElementDocumentURL(v.toolSpecific_id, v.toolSpecific_url))
+   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeLink)
+  : OTIDocumentExtent
+  = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
+    extent.copy(
+      compositeLinkExtent =
+        extent.compositeLinkExtent +
+          ctor(
+            ToolSpecificElementID_OTIDocumentURL(u.toolSpecific_id, ud.info.documentURL),
+            ToolSpecificElementID_OTIDocumentURL(v.toolSpecific_id, vd.info.documentURL)))
+  }
+
+  def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  (extent: OTIDocumentExtent,
+   ud: Document[Uml],
+   u : U,
+   v : Option[V],
+   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeLink)
+  : OTIDocumentExtent
+  = v.fold[OTIDocumentExtent](extent) { uv =>
+    toCompositeLinkExtent(extent, ud, u, uv, ctor)
+  }
+
+  def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  (extent: OTIDocumentExtent,
+   ud: Document[Uml],
+   u : U,
+   v : Set[V],
+   ctor: (ToolSpecificElementID_OTIDocumentURL, ToolSpecificElementID_OTIDocumentURL) => OTIMOFCompositeLink)
+  : OTIDocumentExtent
+  = ( extent /: v ) { (ei, uv) =>
+    toCompositeLinkExtent(ei, ud, u, uv, ctor)
+  }
+
   // <!-- End of user code additions -->
 
   implicit def toOTI
