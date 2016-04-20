@@ -278,6 +278,14 @@ case class OTIJsonSerializationHelper
     }
   }
 
+  // ============
+
+  implicit def optionToOTI[U,V]
+  (value: Option[U])
+  (implicit u2v: U => V)
+  : Option[V]
+  = value.map(u2v)
+
   // <!-- End of user code additions -->
 
   def addToOTIDocumentExtent
