@@ -94,12 +94,12 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U, 
    v : V, 
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL) => OTIMOFCompositeLink)
+   ctor: (ElementLocation, ElementLocation) => OTIMOFCompositeLink)
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
     extent.copy(
       compositeLinkExtent =
-        extent.compositeLinkExtent +
+        extent.compositeLinkExtent :+
           ctor(
             ElementLocation_OTI_ID_OTI_URL(u.toolSpecific_id, ud.info.documentURL),
             ElementLocation_OTI_ID_OTI_URL(v.toolSpecific_id, vd.info.documentURL)))
@@ -110,7 +110,7 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U,
    v : scala.collection.Iterable[V],
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL) => OTIMOFCompositeLink,
+   ctor: (ElementLocation, ElementLocation) => OTIMOFCompositeLink,
    vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
   = {
@@ -132,12 +132,12 @@ case class OTIJsonSerializationHelper
    u : U,
    v : V,
    vIndex: Int,
-   ctor: (ElementLocation_OTI_ID_OTI_URL, Int, ElementLocation_OTI_ID_OTI_URL) => OTIMOFCompositeFirstEndOrderedLink)
+   ctor: (ElementLocation, Int, ElementLocation) => OTIMOFCompositeFirstEndOrderedLink)
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
     extent.copy(
       compositeFirstEndOrderedLinkExtent =
-        extent.compositeFirstEndOrderedLinkExtent +
+        extent.compositeFirstEndOrderedLinkExtent :+
           ctor(
             ElementLocation_OTI_ID_OTI_URL(u.toolSpecific_id, ud.info.documentURL),
             vIndex,
@@ -149,7 +149,7 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U,
    v : Seq[V],
-   ctor: (ElementLocation_OTI_ID_OTI_URL, Int, ElementLocation_OTI_ID_OTI_URL) => OTIMOFCompositeFirstEndOrderedLink,
+   ctor: (ElementLocation, Int, ElementLocation) => OTIMOFCompositeFirstEndOrderedLink,
    vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
   = {
@@ -171,12 +171,12 @@ case class OTIJsonSerializationHelper
    u : U,
    v : V,
    vIndex: Int,
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL, Int) => OTIMOFCompositeSecondEndOrderedLink)
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFCompositeSecondEndOrderedLink)
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
     extent.copy(
       compositeSecondEndOrderedLinkExtent =
-        extent.compositeSecondEndOrderedLinkExtent +
+        extent.compositeSecondEndOrderedLinkExtent :+
           ctor(
             ElementLocation_OTI_ID_OTI_URL(u.toolSpecific_id, ud.info.documentURL),
             ElementLocation_OTI_ID_OTI_URL(v.toolSpecific_id, vd.info.documentURL),
@@ -188,7 +188,7 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U,
    v : scala.collection.Iterable[V],
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL, Int) => OTIMOFCompositeSecondEndOrderedLink,
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFCompositeSecondEndOrderedLink,
    vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
   = {
@@ -209,12 +209,12 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U,
    v : V,
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL) => OTIMOFReferenceLink)
+   ctor: (ElementLocation, ElementLocation) => OTIMOFReferenceLink)
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
     extent.copy(
       referenceLinkExtent =
-        extent.referenceLinkExtent +
+        extent.referenceLinkExtent :+
           ctor(
             ElementLocation_OTI_ID_OTI_URL(u.toolSpecific_id, ud.info.documentURL),
             ElementLocation_OTI_ID_OTI_URL(v.toolSpecific_id, vd.info.documentURL)))
@@ -225,7 +225,7 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U,
    v : scala.collection.Iterable[V],
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL) => OTIMOFReferenceLink,
+   ctor: (ElementLocation, ElementLocation) => OTIMOFReferenceLink,
    vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
   = {
@@ -247,12 +247,12 @@ case class OTIJsonSerializationHelper
    u : U,
    v : V,
    vIndex: Int,
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL, Int) => OTIMOFReferenceSecondEndOrderedLink)
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFReferenceSecondEndOrderedLink)
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
     extent.copy(
       referenceSecondEndOrderedLinkExtent =
-        extent.referenceSecondEndOrderedLinkExtent +
+        extent.referenceSecondEndOrderedLinkExtent :+
           ctor(
             ElementLocation_OTI_ID_OTI_URL(u.toolSpecific_id, ud.info.documentURL),
             ElementLocation_OTI_ID_OTI_URL(v.toolSpecific_id, vd.info.documentURL),
@@ -264,7 +264,7 @@ case class OTIJsonSerializationHelper
    ud: Document[Uml],
    u : U,
    v : Seq[V],
-   ctor: (ElementLocation_OTI_ID_OTI_URL, ElementLocation_OTI_ID_OTI_URL, Int) => OTIMOFReferenceSecondEndOrderedLink,
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFReferenceSecondEndOrderedLink,
    vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
   = {
