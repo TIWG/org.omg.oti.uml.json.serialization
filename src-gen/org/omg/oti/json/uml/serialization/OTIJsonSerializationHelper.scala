@@ -46,7 +46,6 @@ package org.omg.oti.json.uml.serialization
  */ 
 
 // <!-- Start of user code imports -->
-import org.omg.oti._
 import org.omg.oti.uml.read.api._
 import org.omg.oti.uml.read.operations._
 import org.omg.oti.json.common._
@@ -61,7 +60,7 @@ import org.omg.oti.uml.write.api.{UMLFactory, UMLUpdate}
 import org.omg.oti.uml.xmi.Document
 
 import scala.collection.immutable._
-import scala.{Boolean, Double, Function1, Int, Option}
+import scala.{Boolean, Double, Function1, Int, Option, Some}
 import scala.Predef.Integer2int
 // <!-- End of user code imports -->
 
@@ -259,7 +258,7 @@ case class OTIJsonSerializationHelper
 
   // <!-- End of user code additions -->
 
-  val otiJsonElementHelper = OTIJsonElementHelper(odsa.oa, odsa.ds)
+  val otiJsonElementHelper = OTIJsonElementHelper(odsa.otiAdapter, Some(odsa.ds))
 
   def addToOTIDocumentExtent
   (extent: OTIDocumentExtent,

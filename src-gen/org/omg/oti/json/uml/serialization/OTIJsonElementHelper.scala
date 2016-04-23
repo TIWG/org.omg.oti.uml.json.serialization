@@ -57,12 +57,9 @@ import org.omg.oti.uml.xmi.Document
 import org.omg.oti.json.common._
 import org.omg.oti.json.common.OTIPrimitiveTypes.TOOL_SPECIFIC_ID
 import org.omg.oti.json.uml._
-import org.omg.oti.json.uml.enums._
 
-import scala.collection.immutable._
 import scala.{Boolean,Double,Int,Option,None}
-import scala.Predef.{require,String}
-import scalaz.@@
+import scala.Predef.{require,Integer2int}
 // <!-- End of user code imports -->
 
 object OTIJsonElementHelper {
@@ -125,7 +122,7 @@ case class OTIJsonElementHelper
       }
     }
   }
-  
+
   // <!-- End of user code additions -->
 
   def toOTIMOFElement
