@@ -4,6 +4,7 @@ Bundle-Name: Serialization
 Bundle-SymbolicName: org.omg.oti.uml.json.serialization;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.omg.oti;bundle-version="0.19.0";visibility:=reexport,
- org.omg.oti.uml.json;bundle-version="1.0.0";visibility:=reexport
+ org.omg.oti.uml.json;bundle-version="1.0.0";visibility:=reexport,
+ org.omg.oti.uml.canonicalXMI;bundle-version="0.19.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
