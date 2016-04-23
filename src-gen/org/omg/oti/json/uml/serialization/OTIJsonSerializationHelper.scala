@@ -259,461 +259,212 @@ case class OTIJsonSerializationHelper
 
   // <!-- End of user code additions -->
 
+  val otiJsonElementHelper = OTIJsonElementHelper(odsa.oa, odsa.ds)
+
   def addToOTIDocumentExtent
   (extent: OTIDocumentExtent,
    u: UMLElement[Uml])
   (implicit ops: UMLOps[Uml])
   : OTIDocumentExtent
   = u match {
-    case uu: UMLAcceptCallAction[Uml] => toOTI(extent, uu)
-    case uu: UMLActionExecutionSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLActionInputPin[Uml] => toOTI(extent, uu)
-    case uu: UMLActivity[Uml] => toOTI(extent, uu)
-    case uu: UMLActivityFinalNode[Uml] => toOTI(extent, uu)
-    case uu: UMLActivityParameterNode[Uml] => toOTI(extent, uu)
-    case uu: UMLActivityPartition[Uml] => toOTI(extent, uu)
-    case uu: UMLActor[Uml] => toOTI(extent, uu)
-    case uu: UMLAddStructuralFeatureValueAction[Uml] => toOTI(extent, uu)
-    case uu: UMLAddVariableValueAction[Uml] => toOTI(extent, uu)
-    case uu: UMLAnyReceiveEvent[Uml] => toOTI(extent, uu)
-    case uu: UMLAssociationClass[Uml] => toOTI(extent, uu)
-    case uu: UMLBehaviorExecutionSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLBroadcastSignalAction[Uml] => toOTI(extent, uu)
-    case uu: UMLCallBehaviorAction[Uml] => toOTI(extent, uu)
-    case uu: UMLCallEvent[Uml] => toOTI(extent, uu)
-    case uu: UMLCallOperationAction[Uml] => toOTI(extent, uu)
-    case uu: UMLChangeEvent[Uml] => toOTI(extent, uu)
-    case uu: UMLClassifierTemplateParameter[Uml] => toOTI(extent, uu)
-    case uu: UMLClause[Uml] => toOTI(extent, uu)
-    case uu: UMLClearAssociationAction[Uml] => toOTI(extent, uu)
-    case uu: UMLClearStructuralFeatureAction[Uml] => toOTI(extent, uu)
-    case uu: UMLClearVariableAction[Uml] => toOTI(extent, uu)
-    case uu: UMLCollaboration[Uml] => toOTI(extent, uu)
-    case uu: UMLCollaborationUse[Uml] => toOTI(extent, uu)
-    case uu: UMLComment[Uml] => toOTI(extent, uu)
-    case uu: UMLCommunicationPath[Uml] => toOTI(extent, uu)
-    case uu: UMLComponent[Uml] => toOTI(extent, uu)
-    case uu: UMLComponentRealization[Uml] => toOTI(extent, uu)
-    case uu: UMLConditionalNode[Uml] => toOTI(extent, uu)
-    case uu: UMLConnectableElementTemplateParameter[Uml] => toOTI(extent, uu)
-    case uu: UMLConnectionPointReference[Uml] => toOTI(extent, uu)
-    case uu: UMLConnector[Uml] => toOTI(extent, uu)
-    case uu: UMLConnectorEnd[Uml] => toOTI(extent, uu)
-    case uu: UMLConsiderIgnoreFragment[Uml] => toOTI(extent, uu)
-    case uu: UMLContinuation[Uml] => toOTI(extent, uu)
-    case uu: UMLControlFlow[Uml] => toOTI(extent, uu)
-    case uu: UMLCreateLinkObjectAction[Uml] => toOTI(extent, uu)
-    case uu: UMLCreateObjectAction[Uml] => toOTI(extent, uu)
-    case uu: UMLDataStoreNode[Uml] => toOTI(extent, uu)
-    case uu: UMLDecisionNode[Uml] => toOTI(extent, uu)
-    case uu: UMLDeployment[Uml] => toOTI(extent, uu)
-    case uu: UMLDeploymentSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLDestroyLinkAction[Uml] => toOTI(extent, uu)
-    case uu: UMLDestroyObjectAction[Uml] => toOTI(extent, uu)
-    case uu: UMLDestructionOccurrenceSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLDevice[Uml] => toOTI(extent, uu)
-    case uu: UMLDuration[Uml] => toOTI(extent, uu)
-    case uu: UMLDurationConstraint[Uml] => toOTI(extent, uu)
-    case uu: UMLDurationInterval[Uml] => toOTI(extent, uu)
-    case uu: UMLDurationObservation[Uml] => toOTI(extent, uu)
-    case uu: UMLElementImport[Uml] => toOTI(extent, uu)
-    case uu: UMLElementValue[Uml] => toOTI(extent, uu)
-    case uu: UMLEnumeration[Uml] => toOTI(extent, uu)
-    case uu: UMLEnumerationLiteral[Uml] => toOTI(extent, uu)
-    case uu: UMLExceptionHandler[Uml] => toOTI(extent, uu)
-    case uu: UMLExecutionEnvironment[Uml] => toOTI(extent, uu)
-    case uu: UMLExecutionOccurrenceSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLExpansionNode[Uml] => toOTI(extent, uu)
-    case uu: UMLExpansionRegion[Uml] => toOTI(extent, uu)
-    case uu: UMLExtend[Uml] => toOTI(extent, uu)
-    case uu: UMLExtension[Uml] => toOTI(extent, uu)
-    case uu: UMLExtensionEnd[Uml] => toOTI(extent, uu)
-    case uu: UMLExtensionPoint[Uml] => toOTI(extent, uu)
-    case uu: UMLFinalState[Uml] => toOTI(extent, uu)
-    case uu: UMLFlowFinalNode[Uml] => toOTI(extent, uu)
-    case uu: UMLForkNode[Uml] => toOTI(extent, uu)
-    case uu: UMLFunctionBehavior[Uml] => toOTI(extent, uu)
-    case uu: UMLGate[Uml] => toOTI(extent, uu)
-    case uu: UMLGeneralOrdering[Uml] => toOTI(extent, uu)
-    case uu: UMLGeneralization[Uml] => toOTI(extent, uu)
-    case uu: UMLGeneralizationSet[Uml] => toOTI(extent, uu)
-    case uu: UMLImage[Uml] => toOTI(extent, uu)
-    case uu: UMLInclude[Uml] => toOTI(extent, uu)
-    case uu: UMLInformationFlow[Uml] => toOTI(extent, uu)
-    case uu: UMLInformationItem[Uml] => toOTI(extent, uu)
-    case uu: UMLInitialNode[Uml] => toOTI(extent, uu)
-    case uu: UMLInstanceValue[Uml] => toOTI(extent, uu)
-    case uu: UMLInteraction[Uml] => toOTI(extent, uu)
-    case uu: UMLInteractionConstraint[Uml] => toOTI(extent, uu)
-    case uu: UMLInteractionOperand[Uml] => toOTI(extent, uu)
-    case uu: UMLInterface[Uml] => toOTI(extent, uu)
-    case uu: UMLInterfaceRealization[Uml] => toOTI(extent, uu)
-    case uu: UMLInterruptibleActivityRegion[Uml] => toOTI(extent, uu)
-    case uu: UMLJoinNode[Uml] => toOTI(extent, uu)
-    case uu: UMLLifeline[Uml] => toOTI(extent, uu)
-    case uu: UMLLinkEndCreationData[Uml] => toOTI(extent, uu)
-    case uu: UMLLinkEndDestructionData[Uml] => toOTI(extent, uu)
-    case uu: UMLLiteralBoolean[Uml] => toOTI(extent, uu)
-    case uu: UMLLiteralInteger[Uml] => toOTI(extent, uu)
-    case uu: UMLLiteralNull[Uml] => toOTI(extent, uu)
-    case uu: UMLLiteralReal[Uml] => toOTI(extent, uu)
-    case uu: UMLLiteralString[Uml] => toOTI(extent, uu)
-    case uu: UMLLiteralUnlimitedNatural[Uml] => toOTI(extent, uu)
-    case uu: UMLLoopNode[Uml] => toOTI(extent, uu)
-    case uu: UMLManifestation[Uml] => toOTI(extent, uu)
-    case uu: UMLMergeNode[Uml] => toOTI(extent, uu)
-    case uu: UMLMessage[Uml] => toOTI(extent, uu)
-    case uu: UMLModel[Uml] => toOTI(extent, uu)
-    case uu: UMLObjectFlow[Uml] => toOTI(extent, uu)
-    case uu: UMLOpaqueAction[Uml] => toOTI(extent, uu)
-    case uu: UMLOpaqueExpression[Uml] => toOTI(extent, uu)
-    case uu: UMLOperation[Uml] => toOTI(extent, uu)
-    case uu: UMLOperationTemplateParameter[Uml] => toOTI(extent, uu)
-    case uu: UMLOutputPin[Uml] => toOTI(extent, uu)
-    case uu: UMLPackageImport[Uml] => toOTI(extent, uu)
-    case uu: UMLPackageMerge[Uml] => toOTI(extent, uu)
-    case uu: UMLParameter[Uml] => toOTI(extent, uu)
-    case uu: UMLParameterSet[Uml] => toOTI(extent, uu)
-    case uu: UMLPartDecomposition[Uml] => toOTI(extent, uu)
-    case uu: UMLPort[Uml] => toOTI(extent, uu)
-    case uu: UMLPrimitiveType[Uml] => toOTI(extent, uu)
-    case uu: UMLProfile[Uml] => toOTI(extent, uu)
-    case uu: UMLProfileApplication[Uml] => toOTI(extent, uu)
-    case uu: UMLProtocolConformance[Uml] => toOTI(extent, uu)
-    case uu: UMLProtocolStateMachine[Uml] => toOTI(extent, uu)
-    case uu: UMLProtocolTransition[Uml] => toOTI(extent, uu)
-    case uu: UMLPseudostate[Uml] => toOTI(extent, uu)
-    case uu: UMLQualifierValue[Uml] => toOTI(extent, uu)
-    case uu: UMLRaiseExceptionAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadExtentAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadIsClassifiedObjectAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadLinkAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadLinkObjectEndAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadLinkObjectEndQualifierAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadSelfAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadStructuralFeatureAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReadVariableAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReception[Uml] => toOTI(extent, uu)
-    case uu: UMLReclassifyObjectAction[Uml] => toOTI(extent, uu)
-    case uu: UMLRedefinableTemplateSignature[Uml] => toOTI(extent, uu)
-    case uu: UMLReduceAction[Uml] => toOTI(extent, uu)
-    case uu: UMLRegion[Uml] => toOTI(extent, uu)
-    case uu: UMLRemoveStructuralFeatureValueAction[Uml] => toOTI(extent, uu)
-    case uu: UMLRemoveVariableValueAction[Uml] => toOTI(extent, uu)
-    case uu: UMLReplyAction[Uml] => toOTI(extent, uu)
-    case uu: UMLSendObjectAction[Uml] => toOTI(extent, uu)
-    case uu: UMLSendSignalAction[Uml] => toOTI(extent, uu)
-    case uu: UMLSequenceNode[Uml] => toOTI(extent, uu)
-    case uu: UMLSignal[Uml] => toOTI(extent, uu)
-    case uu: UMLSignalEvent[Uml] => toOTI(extent, uu)
-    case uu: UMLSlot[Uml] => toOTI(extent, uu)
-    case uu: UMLStartClassifierBehaviorAction[Uml] => toOTI(extent, uu)
-    case uu: UMLStartObjectBehaviorAction[Uml] => toOTI(extent, uu)
-    case uu: UMLStateInvariant[Uml] => toOTI(extent, uu)
-    case uu: UMLStereotype[Uml] => toOTI(extent, uu)
-    case uu: UMLStringExpression[Uml] => toOTI(extent, uu)
-    case uu: UMLSubstitution[Uml] => toOTI(extent, uu)
-    case uu: UMLTemplateBinding[Uml] => toOTI(extent, uu)
-    case uu: UMLTemplateParameterSubstitution[Uml] => toOTI(extent, uu)
-    case uu: UMLTestIdentityAction[Uml] => toOTI(extent, uu)
-    case uu: UMLTimeConstraint[Uml] => toOTI(extent, uu)
-    case uu: UMLTimeEvent[Uml] => toOTI(extent, uu)
-    case uu: UMLTimeExpression[Uml] => toOTI(extent, uu)
-    case uu: UMLTimeInterval[Uml] => toOTI(extent, uu)
-    case uu: UMLTimeObservation[Uml] => toOTI(extent, uu)
-    case uu: UMLTrigger[Uml] => toOTI(extent, uu)
-    case uu: UMLUnmarshallAction[Uml] => toOTI(extent, uu)
-    case uu: UMLUsage[Uml] => toOTI(extent, uu)
-    case uu: UMLUseCase[Uml] => toOTI(extent, uu)
-    case uu: UMLValuePin[Uml] => toOTI(extent, uu)
-    case uu: UMLValueSpecificationAction[Uml] => toOTI(extent, uu)
-    case uu: UMLVariable[Uml] => toOTI(extent, uu)
-    case uu: UMLAcceptEventAction[Uml] => toOTI(extent, uu)
-    case uu: UMLArtifact[Uml] => toOTI(extent, uu)
-    case uu: UMLAssociation[Uml] => toOTI(extent, uu)
-    case uu: UMLCentralBufferNode[Uml] => toOTI(extent, uu)
-    case uu: UMLCombinedFragment[Uml] => toOTI(extent, uu)
-    case uu: UMLCreateLinkAction[Uml] => toOTI(extent, uu)
-    case uu: UMLDataType[Uml] => toOTI(extent, uu)
-    case uu: UMLExpression[Uml] => toOTI(extent, uu)
-    case uu: UMLInputPin[Uml] => toOTI(extent, uu)
-    case uu: UMLInstanceSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLInteractionUse[Uml] => toOTI(extent, uu)
-    case uu: UMLInterval[Uml] => toOTI(extent, uu)
-    case uu: UMLIntervalConstraint[Uml] => toOTI(extent, uu)
-    case uu: UMLLinkEndData[Uml] => toOTI(extent, uu)
-    case uu: UMLMessageOccurrenceSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLNode[Uml] => toOTI(extent, uu)
-    case uu: UMLOpaqueBehavior[Uml] => toOTI(extent, uu)
-    case uu: UMLPackage[Uml] => toOTI(extent, uu)
-    case uu: UMLProperty[Uml] => toOTI(extent, uu)
-    case uu: UMLRealization[Uml] => toOTI(extent, uu)
-    case uu: UMLState[Uml] => toOTI(extent, uu)
-    case uu: UMLStateMachine[Uml] => toOTI(extent, uu)
-    case uu: UMLStructuredActivityNode[Uml] => toOTI(extent, uu)
-    case uu: UMLTemplateParameter[Uml] => toOTI(extent, uu)
-    case uu: UMLTemplateSignature[Uml] => toOTI(extent, uu)
-    case uu: UMLTransition[Uml] => toOTI(extent, uu)
-    case uu: UMLAbstraction[Uml] => toOTI(extent, uu)
-    case uu: UMLClass[Uml] => toOTI(extent, uu)
-    case uu: UMLConstraint[Uml] => toOTI(extent, uu)
-    case uu: UMLOccurrenceSpecification[Uml] => toOTI(extent, uu)
-    case uu: UMLDependency[Uml] => toOTI(extent, uu)
+    case uu: UMLAcceptCallAction[Uml] => addOTIUMLAcceptCallAction(extent, uu)
+    case uu: UMLActionExecutionSpecification[Uml] => addOTIUMLActionExecutionSpecification(extent, uu)
+    case uu: UMLActionInputPin[Uml] => addOTIUMLActionInputPin(extent, uu)
+    case uu: UMLActivity[Uml] => addOTIUMLActivity(extent, uu)
+    case uu: UMLActivityFinalNode[Uml] => addOTIUMLActivityFinalNode(extent, uu)
+    case uu: UMLActivityParameterNode[Uml] => addOTIUMLActivityParameterNode(extent, uu)
+    case uu: UMLActivityPartition[Uml] => addOTIUMLActivityPartition(extent, uu)
+    case uu: UMLActor[Uml] => addOTIUMLActor(extent, uu)
+    case uu: UMLAddStructuralFeatureValueAction[Uml] => addOTIUMLAddStructuralFeatureValueAction(extent, uu)
+    case uu: UMLAddVariableValueAction[Uml] => addOTIUMLAddVariableValueAction(extent, uu)
+    case uu: UMLAnyReceiveEvent[Uml] => addOTIUMLAnyReceiveEvent(extent, uu)
+    case uu: UMLAssociationClass[Uml] => addOTIUMLAssociationClass(extent, uu)
+    case uu: UMLBehaviorExecutionSpecification[Uml] => addOTIUMLBehaviorExecutionSpecification(extent, uu)
+    case uu: UMLBroadcastSignalAction[Uml] => addOTIUMLBroadcastSignalAction(extent, uu)
+    case uu: UMLCallBehaviorAction[Uml] => addOTIUMLCallBehaviorAction(extent, uu)
+    case uu: UMLCallEvent[Uml] => addOTIUMLCallEvent(extent, uu)
+    case uu: UMLCallOperationAction[Uml] => addOTIUMLCallOperationAction(extent, uu)
+    case uu: UMLChangeEvent[Uml] => addOTIUMLChangeEvent(extent, uu)
+    case uu: UMLClassifierTemplateParameter[Uml] => addOTIUMLClassifierTemplateParameter(extent, uu)
+    case uu: UMLClause[Uml] => addOTIUMLClause(extent, uu)
+    case uu: UMLClearAssociationAction[Uml] => addOTIUMLClearAssociationAction(extent, uu)
+    case uu: UMLClearStructuralFeatureAction[Uml] => addOTIUMLClearStructuralFeatureAction(extent, uu)
+    case uu: UMLClearVariableAction[Uml] => addOTIUMLClearVariableAction(extent, uu)
+    case uu: UMLCollaboration[Uml] => addOTIUMLCollaboration(extent, uu)
+    case uu: UMLCollaborationUse[Uml] => addOTIUMLCollaborationUse(extent, uu)
+    case uu: UMLComment[Uml] => addOTIUMLComment(extent, uu)
+    case uu: UMLCommunicationPath[Uml] => addOTIUMLCommunicationPath(extent, uu)
+    case uu: UMLComponent[Uml] => addOTIUMLComponent(extent, uu)
+    case uu: UMLComponentRealization[Uml] => addOTIUMLComponentRealization(extent, uu)
+    case uu: UMLConditionalNode[Uml] => addOTIUMLConditionalNode(extent, uu)
+    case uu: UMLConnectableElementTemplateParameter[Uml] => addOTIUMLConnectableElementTemplateParameter(extent, uu)
+    case uu: UMLConnectionPointReference[Uml] => addOTIUMLConnectionPointReference(extent, uu)
+    case uu: UMLConnector[Uml] => addOTIUMLConnector(extent, uu)
+    case uu: UMLConnectorEnd[Uml] => addOTIUMLConnectorEnd(extent, uu)
+    case uu: UMLConsiderIgnoreFragment[Uml] => addOTIUMLConsiderIgnoreFragment(extent, uu)
+    case uu: UMLContinuation[Uml] => addOTIUMLContinuation(extent, uu)
+    case uu: UMLControlFlow[Uml] => addOTIUMLControlFlow(extent, uu)
+    case uu: UMLCreateLinkObjectAction[Uml] => addOTIUMLCreateLinkObjectAction(extent, uu)
+    case uu: UMLCreateObjectAction[Uml] => addOTIUMLCreateObjectAction(extent, uu)
+    case uu: UMLDataStoreNode[Uml] => addOTIUMLDataStoreNode(extent, uu)
+    case uu: UMLDecisionNode[Uml] => addOTIUMLDecisionNode(extent, uu)
+    case uu: UMLDeployment[Uml] => addOTIUMLDeployment(extent, uu)
+    case uu: UMLDeploymentSpecification[Uml] => addOTIUMLDeploymentSpecification(extent, uu)
+    case uu: UMLDestroyLinkAction[Uml] => addOTIUMLDestroyLinkAction(extent, uu)
+    case uu: UMLDestroyObjectAction[Uml] => addOTIUMLDestroyObjectAction(extent, uu)
+    case uu: UMLDestructionOccurrenceSpecification[Uml] => addOTIUMLDestructionOccurrenceSpecification(extent, uu)
+    case uu: UMLDevice[Uml] => addOTIUMLDevice(extent, uu)
+    case uu: UMLDuration[Uml] => addOTIUMLDuration(extent, uu)
+    case uu: UMLDurationConstraint[Uml] => addOTIUMLDurationConstraint(extent, uu)
+    case uu: UMLDurationInterval[Uml] => addOTIUMLDurationInterval(extent, uu)
+    case uu: UMLDurationObservation[Uml] => addOTIUMLDurationObservation(extent, uu)
+    case uu: UMLElementImport[Uml] => addOTIUMLElementImport(extent, uu)
+    case uu: UMLElementValue[Uml] => addOTIUMLElementValue(extent, uu)
+    case uu: UMLEnumeration[Uml] => addOTIUMLEnumeration(extent, uu)
+    case uu: UMLEnumerationLiteral[Uml] => addOTIUMLEnumerationLiteral(extent, uu)
+    case uu: UMLExceptionHandler[Uml] => addOTIUMLExceptionHandler(extent, uu)
+    case uu: UMLExecutionEnvironment[Uml] => addOTIUMLExecutionEnvironment(extent, uu)
+    case uu: UMLExecutionOccurrenceSpecification[Uml] => addOTIUMLExecutionOccurrenceSpecification(extent, uu)
+    case uu: UMLExpansionNode[Uml] => addOTIUMLExpansionNode(extent, uu)
+    case uu: UMLExpansionRegion[Uml] => addOTIUMLExpansionRegion(extent, uu)
+    case uu: UMLExtend[Uml] => addOTIUMLExtend(extent, uu)
+    case uu: UMLExtension[Uml] => addOTIUMLExtension(extent, uu)
+    case uu: UMLExtensionEnd[Uml] => addOTIUMLExtensionEnd(extent, uu)
+    case uu: UMLExtensionPoint[Uml] => addOTIUMLExtensionPoint(extent, uu)
+    case uu: UMLFinalState[Uml] => addOTIUMLFinalState(extent, uu)
+    case uu: UMLFlowFinalNode[Uml] => addOTIUMLFlowFinalNode(extent, uu)
+    case uu: UMLForkNode[Uml] => addOTIUMLForkNode(extent, uu)
+    case uu: UMLFunctionBehavior[Uml] => addOTIUMLFunctionBehavior(extent, uu)
+    case uu: UMLGate[Uml] => addOTIUMLGate(extent, uu)
+    case uu: UMLGeneralOrdering[Uml] => addOTIUMLGeneralOrdering(extent, uu)
+    case uu: UMLGeneralization[Uml] => addOTIUMLGeneralization(extent, uu)
+    case uu: UMLGeneralizationSet[Uml] => addOTIUMLGeneralizationSet(extent, uu)
+    case uu: UMLImage[Uml] => addOTIUMLImage(extent, uu)
+    case uu: UMLInclude[Uml] => addOTIUMLInclude(extent, uu)
+    case uu: UMLInformationFlow[Uml] => addOTIUMLInformationFlow(extent, uu)
+    case uu: UMLInformationItem[Uml] => addOTIUMLInformationItem(extent, uu)
+    case uu: UMLInitialNode[Uml] => addOTIUMLInitialNode(extent, uu)
+    case uu: UMLInstanceValue[Uml] => addOTIUMLInstanceValue(extent, uu)
+    case uu: UMLInteraction[Uml] => addOTIUMLInteraction(extent, uu)
+    case uu: UMLInteractionConstraint[Uml] => addOTIUMLInteractionConstraint(extent, uu)
+    case uu: UMLInteractionOperand[Uml] => addOTIUMLInteractionOperand(extent, uu)
+    case uu: UMLInterface[Uml] => addOTIUMLInterface(extent, uu)
+    case uu: UMLInterfaceRealization[Uml] => addOTIUMLInterfaceRealization(extent, uu)
+    case uu: UMLInterruptibleActivityRegion[Uml] => addOTIUMLInterruptibleActivityRegion(extent, uu)
+    case uu: UMLJoinNode[Uml] => addOTIUMLJoinNode(extent, uu)
+    case uu: UMLLifeline[Uml] => addOTIUMLLifeline(extent, uu)
+    case uu: UMLLinkEndCreationData[Uml] => addOTIUMLLinkEndCreationData(extent, uu)
+    case uu: UMLLinkEndDestructionData[Uml] => addOTIUMLLinkEndDestructionData(extent, uu)
+    case uu: UMLLiteralBoolean[Uml] => addOTIUMLLiteralBoolean(extent, uu)
+    case uu: UMLLiteralInteger[Uml] => addOTIUMLLiteralInteger(extent, uu)
+    case uu: UMLLiteralNull[Uml] => addOTIUMLLiteralNull(extent, uu)
+    case uu: UMLLiteralReal[Uml] => addOTIUMLLiteralReal(extent, uu)
+    case uu: UMLLiteralString[Uml] => addOTIUMLLiteralString(extent, uu)
+    case uu: UMLLiteralUnlimitedNatural[Uml] => addOTIUMLLiteralUnlimitedNatural(extent, uu)
+    case uu: UMLLoopNode[Uml] => addOTIUMLLoopNode(extent, uu)
+    case uu: UMLManifestation[Uml] => addOTIUMLManifestation(extent, uu)
+    case uu: UMLMergeNode[Uml] => addOTIUMLMergeNode(extent, uu)
+    case uu: UMLMessage[Uml] => addOTIUMLMessage(extent, uu)
+    case uu: UMLModel[Uml] => addOTIUMLModel(extent, uu)
+    case uu: UMLObjectFlow[Uml] => addOTIUMLObjectFlow(extent, uu)
+    case uu: UMLOpaqueAction[Uml] => addOTIUMLOpaqueAction(extent, uu)
+    case uu: UMLOpaqueExpression[Uml] => addOTIUMLOpaqueExpression(extent, uu)
+    case uu: UMLOperation[Uml] => addOTIUMLOperation(extent, uu)
+    case uu: UMLOperationTemplateParameter[Uml] => addOTIUMLOperationTemplateParameter(extent, uu)
+    case uu: UMLOutputPin[Uml] => addOTIUMLOutputPin(extent, uu)
+    case uu: UMLPackageImport[Uml] => addOTIUMLPackageImport(extent, uu)
+    case uu: UMLPackageMerge[Uml] => addOTIUMLPackageMerge(extent, uu)
+    case uu: UMLParameter[Uml] => addOTIUMLParameter(extent, uu)
+    case uu: UMLParameterSet[Uml] => addOTIUMLParameterSet(extent, uu)
+    case uu: UMLPartDecomposition[Uml] => addOTIUMLPartDecomposition(extent, uu)
+    case uu: UMLPort[Uml] => addOTIUMLPort(extent, uu)
+    case uu: UMLPrimitiveType[Uml] => addOTIUMLPrimitiveType(extent, uu)
+    case uu: UMLProfile[Uml] => addOTIUMLProfile(extent, uu)
+    case uu: UMLProfileApplication[Uml] => addOTIUMLProfileApplication(extent, uu)
+    case uu: UMLProtocolConformance[Uml] => addOTIUMLProtocolConformance(extent, uu)
+    case uu: UMLProtocolStateMachine[Uml] => addOTIUMLProtocolStateMachine(extent, uu)
+    case uu: UMLProtocolTransition[Uml] => addOTIUMLProtocolTransition(extent, uu)
+    case uu: UMLPseudostate[Uml] => addOTIUMLPseudostate(extent, uu)
+    case uu: UMLQualifierValue[Uml] => addOTIUMLQualifierValue(extent, uu)
+    case uu: UMLRaiseExceptionAction[Uml] => addOTIUMLRaiseExceptionAction(extent, uu)
+    case uu: UMLReadExtentAction[Uml] => addOTIUMLReadExtentAction(extent, uu)
+    case uu: UMLReadIsClassifiedObjectAction[Uml] => addOTIUMLReadIsClassifiedObjectAction(extent, uu)
+    case uu: UMLReadLinkAction[Uml] => addOTIUMLReadLinkAction(extent, uu)
+    case uu: UMLReadLinkObjectEndAction[Uml] => addOTIUMLReadLinkObjectEndAction(extent, uu)
+    case uu: UMLReadLinkObjectEndQualifierAction[Uml] => addOTIUMLReadLinkObjectEndQualifierAction(extent, uu)
+    case uu: UMLReadSelfAction[Uml] => addOTIUMLReadSelfAction(extent, uu)
+    case uu: UMLReadStructuralFeatureAction[Uml] => addOTIUMLReadStructuralFeatureAction(extent, uu)
+    case uu: UMLReadVariableAction[Uml] => addOTIUMLReadVariableAction(extent, uu)
+    case uu: UMLReception[Uml] => addOTIUMLReception(extent, uu)
+    case uu: UMLReclassifyObjectAction[Uml] => addOTIUMLReclassifyObjectAction(extent, uu)
+    case uu: UMLRedefinableTemplateSignature[Uml] => addOTIUMLRedefinableTemplateSignature(extent, uu)
+    case uu: UMLReduceAction[Uml] => addOTIUMLReduceAction(extent, uu)
+    case uu: UMLRegion[Uml] => addOTIUMLRegion(extent, uu)
+    case uu: UMLRemoveStructuralFeatureValueAction[Uml] => addOTIUMLRemoveStructuralFeatureValueAction(extent, uu)
+    case uu: UMLRemoveVariableValueAction[Uml] => addOTIUMLRemoveVariableValueAction(extent, uu)
+    case uu: UMLReplyAction[Uml] => addOTIUMLReplyAction(extent, uu)
+    case uu: UMLSendObjectAction[Uml] => addOTIUMLSendObjectAction(extent, uu)
+    case uu: UMLSendSignalAction[Uml] => addOTIUMLSendSignalAction(extent, uu)
+    case uu: UMLSequenceNode[Uml] => addOTIUMLSequenceNode(extent, uu)
+    case uu: UMLSignal[Uml] => addOTIUMLSignal(extent, uu)
+    case uu: UMLSignalEvent[Uml] => addOTIUMLSignalEvent(extent, uu)
+    case uu: UMLSlot[Uml] => addOTIUMLSlot(extent, uu)
+    case uu: UMLStartClassifierBehaviorAction[Uml] => addOTIUMLStartClassifierBehaviorAction(extent, uu)
+    case uu: UMLStartObjectBehaviorAction[Uml] => addOTIUMLStartObjectBehaviorAction(extent, uu)
+    case uu: UMLStateInvariant[Uml] => addOTIUMLStateInvariant(extent, uu)
+    case uu: UMLStereotype[Uml] => addOTIUMLStereotype(extent, uu)
+    case uu: UMLStringExpression[Uml] => addOTIUMLStringExpression(extent, uu)
+    case uu: UMLSubstitution[Uml] => addOTIUMLSubstitution(extent, uu)
+    case uu: UMLTemplateBinding[Uml] => addOTIUMLTemplateBinding(extent, uu)
+    case uu: UMLTemplateParameterSubstitution[Uml] => addOTIUMLTemplateParameterSubstitution(extent, uu)
+    case uu: UMLTestIdentityAction[Uml] => addOTIUMLTestIdentityAction(extent, uu)
+    case uu: UMLTimeConstraint[Uml] => addOTIUMLTimeConstraint(extent, uu)
+    case uu: UMLTimeEvent[Uml] => addOTIUMLTimeEvent(extent, uu)
+    case uu: UMLTimeExpression[Uml] => addOTIUMLTimeExpression(extent, uu)
+    case uu: UMLTimeInterval[Uml] => addOTIUMLTimeInterval(extent, uu)
+    case uu: UMLTimeObservation[Uml] => addOTIUMLTimeObservation(extent, uu)
+    case uu: UMLTrigger[Uml] => addOTIUMLTrigger(extent, uu)
+    case uu: UMLUnmarshallAction[Uml] => addOTIUMLUnmarshallAction(extent, uu)
+    case uu: UMLUsage[Uml] => addOTIUMLUsage(extent, uu)
+    case uu: UMLUseCase[Uml] => addOTIUMLUseCase(extent, uu)
+    case uu: UMLValuePin[Uml] => addOTIUMLValuePin(extent, uu)
+    case uu: UMLValueSpecificationAction[Uml] => addOTIUMLValueSpecificationAction(extent, uu)
+    case uu: UMLVariable[Uml] => addOTIUMLVariable(extent, uu)
+    case uu: UMLAcceptEventAction[Uml] => addOTIUMLAcceptEventAction(extent, uu)
+    case uu: UMLArtifact[Uml] => addOTIUMLArtifact(extent, uu)
+    case uu: UMLAssociation[Uml] => addOTIUMLAssociation(extent, uu)
+    case uu: UMLCentralBufferNode[Uml] => addOTIUMLCentralBufferNode(extent, uu)
+    case uu: UMLCombinedFragment[Uml] => addOTIUMLCombinedFragment(extent, uu)
+    case uu: UMLCreateLinkAction[Uml] => addOTIUMLCreateLinkAction(extent, uu)
+    case uu: UMLDataType[Uml] => addOTIUMLDataType(extent, uu)
+    case uu: UMLExpression[Uml] => addOTIUMLExpression(extent, uu)
+    case uu: UMLInputPin[Uml] => addOTIUMLInputPin(extent, uu)
+    case uu: UMLInstanceSpecification[Uml] => addOTIUMLInstanceSpecification(extent, uu)
+    case uu: UMLInteractionUse[Uml] => addOTIUMLInteractionUse(extent, uu)
+    case uu: UMLInterval[Uml] => addOTIUMLInterval(extent, uu)
+    case uu: UMLIntervalConstraint[Uml] => addOTIUMLIntervalConstraint(extent, uu)
+    case uu: UMLLinkEndData[Uml] => addOTIUMLLinkEndData(extent, uu)
+    case uu: UMLMessageOccurrenceSpecification[Uml] => addOTIUMLMessageOccurrenceSpecification(extent, uu)
+    case uu: UMLNode[Uml] => addOTIUMLNode(extent, uu)
+    case uu: UMLOpaqueBehavior[Uml] => addOTIUMLOpaqueBehavior(extent, uu)
+    case uu: UMLPackage[Uml] => addOTIUMLPackage(extent, uu)
+    case uu: UMLProperty[Uml] => addOTIUMLProperty(extent, uu)
+    case uu: UMLRealization[Uml] => addOTIUMLRealization(extent, uu)
+    case uu: UMLState[Uml] => addOTIUMLState(extent, uu)
+    case uu: UMLStateMachine[Uml] => addOTIUMLStateMachine(extent, uu)
+    case uu: UMLStructuredActivityNode[Uml] => addOTIUMLStructuredActivityNode(extent, uu)
+    case uu: UMLTemplateParameter[Uml] => addOTIUMLTemplateParameter(extent, uu)
+    case uu: UMLTemplateSignature[Uml] => addOTIUMLTemplateSignature(extent, uu)
+    case uu: UMLTransition[Uml] => addOTIUMLTransition(extent, uu)
+    case uu: UMLAbstraction[Uml] => addOTIUMLAbstraction(extent, uu)
+    case uu: UMLClass[Uml] => addOTIUMLClass(extent, uu)
+    case uu: UMLConstraint[Uml] => addOTIUMLConstraint(extent, uu)
+    case uu: UMLOccurrenceSpecification[Uml] => addOTIUMLOccurrenceSpecification(extent, uu)
+    case uu: UMLDependency[Uml] => addOTIUMLDependency(extent, uu)
     case _ => extent
   }
 
-  implicit def toOTI
-  (value: uml.read.api.UMLAggregationKind.UMLAggregationKind)
-  : json.uml.enums.UMLAggregationKind
-  = value match {
-    case uml.read.api.UMLAggregationKind.composite =>
-      json.uml.enums.UMLAggregationKind.composite
-
-    case uml.read.api.UMLAggregationKind.none =>
-      json.uml.enums.UMLAggregationKind.none
-
-    case uml.read.api.UMLAggregationKind.shared =>
-      json.uml.enums.UMLAggregationKind.shared
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLCallConcurrencyKind.UMLCallConcurrencyKind)
-  : json.uml.enums.UMLCallConcurrencyKind
-  = value match {
-    case uml.read.api.UMLCallConcurrencyKind.concurrent =>
-      json.uml.enums.UMLCallConcurrencyKind.concurrent
-
-    case uml.read.api.UMLCallConcurrencyKind.guarded =>
-      json.uml.enums.UMLCallConcurrencyKind.guarded
-
-    case uml.read.api.UMLCallConcurrencyKind.sequential =>
-      json.uml.enums.UMLCallConcurrencyKind.sequential
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLConnectorKind.UMLConnectorKind)
-  : json.uml.enums.UMLConnectorKind
-  = value match {
-    case uml.read.api.UMLConnectorKind.assembly =>
-      json.uml.enums.UMLConnectorKind.assembly
-
-    case uml.read.api.UMLConnectorKind.delegation =>
-      json.uml.enums.UMLConnectorKind.delegation
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLExpansionKind.UMLExpansionKind)
-  : json.uml.enums.UMLExpansionKind
-  = value match {
-    case uml.read.api.UMLExpansionKind.iterative =>
-      json.uml.enums.UMLExpansionKind.iterative
-
-    case uml.read.api.UMLExpansionKind.parallel =>
-      json.uml.enums.UMLExpansionKind.parallel
-
-    case uml.read.api.UMLExpansionKind.stream =>
-      json.uml.enums.UMLExpansionKind.stream
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLInteractionOperatorKind.UMLInteractionOperatorKind)
-  : json.uml.enums.UMLInteractionOperatorKind
-  = value match {
-    case uml.read.api.UMLInteractionOperatorKind.alt =>
-      json.uml.enums.UMLInteractionOperatorKind.alt
-
-    case uml.read.api.UMLInteractionOperatorKind.assert =>
-      json.uml.enums.UMLInteractionOperatorKind.assert
-
-    case uml.read.api.UMLInteractionOperatorKind.break =>
-      json.uml.enums.UMLInteractionOperatorKind.break
-
-    case uml.read.api.UMLInteractionOperatorKind.consider =>
-      json.uml.enums.UMLInteractionOperatorKind.consider
-
-    case uml.read.api.UMLInteractionOperatorKind.critical =>
-      json.uml.enums.UMLInteractionOperatorKind.critical
-
-    case uml.read.api.UMLInteractionOperatorKind.ignore =>
-      json.uml.enums.UMLInteractionOperatorKind.ignore
-
-    case uml.read.api.UMLInteractionOperatorKind.loop =>
-      json.uml.enums.UMLInteractionOperatorKind.loop
-
-    case uml.read.api.UMLInteractionOperatorKind.neg =>
-      json.uml.enums.UMLInteractionOperatorKind.neg
-
-    case uml.read.api.UMLInteractionOperatorKind.opt =>
-      json.uml.enums.UMLInteractionOperatorKind.opt
-
-    case uml.read.api.UMLInteractionOperatorKind.par =>
-      json.uml.enums.UMLInteractionOperatorKind.par
-
-    case uml.read.api.UMLInteractionOperatorKind.seq =>
-      json.uml.enums.UMLInteractionOperatorKind.seq
-
-    case uml.read.api.UMLInteractionOperatorKind.strict =>
-      json.uml.enums.UMLInteractionOperatorKind.strict
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLMessageKind.UMLMessageKind)
-  : json.uml.enums.UMLMessageKind
-  = value match {
-    case uml.read.api.UMLMessageKind.complete =>
-      json.uml.enums.UMLMessageKind.complete
-
-    case uml.read.api.UMLMessageKind.found =>
-      json.uml.enums.UMLMessageKind.found
-
-    case uml.read.api.UMLMessageKind.lost =>
-      json.uml.enums.UMLMessageKind.lost
-
-    case uml.read.api.UMLMessageKind.unknown =>
-      json.uml.enums.UMLMessageKind.unknown
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLMessageSort.UMLMessageSort)
-  : json.uml.enums.UMLMessageSort
-  = value match {
-    case uml.read.api.UMLMessageSort.asynchCall =>
-      json.uml.enums.UMLMessageSort.asynchCall
-
-    case uml.read.api.UMLMessageSort.asynchSignal =>
-      json.uml.enums.UMLMessageSort.asynchSignal
-
-    case uml.read.api.UMLMessageSort.createMessage =>
-      json.uml.enums.UMLMessageSort.createMessage
-
-    case uml.read.api.UMLMessageSort.deleteMessage =>
-      json.uml.enums.UMLMessageSort.deleteMessage
-
-    case uml.read.api.UMLMessageSort.reply =>
-      json.uml.enums.UMLMessageSort.reply
-
-    case uml.read.api.UMLMessageSort.synchCall =>
-      json.uml.enums.UMLMessageSort.synchCall
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLObjectNodeOrderingKind.UMLObjectNodeOrderingKind)
-  : json.uml.enums.UMLObjectNodeOrderingKind
-  = value match {
-    case uml.read.api.UMLObjectNodeOrderingKind.FIFO =>
-      json.uml.enums.UMLObjectNodeOrderingKind.FIFO
-
-    case uml.read.api.UMLObjectNodeOrderingKind.LIFO =>
-      json.uml.enums.UMLObjectNodeOrderingKind.LIFO
-
-    case uml.read.api.UMLObjectNodeOrderingKind.ordered =>
-      json.uml.enums.UMLObjectNodeOrderingKind.ordered
-
-    case uml.read.api.UMLObjectNodeOrderingKind.unordered =>
-      json.uml.enums.UMLObjectNodeOrderingKind.unordered
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLParameterDirectionKind.UMLParameterDirectionKind)
-  : json.uml.enums.UMLParameterDirectionKind
-  = value match {
-    case uml.read.api.UMLParameterDirectionKind._return =>
-      json.uml.enums.UMLParameterDirectionKind._return
-
-    case uml.read.api.UMLParameterDirectionKind.in =>
-      json.uml.enums.UMLParameterDirectionKind.in
-
-    case uml.read.api.UMLParameterDirectionKind.inout =>
-      json.uml.enums.UMLParameterDirectionKind.inout
-
-    case uml.read.api.UMLParameterDirectionKind.out =>
-      json.uml.enums.UMLParameterDirectionKind.out
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLParameterEffectKind.UMLParameterEffectKind)
-  : json.uml.enums.UMLParameterEffectKind
-  = value match {
-    case uml.read.api.UMLParameterEffectKind.create =>
-      json.uml.enums.UMLParameterEffectKind.create
-
-    case uml.read.api.UMLParameterEffectKind.delete =>
-      json.uml.enums.UMLParameterEffectKind.delete
-
-    case uml.read.api.UMLParameterEffectKind.read =>
-      json.uml.enums.UMLParameterEffectKind.read
-
-    case uml.read.api.UMLParameterEffectKind.update =>
-      json.uml.enums.UMLParameterEffectKind.update
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLPseudostateKind.UMLPseudostateKind)
-  : json.uml.enums.UMLPseudostateKind
-  = value match {
-    case uml.read.api.UMLPseudostateKind.choice =>
-      json.uml.enums.UMLPseudostateKind.choice
-
-    case uml.read.api.UMLPseudostateKind.deepHistory =>
-      json.uml.enums.UMLPseudostateKind.deepHistory
-
-    case uml.read.api.UMLPseudostateKind.entryPoint =>
-      json.uml.enums.UMLPseudostateKind.entryPoint
-
-    case uml.read.api.UMLPseudostateKind.exitPoint =>
-      json.uml.enums.UMLPseudostateKind.exitPoint
-
-    case uml.read.api.UMLPseudostateKind.fork =>
-      json.uml.enums.UMLPseudostateKind.fork
-
-    case uml.read.api.UMLPseudostateKind.initial =>
-      json.uml.enums.UMLPseudostateKind.initial
-
-    case uml.read.api.UMLPseudostateKind.join =>
-      json.uml.enums.UMLPseudostateKind.join
-
-    case uml.read.api.UMLPseudostateKind.junction =>
-      json.uml.enums.UMLPseudostateKind.junction
-
-    case uml.read.api.UMLPseudostateKind.shallowHistory =>
-      json.uml.enums.UMLPseudostateKind.shallowHistory
-
-    case uml.read.api.UMLPseudostateKind.terminate =>
-      json.uml.enums.UMLPseudostateKind.terminate
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLTransitionKind.UMLTransitionKind)
-  : json.uml.enums.UMLTransitionKind
-  = value match {
-    case uml.read.api.UMLTransitionKind.external =>
-      json.uml.enums.UMLTransitionKind.external
-
-    case uml.read.api.UMLTransitionKind.internal =>
-      json.uml.enums.UMLTransitionKind.internal
-
-    case uml.read.api.UMLTransitionKind.local =>
-      json.uml.enums.UMLTransitionKind.local
-  }
-
-  implicit def toOTI
-  (value: uml.read.api.UMLVisibilityKind.UMLVisibilityKind)
-  : json.uml.enums.UMLVisibilityKind
-  = value match {
-    case uml.read.api.UMLVisibilityKind._package =>
-      json.uml.enums.UMLVisibilityKind._package
-
-    case uml.read.api.UMLVisibilityKind._private =>
-      json.uml.enums.UMLVisibilityKind._private
-
-    case uml.read.api.UMLVisibilityKind._protected =>
-      json.uml.enums.UMLVisibilityKind._protected
-
-    case uml.read.api.UMLVisibilityKind.public =>
-      json.uml.enums.UMLVisibilityKind.public
-  }
-
-  def toOTI
+  def addOTIUMLAbstraction
   (extent: OTIDocumentExtent,
    u: UMLAbstraction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -722,10 +473,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAbstraction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -742,7 +490,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLAcceptCallAction
   (extent: OTIDocumentExtent,
    u: UMLAcceptCallAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -751,13 +499,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAcceptCallAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isUnmarshall = u.isUnmarshall,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -784,7 +526,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLAcceptEventAction
   (extent: OTIDocumentExtent,
    u: UMLAcceptEventAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -793,13 +535,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAcceptEventAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isUnmarshall = u.isUnmarshall,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -824,7 +560,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLActionExecutionSpecification
   (extent: OTIDocumentExtent,
    u: UMLActionExecutionSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -833,10 +569,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLActionExecutionSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -849,7 +582,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLActionInputPin
   (extent: OTIDocumentExtent,
    u: UMLActionInputPin[Uml])
   (implicit ops: UMLOps[Uml])
@@ -858,16 +591,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLActionInputPin(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControl = u.isControl,
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            isOrdered = u.isOrdered,
-            isUnique = u.isUnique,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.fromAction, OTIUMLA_fromAction_actionInputPin)
     val e2 = 
@@ -892,7 +616,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLActivity
   (extent: OTIDocumentExtent,
    u: UMLActivity[Uml])
   (implicit ops: UMLOps[Uml])
@@ -901,17 +625,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLActivity(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            isReadOnly = u.isReadOnly,
-            isReentrant = u.isReentrant,
-            isSingleExecution = u.isSingleExecution,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -984,7 +698,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLActivityFinalNode
   (extent: OTIDocumentExtent,
    u: UMLActivityFinalNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -993,11 +707,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLActivityFinalNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1012,7 +722,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLActivityParameterNode
   (extent: OTIDocumentExtent,
    u: UMLActivityParameterNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1021,13 +731,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLActivityParameterNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1046,7 +750,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLActivityPartition
   (extent: OTIDocumentExtent,
    u: UMLActivityPartition[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1055,12 +759,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLActivityPartition(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isDimension = u.isDimension,
-            isExternal = u.isExternal,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1075,7 +774,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLActor
   (extent: OTIDocumentExtent,
    u: UMLActor[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1084,13 +783,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLActor(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1131,7 +824,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLAddStructuralFeatureValueAction
   (extent: OTIDocumentExtent,
    u: UMLAddStructuralFeatureValueAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1140,13 +833,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAddStructuralFeatureValueAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isReplaceAll = u.isReplaceAll,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1175,7 +862,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLAddVariableValueAction
   (extent: OTIDocumentExtent,
    u: UMLAddVariableValueAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1184,13 +871,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAddVariableValueAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isReplaceAll = u.isReplaceAll,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1215,7 +896,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLAnyReceiveEvent
   (extent: OTIDocumentExtent,
    u: UMLAnyReceiveEvent[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1224,10 +905,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAnyReceiveEvent(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1238,7 +916,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLArtifact
   (extent: OTIDocumentExtent,
    u: UMLArtifact[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1247,14 +925,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLArtifact(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            fileName = u.fileName,
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1297,7 +968,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLAssociation
   (extent: OTIDocumentExtent,
    u: UMLAssociation[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1306,14 +977,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAssociation(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isDerived = u.isDerived,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1354,7 +1018,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLAssociationClass
   (extent: OTIDocumentExtent,
    u: UMLAssociationClass[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1363,15 +1027,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLAssociationClass(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isDerived = u.isDerived,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1428,7 +1084,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLBehaviorExecutionSpecification
   (extent: OTIDocumentExtent,
    u: UMLBehaviorExecutionSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1437,10 +1093,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLBehaviorExecutionSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -1453,7 +1106,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLBroadcastSignalAction
   (extent: OTIDocumentExtent,
    u: UMLBroadcastSignalAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1462,12 +1115,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLBroadcastSignalAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -1490,7 +1138,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCallBehaviorAction
   (extent: OTIDocumentExtent,
    u: UMLCallBehaviorAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1499,13 +1147,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCallBehaviorAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isSynchronous = u.isSynchronous,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -1530,7 +1172,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCallEvent
   (extent: OTIDocumentExtent,
    u: UMLCallEvent[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1539,10 +1181,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCallEvent(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1553,7 +1192,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCallOperationAction
   (extent: OTIDocumentExtent,
    u: UMLCallOperationAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1562,13 +1201,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCallOperationAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isSynchronous = u.isSynchronous,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -1595,7 +1228,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCentralBufferNode
   (extent: OTIDocumentExtent,
    u: UMLCentralBufferNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1604,13 +1237,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCentralBufferNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1629,7 +1256,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLChangeEvent
   (extent: OTIDocumentExtent,
    u: UMLChangeEvent[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1638,10 +1265,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLChangeEvent(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.changeExpression, OTIUMLA_changeExpression_changeEvent)
     val e2 = 
@@ -1654,7 +1278,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLClass
   (extent: OTIDocumentExtent,
    u: UMLClass[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1663,14 +1287,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLClass(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1721,7 +1338,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLClassifierTemplateParameter
   (extent: OTIDocumentExtent,
    u: UMLClassifierTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1730,9 +1347,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLClassifierTemplateParameter(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            allowSubstitutable = u.allowSubstitutable))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -1745,7 +1360,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLClause
   (extent: OTIDocumentExtent,
    u: UMLClause[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1754,8 +1369,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLClause(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -1772,7 +1386,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLClearAssociationAction
   (extent: OTIDocumentExtent,
    u: UMLClearAssociationAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1781,12 +1395,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLClearAssociationAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1811,7 +1420,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLClearStructuralFeatureAction
   (extent: OTIDocumentExtent,
    u: UMLClearStructuralFeatureAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1820,12 +1429,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLClearStructuralFeatureAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1850,7 +1454,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLClearVariableAction
   (extent: OTIDocumentExtent,
    u: UMLClearVariableAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1859,12 +1463,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLClearVariableAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1885,7 +1484,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCollaboration
   (extent: OTIDocumentExtent,
    u: UMLCollaboration[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1894,13 +1493,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCollaboration(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1947,7 +1540,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCollaborationUse
   (extent: OTIDocumentExtent,
    u: UMLCollaborationUse[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1956,10 +1549,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCollaborationUse(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1970,7 +1560,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCombinedFragment
   (extent: OTIDocumentExtent,
    u: UMLCombinedFragment[Uml])
   (implicit ops: UMLOps[Uml])
@@ -1979,11 +1569,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCombinedFragment(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            interactionOperator = u.interactionOperator,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment)
     val e2 = 
@@ -2000,7 +1586,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLComment
   (extent: OTIDocumentExtent,
    u: UMLComment[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2009,9 +1595,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLComment(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            body = u.body))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -2020,7 +1604,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCommunicationPath
   (extent: OTIDocumentExtent,
    u: UMLCommunicationPath[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2029,14 +1613,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCommunicationPath(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isDerived = u.isDerived,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2077,7 +1654,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLComponent
   (extent: OTIDocumentExtent,
    u: UMLComponent[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2086,15 +1663,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLComponent(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isIndirectlyInstantiated = u.isIndirectlyInstantiated,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2149,7 +1718,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLComponentRealization
   (extent: OTIDocumentExtent,
    u: UMLComponentRealization[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2158,10 +1727,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLComponentRealization(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -2180,7 +1746,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLConditionalNode
   (extent: OTIDocumentExtent,
    u: UMLConditionalNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2189,15 +1755,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLConditionalNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAssured = u.isAssured,
-            isDeterminate = u.isDeterminate,
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            mustIsolate = u.mustIsolate,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.clause, OTIUMLA_clause_conditionalNode)
     val e2 = 
@@ -2236,7 +1794,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLConnectableElementTemplateParameter
   (extent: OTIDocumentExtent,
    u: UMLConnectableElementTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2245,8 +1803,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLConnectableElementTemplateParameter(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -2257,7 +1814,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLConnectionPointReference
   (extent: OTIDocumentExtent,
    u: UMLConnectionPointReference[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2266,10 +1823,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLConnectionPointReference(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2282,7 +1836,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLConnector
   (extent: OTIDocumentExtent,
    u: UMLConnector[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2291,12 +1845,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLConnector(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isStatic = u.isStatic,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.end, OTIUMLA_end_connector)
     val e2 = 
@@ -2311,7 +1860,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLConnectorEnd
   (extent: OTIDocumentExtent,
    u: UMLConnectorEnd[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2320,10 +1869,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLConnectorEnd(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isOrdered = u.isOrdered,
-            isUnique = u.isUnique))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -2334,7 +1880,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLConsiderIgnoreFragment
   (extent: OTIDocumentExtent,
    u: UMLConsiderIgnoreFragment[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2343,11 +1889,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLConsiderIgnoreFragment(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            interactionOperator = u.interactionOperator,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment)
     val e2 = 
@@ -2366,7 +1908,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLConstraint
   (extent: OTIDocumentExtent,
    u: UMLConstraint[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2375,10 +1917,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLConstraint(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2393,7 +1932,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLContinuation
   (extent: OTIDocumentExtent,
    u: UMLContinuation[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2402,11 +1941,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLContinuation(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            setting = u.setting,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -2419,7 +1954,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLControlFlow
   (extent: OTIDocumentExtent,
    u: UMLControlFlow[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2428,11 +1963,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLControlFlow(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge)
     val e2 = 
@@ -2447,7 +1978,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCreateLinkAction
   (extent: OTIDocumentExtent,
    u: UMLCreateLinkAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2456,12 +1987,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCreateLinkAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction)
     val e2 = 
@@ -2486,7 +2012,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCreateLinkObjectAction
   (extent: OTIDocumentExtent,
    u: UMLCreateLinkObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2495,12 +2021,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCreateLinkObjectAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction)
     val e2 = 
@@ -2527,7 +2048,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLCreateObjectAction
   (extent: OTIDocumentExtent,
    u: UMLCreateObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2536,12 +2057,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLCreateObjectAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -2564,7 +2080,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDataStoreNode
   (extent: OTIDocumentExtent,
    u: UMLDataStoreNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2573,13 +2089,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDataStoreNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2598,7 +2108,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDataType
   (extent: OTIDocumentExtent,
    u: UMLDataType[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2607,13 +2117,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDataType(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2652,7 +2156,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDecisionNode
   (extent: OTIDocumentExtent,
    u: UMLDecisionNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2661,11 +2165,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDecisionNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2682,7 +2182,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDependency
   (extent: OTIDocumentExtent,
    u: UMLDependency[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2691,10 +2191,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDependency(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2709,7 +2206,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDeployment
   (extent: OTIDocumentExtent,
    u: UMLDeployment[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2718,10 +2215,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDeployment(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.configuration, OTIUMLA_configuration_deployment)
     val e2 = 
@@ -2740,7 +2234,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDeploymentSpecification
   (extent: OTIDocumentExtent,
    u: UMLDeploymentSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2749,16 +2243,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDeploymentSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            deploymentLocation = u.deploymentLocation,
-            executionLocation = u.executionLocation,
-            fileName = u.fileName,
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2801,7 +2286,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDestroyLinkAction
   (extent: OTIDocumentExtent,
    u: UMLDestroyLinkAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2810,12 +2295,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDestroyLinkAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_destroyLinkAction)
     val e2 = 
@@ -2840,7 +2320,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDestroyObjectAction
   (extent: OTIDocumentExtent,
    u: UMLDestroyObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2849,14 +2329,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDestroyObjectAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isDestroyLinks = u.isDestroyLinks,
-            isDestroyOwnedObjects = u.isDestroyOwnedObjects,
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -2879,7 +2352,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDestructionOccurrenceSpecification
   (extent: OTIDocumentExtent,
    u: UMLDestructionOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2888,10 +2361,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDestructionOccurrenceSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -2908,7 +2378,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDevice
   (extent: OTIDocumentExtent,
    u: UMLDevice[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2917,14 +2387,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDevice(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2979,7 +2442,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDuration
   (extent: OTIDocumentExtent,
    u: UMLDuration[Uml])
   (implicit ops: UMLOps[Uml])
@@ -2988,10 +2451,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDuration(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_duration)
     val e2 = 
@@ -3006,7 +2466,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDurationConstraint
   (extent: OTIDocumentExtent,
    u: UMLDurationConstraint[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3015,11 +2475,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDurationConstraint(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            firstEvent = u.firstEvent,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3034,7 +2490,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDurationInterval
   (extent: OTIDocumentExtent,
    u: UMLDurationInterval[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3043,10 +2499,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDurationInterval(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3057,7 +2510,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLDurationObservation
   (extent: OTIDocumentExtent,
    u: UMLDurationObservation[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3066,11 +2519,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLDurationObservation(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            firstEvent = u.firstEvent,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3083,7 +2532,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLElementImport
   (extent: OTIDocumentExtent,
    u: UMLElementImport[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3092,17 +2541,14 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLElementImport(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            alias = u.alias,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
     result
   }
 
-  def toOTI
+  def addOTIUMLElementValue
   (extent: OTIDocumentExtent,
    u: UMLElementValue[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3111,10 +2557,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLElementValue(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3125,7 +2568,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLEnumeration
   (extent: OTIDocumentExtent,
    u: UMLEnumeration[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3134,13 +2577,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLEnumeration(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3181,7 +2618,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLEnumerationLiteral
   (extent: OTIDocumentExtent,
    u: UMLEnumerationLiteral[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3190,10 +2627,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLEnumerationLiteral(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location)
     val e2 = 
@@ -3210,7 +2644,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExceptionHandler
   (extent: OTIDocumentExtent,
    u: UMLExceptionHandler[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3219,8 +2653,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExceptionHandler(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -3229,7 +2662,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExecutionEnvironment
   (extent: OTIDocumentExtent,
    u: UMLExecutionEnvironment[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3238,14 +2671,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExecutionEnvironment(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3300,7 +2726,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExecutionOccurrenceSpecification
   (extent: OTIDocumentExtent,
    u: UMLExecutionOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3309,10 +2735,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExecutionOccurrenceSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -3329,7 +2752,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExpansionNode
   (extent: OTIDocumentExtent,
    u: UMLExpansionNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3338,13 +2761,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExpansionNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3363,7 +2780,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExpansionRegion
   (extent: OTIDocumentExtent,
    u: UMLExpansionRegion[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3372,14 +2789,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExpansionRegion(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            mode = u.mode,
-            mustIsolate = u.mustIsolate,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -3420,7 +2830,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExpression
   (extent: OTIDocumentExtent,
    u: UMLExpression[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3429,11 +2839,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExpression(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            symbol = u.symbol,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3446,7 +2852,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExtend
   (extent: OTIDocumentExtent,
    u: UMLExtend[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3455,10 +2861,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExtend(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_extend)
     val e2 = 
@@ -3471,7 +2874,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExtension
   (extent: OTIDocumentExtent,
    u: UMLExtension[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3480,14 +2883,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExtension(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isDerived = u.isDerived,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3528,7 +2924,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExtensionEnd
   (extent: OTIDocumentExtent,
    u: UMLExtensionEnd[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3537,19 +2933,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExtensionEnd(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            aggregation = u.aggregation,
-            isDerived = u.isDerived,
-            isDerivedUnion = u.isDerivedUnion,
-            isID = u.isID,
-            isLeaf = u.isLeaf,
-            isOrdered = u.isOrdered,
-            isReadOnly = u.isReadOnly,
-            isStatic = u.isStatic,
-            isUnique = u.isUnique,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
     val e2 = 
@@ -3574,7 +2958,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLExtensionPoint
   (extent: OTIDocumentExtent,
    u: UMLExtensionPoint[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3583,11 +2967,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLExtensionPoint(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3596,7 +2976,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLFinalState
   (extent: OTIDocumentExtent,
    u: UMLFinalState[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3605,11 +2985,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLFinalState(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state)
     val e2 = 
@@ -3640,7 +3016,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLFlowFinalNode
   (extent: OTIDocumentExtent,
    u: UMLFlowFinalNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3649,11 +3025,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLFlowFinalNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3668,7 +3040,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLForkNode
   (extent: OTIDocumentExtent,
    u: UMLForkNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3677,11 +3049,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLForkNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3696,7 +3064,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLFunctionBehavior
   (extent: OTIDocumentExtent,
    u: UMLFunctionBehavior[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3705,17 +3073,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLFunctionBehavior(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            body = u.body,
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            isReentrant = u.isReentrant,
-            language = u.language,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3776,7 +3134,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLGate
   (extent: OTIDocumentExtent,
    u: UMLGate[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3785,10 +3143,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLGate(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3799,7 +3154,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLGeneralOrdering
   (extent: OTIDocumentExtent,
    u: UMLGeneralOrdering[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3808,10 +3163,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLGeneralOrdering(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3820,7 +3172,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLGeneralization
   (extent: OTIDocumentExtent,
    u: UMLGeneralization[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3829,16 +3181,14 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLGeneralization(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isSubstitutable = u.isSubstitutable))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
     result
   }
 
-  def toOTI
+  def addOTIUMLGeneralizationSet
   (extent: OTIDocumentExtent,
    u: UMLGeneralizationSet[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3847,12 +3197,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLGeneralizationSet(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isCovering = u.isCovering,
-            isDisjoint = u.isDisjoint,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3865,7 +3210,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLImage
   (extent: OTIDocumentExtent,
    u: UMLImage[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3874,18 +3219,14 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLImage(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            content = u.content,
-            format = u.format,
-            location = u.location))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
     result
   }
 
-  def toOTI
+  def addOTIUMLInclude
   (extent: OTIDocumentExtent,
    u: UMLInclude[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3894,10 +3235,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInclude(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3906,7 +3244,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInformationFlow
   (extent: OTIDocumentExtent,
    u: UMLInformationFlow[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3915,10 +3253,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInformationFlow(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3943,7 +3278,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInformationItem
   (extent: OTIDocumentExtent,
    u: UMLInformationItem[Uml])
   (implicit ops: UMLOps[Uml])
@@ -3952,13 +3287,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInformationItem(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3995,7 +3324,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInitialNode
   (extent: OTIDocumentExtent,
    u: UMLInitialNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4004,11 +3333,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInitialNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4023,7 +3348,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInputPin
   (extent: OTIDocumentExtent,
    u: UMLInputPin[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4032,16 +3357,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInputPin(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControl = u.isControl,
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            isOrdered = u.isOrdered,
-            isUnique = u.isUnique,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -4064,7 +3380,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInstanceSpecification
   (extent: OTIDocumentExtent,
    u: UMLInstanceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4073,10 +3389,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInstanceSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location)
     val e2 = 
@@ -4095,7 +3408,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInstanceValue
   (extent: OTIDocumentExtent,
    u: UMLInstanceValue[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4104,10 +3417,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInstanceValue(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4118,7 +3428,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInteraction
   (extent: OTIDocumentExtent,
    u: UMLInteraction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4127,15 +3437,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInteraction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            isReentrant = u.isReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.action, OTIUMLA_action_interaction)
     val e2 = 
@@ -4210,7 +3512,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInteractionConstraint
   (extent: OTIDocumentExtent,
    u: UMLInteractionConstraint[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4219,10 +3521,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInteractionConstraint(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.maxint, OTIUMLA_maxint_interactionConstraint)
     val e2 = 
@@ -4241,7 +3540,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInteractionOperand
   (extent: OTIDocumentExtent,
    u: UMLInteractionOperand[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4250,10 +3549,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInteractionOperand(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -4276,7 +3572,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInteractionUse
   (extent: OTIDocumentExtent,
    u: UMLInteractionUse[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4285,10 +3581,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInteractionUse(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
     val e2 = 
@@ -4307,7 +3600,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInterface
   (extent: OTIDocumentExtent,
    u: UMLInterface[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4316,13 +3609,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInterface(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -4369,7 +3656,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInterfaceRealization
   (extent: OTIDocumentExtent,
    u: UMLInterfaceRealization[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4378,10 +3665,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInterfaceRealization(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -4398,7 +3682,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInterruptibleActivityRegion
   (extent: OTIDocumentExtent,
    u: UMLInterruptibleActivityRegion[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4407,10 +3691,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInterruptibleActivityRegion(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4423,7 +3704,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLInterval
   (extent: OTIDocumentExtent,
    u: UMLInterval[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4432,10 +3713,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLInterval(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4446,7 +3724,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLIntervalConstraint
   (extent: OTIDocumentExtent,
    u: UMLIntervalConstraint[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4455,10 +3733,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLIntervalConstraint(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4473,7 +3748,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLJoinNode
   (extent: OTIDocumentExtent,
    u: UMLJoinNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4482,12 +3757,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLJoinNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isCombineDuplicate = u.isCombineDuplicate,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.joinSpec, OTIUMLA_joinSpec_joinNode)
     val e2 = 
@@ -4504,7 +3774,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLifeline
   (extent: OTIDocumentExtent,
    u: UMLLifeline[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4513,10 +3783,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLifeline(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4529,7 +3796,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLinkEndCreationData
   (extent: OTIDocumentExtent,
    u: UMLLinkEndCreationData[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4538,9 +3805,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLinkEndCreationData(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isReplaceAll = u.isReplaceAll))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -4553,7 +3818,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLinkEndData
   (extent: OTIDocumentExtent,
    u: UMLLinkEndData[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4562,8 +3827,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLinkEndData(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -4574,7 +3838,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLinkEndDestructionData
   (extent: OTIDocumentExtent,
    u: UMLLinkEndDestructionData[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4583,9 +3847,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLinkEndDestructionData(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isDestroyDuplicates = u.isDestroyDuplicates))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -4598,7 +3860,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLiteralBoolean
   (extent: OTIDocumentExtent,
    u: UMLLiteralBoolean[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4607,11 +3869,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLiteralBoolean(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            value = u.value,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4622,7 +3880,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLiteralInteger
   (extent: OTIDocumentExtent,
    u: UMLLiteralInteger[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4631,11 +3889,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLiteralInteger(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            value = u.value,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4646,7 +3900,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLiteralNull
   (extent: OTIDocumentExtent,
    u: UMLLiteralNull[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4655,10 +3909,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLiteralNull(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4669,7 +3920,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLiteralReal
   (extent: OTIDocumentExtent,
    u: UMLLiteralReal[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4678,11 +3929,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLiteralReal(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            value = u.value,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4693,7 +3940,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLiteralString
   (extent: OTIDocumentExtent,
    u: UMLLiteralString[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4702,11 +3949,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLiteralString(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            value = u.value,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4717,7 +3960,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLiteralUnlimitedNatural
   (extent: OTIDocumentExtent,
    u: UMLLiteralUnlimitedNatural[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4726,11 +3969,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLiteralUnlimitedNatural(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            value = u.value,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4741,7 +3980,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLLoopNode
   (extent: OTIDocumentExtent,
    u: UMLLoopNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4750,14 +3989,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLLoopNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isTestedFirst = u.isTestedFirst,
-            mustIsolate = u.mustIsolate,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -4806,7 +4038,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLManifestation
   (extent: OTIDocumentExtent,
    u: UMLManifestation[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4815,10 +4047,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLManifestation(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -4835,7 +4064,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLMergeNode
   (extent: OTIDocumentExtent,
    u: UMLMergeNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4844,11 +4073,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLMergeNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4863,7 +4088,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLMessage
   (extent: OTIDocumentExtent,
    u: UMLMessage[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4872,11 +4097,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLMessage(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            messageSort = u.messageSort,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_message)
     val e2 = 
@@ -4891,7 +4112,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLMessageOccurrenceSpecification
   (extent: OTIDocumentExtent,
    u: UMLMessageOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4900,10 +4121,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLMessageOccurrenceSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -4920,7 +4138,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLModel
   (extent: OTIDocumentExtent,
    u: UMLModel[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4929,12 +4147,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLModel(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            URI = u.URI,
-            name = u.name,
-            viewpoint = u.viewpoint,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -4961,7 +4174,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLNode
   (extent: OTIDocumentExtent,
    u: UMLNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -4970,14 +4183,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -5032,7 +4238,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLObjectFlow
   (extent: OTIDocumentExtent,
    u: UMLObjectFlow[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5041,13 +4247,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLObjectFlow(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isMulticast = u.isMulticast,
-            isMultireceive = u.isMultireceive,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge)
     val e2 = 
@@ -5062,7 +4262,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLOccurrenceSpecification
   (extent: OTIDocumentExtent,
    u: UMLOccurrenceSpecification[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5071,10 +4271,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLOccurrenceSpecification(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -5089,7 +4286,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLOpaqueAction
   (extent: OTIDocumentExtent,
    u: UMLOpaqueAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5098,14 +4295,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLOpaqueAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            body = u.body,
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            language = u.language,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5130,7 +4320,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLOpaqueBehavior
   (extent: OTIDocumentExtent,
    u: UMLOpaqueBehavior[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5139,17 +4329,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLOpaqueBehavior(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            body = u.body,
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            isReentrant = u.isReentrant,
-            language = u.language,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -5210,7 +4390,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLOpaqueExpression
   (extent: OTIDocumentExtent,
    u: UMLOpaqueExpression[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5219,12 +4399,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLOpaqueExpression(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            body = u.body,
-            language = u.language,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -5235,7 +4410,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLOperation
   (extent: OTIDocumentExtent,
    u: UMLOperation[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5244,15 +4419,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLOperation(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            concurrency = u.concurrency,
-            isAbstract = u.isAbstract,
-            isLeaf = u.isLeaf,
-            isQuery = u.isQuery,
-            isStatic = u.isStatic,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.bodyCondition, OTIUMLA_bodyCondition_bodyContext)
     val e2 = 
@@ -5289,7 +4456,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLOperationTemplateParameter
   (extent: OTIDocumentExtent,
    u: UMLOperationTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5298,8 +4465,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLOperationTemplateParameter(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -5310,7 +4476,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLOutputPin
   (extent: OTIDocumentExtent,
    u: UMLOutputPin[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5319,16 +4485,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLOutputPin(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControl = u.isControl,
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            isOrdered = u.isOrdered,
-            isUnique = u.isUnique,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -5351,7 +4508,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLPackage
   (extent: OTIDocumentExtent,
    u: UMLPackage[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5360,11 +4517,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLPackage(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            URI = u.URI,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -5391,7 +4544,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLPackageImport
   (extent: OTIDocumentExtent,
    u: UMLPackageImport[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5400,16 +4553,14 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLPackageImport(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
     result
   }
 
-  def toOTI
+  def addOTIUMLPackageMerge
   (extent: OTIDocumentExtent,
    u: UMLPackageMerge[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5418,15 +4569,14 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLPackageMerge(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
     result
   }
 
-  def toOTI
+  def addOTIUMLParameter
   (extent: OTIDocumentExtent,
    u: UMLParameter[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5435,16 +4585,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLParameter(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            direction = u.direction,
-            effect = u.effect,
-            isException = u.isException,
-            isOrdered = u.isOrdered,
-            isStream = u.isStream,
-            isUnique = u.isUnique,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningParameter)
     val e2 = 
@@ -5463,7 +4604,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLParameterSet
   (extent: OTIDocumentExtent,
    u: UMLParameterSet[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5472,10 +4613,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLParameterSet(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_parameterSet)
     val e2 = 
@@ -5486,7 +4624,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLPartDecomposition
   (extent: OTIDocumentExtent,
    u: UMLPartDecomposition[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5495,10 +4633,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLPartDecomposition(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
     val e2 = 
@@ -5517,7 +4652,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLPort
   (extent: OTIDocumentExtent,
    u: UMLPort[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5526,22 +4661,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLPort(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            aggregation = u.aggregation,
-            isBehavior = u.isBehavior,
-            isConjugated = u.isConjugated,
-            isDerived = u.isDerived,
-            isDerivedUnion = u.isDerivedUnion,
-            isID = u.isID,
-            isLeaf = u.isLeaf,
-            isOrdered = u.isOrdered,
-            isReadOnly = u.isReadOnly,
-            isService = u.isService,
-            isStatic = u.isStatic,
-            isUnique = u.isUnique,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
     val e2 = 
@@ -5568,7 +4688,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLPrimitiveType
   (extent: OTIDocumentExtent,
    u: UMLPrimitiveType[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5577,13 +4697,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLPrimitiveType(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -5622,7 +4736,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLProfile
   (extent: OTIDocumentExtent,
    u: UMLProfile[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5631,11 +4745,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLProfile(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            URI = u.URI,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace, u.metaclassReference)
     val e2 = 
@@ -5666,7 +4776,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLProfileApplication
   (extent: OTIDocumentExtent,
    u: UMLProfileApplication[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5675,16 +4785,14 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLProfileApplication(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isStrict = u.isStrict))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
     result
   }
 
-  def toOTI
+  def addOTIUMLProperty
   (extent: OTIDocumentExtent,
    u: UMLProperty[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5693,19 +4801,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLProperty(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            aggregation = u.aggregation,
-            isDerived = u.isDerived,
-            isDerivedUnion = u.isDerivedUnion,
-            isID = u.isID,
-            isLeaf = u.isLeaf,
-            isOrdered = u.isOrdered,
-            isReadOnly = u.isReadOnly,
-            isStatic = u.isStatic,
-            isUnique = u.isUnique,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
     val e2 = 
@@ -5730,7 +4826,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLProtocolConformance
   (extent: OTIDocumentExtent,
    u: UMLProtocolConformance[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5739,15 +4835,14 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLProtocolConformance(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
     result
   }
 
-  def toOTI
+  def addOTIUMLProtocolStateMachine
   (extent: OTIDocumentExtent,
    u: UMLProtocolStateMachine[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5756,15 +4851,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLProtocolStateMachine(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            isReentrant = u.isReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -5833,7 +4920,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLProtocolTransition
   (extent: OTIDocumentExtent,
    u: UMLProtocolTransition[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5842,12 +4929,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLProtocolTransition(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            kind = u.kind,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition)
     val e2 = 
@@ -5872,7 +4954,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLPseudostate
   (extent: OTIDocumentExtent,
    u: UMLPseudostate[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5881,11 +4963,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLPseudostate(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            kind = u.kind,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -5894,7 +4972,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLQualifierValue
   (extent: OTIDocumentExtent,
    u: UMLQualifierValue[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5903,8 +4981,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLQualifierValue(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -5913,7 +4990,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLRaiseExceptionAction
   (extent: OTIDocumentExtent,
    u: UMLRaiseExceptionAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5922,12 +4999,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLRaiseExceptionAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.exception, OTIUMLA_exception_raiseExceptionAction)
     val e2 = 
@@ -5950,7 +5022,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadExtentAction
   (extent: OTIDocumentExtent,
    u: UMLReadExtentAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5959,12 +5031,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadExtentAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5989,7 +5056,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadIsClassifiedObjectAction
   (extent: OTIDocumentExtent,
    u: UMLReadIsClassifiedObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -5998,13 +5065,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadIsClassifiedObjectAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isDirect = u.isDirect,
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6029,7 +5090,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadLinkAction
   (extent: OTIDocumentExtent,
    u: UMLReadLinkAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6038,12 +5099,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadLinkAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_linkAction)
     val e2 = 
@@ -6070,7 +5126,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadLinkObjectEndAction
   (extent: OTIDocumentExtent,
    u: UMLReadLinkObjectEndAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6079,12 +5135,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadLinkObjectEndAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6111,7 +5162,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadLinkObjectEndQualifierAction
   (extent: OTIDocumentExtent,
    u: UMLReadLinkObjectEndQualifierAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6120,12 +5171,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadLinkObjectEndQualifierAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6152,7 +5198,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadSelfAction
   (extent: OTIDocumentExtent,
    u: UMLReadSelfAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6161,12 +5207,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadSelfAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6189,7 +5230,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadStructuralFeatureAction
   (extent: OTIDocumentExtent,
    u: UMLReadStructuralFeatureAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6198,12 +5239,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadStructuralFeatureAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6228,7 +5264,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReadVariableAction
   (extent: OTIDocumentExtent,
    u: UMLReadVariableAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6237,12 +5273,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReadVariableAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6265,7 +5296,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLRealization
   (extent: OTIDocumentExtent,
    u: UMLRealization[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6274,10 +5305,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLRealization(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -6294,7 +5322,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReception
   (extent: OTIDocumentExtent,
    u: UMLReception[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6303,14 +5331,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReception(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            concurrency = u.concurrency,
-            isAbstract = u.isAbstract,
-            isLeaf = u.isLeaf,
-            isStatic = u.isStatic,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -6333,7 +5354,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReclassifyObjectAction
   (extent: OTIDocumentExtent,
    u: UMLReclassifyObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6342,13 +5363,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReclassifyObjectAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isReplaceAll = u.isReplaceAll,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6375,7 +5390,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLRedefinableTemplateSignature
   (extent: OTIDocumentExtent,
    u: UMLRedefinableTemplateSignature[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6384,11 +5399,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLRedefinableTemplateSignature(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6403,7 +5414,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReduceAction
   (extent: OTIDocumentExtent,
    u: UMLReduceAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6412,13 +5423,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReduceAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isOrdered = u.isOrdered,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collection, OTIUMLA_collection_reduceAction)
     val e2 = 
@@ -6443,7 +5448,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLRegion
   (extent: OTIDocumentExtent,
    u: UMLRegion[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6452,11 +5457,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLRegion(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -6475,7 +5476,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLRemoveStructuralFeatureValueAction
   (extent: OTIDocumentExtent,
    u: UMLRemoveStructuralFeatureValueAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6484,13 +5485,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLRemoveStructuralFeatureValueAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isRemoveDuplicates = u.isRemoveDuplicates,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6519,7 +5514,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLRemoveVariableValueAction
   (extent: OTIDocumentExtent,
    u: UMLRemoveVariableValueAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6528,13 +5523,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLRemoveVariableValueAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isRemoveDuplicates = u.isRemoveDuplicates,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6559,7 +5548,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLReplyAction
   (extent: OTIDocumentExtent,
    u: UMLReplyAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6568,12 +5557,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLReplyAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6600,7 +5584,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLSendObjectAction
   (extent: OTIDocumentExtent,
    u: UMLSendObjectAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6609,12 +5593,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLSendObjectAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6639,7 +5618,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLSendSignalAction
   (extent: OTIDocumentExtent,
    u: UMLSendSignalAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6648,12 +5627,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLSendSignalAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -6678,7 +5652,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLSequenceNode
   (extent: OTIDocumentExtent,
    u: UMLSequenceNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6687,13 +5661,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLSequenceNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            mustIsolate = u.mustIsolate,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -6730,7 +5698,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLSignal
   (extent: OTIDocumentExtent,
    u: UMLSignal[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6739,13 +5707,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLSignal(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -6782,7 +5744,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLSignalEvent
   (extent: OTIDocumentExtent,
    u: UMLSignalEvent[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6791,10 +5753,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLSignalEvent(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6805,7 +5764,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLSlot
   (extent: OTIDocumentExtent,
    u: UMLSlot[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6814,8 +5773,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLSlot(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -6824,7 +5782,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLStartClassifierBehaviorAction
   (extent: OTIDocumentExtent,
    u: UMLStartClassifierBehaviorAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6833,12 +5791,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLStartClassifierBehaviorAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6861,7 +5814,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLStartObjectBehaviorAction
   (extent: OTIDocumentExtent,
    u: UMLStartObjectBehaviorAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6870,13 +5823,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLStartObjectBehaviorAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            isSynchronous = u.isSynchronous,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -6903,7 +5850,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLState
   (extent: OTIDocumentExtent,
    u: UMLState[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6912,11 +5859,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLState(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state)
     val e2 = 
@@ -6947,7 +5890,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLStateInvariant
   (extent: OTIDocumentExtent,
    u: UMLStateInvariant[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6956,10 +5899,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLStateInvariant(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -6972,7 +5912,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLStateMachine
   (extent: OTIDocumentExtent,
    u: UMLStateMachine[Uml])
   (implicit ops: UMLOps[Uml])
@@ -6981,15 +5921,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLStateMachine(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            isReentrant = u.isReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -7056,7 +5988,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLStereotype
   (extent: OTIDocumentExtent,
    u: UMLStereotype[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7065,14 +5997,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLStereotype(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isActive = u.isActive,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -7125,7 +6050,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLStringExpression
   (extent: OTIDocumentExtent,
    u: UMLStringExpression[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7134,11 +6059,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLStringExpression(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            symbol = u.symbol,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -7157,7 +6078,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLStructuredActivityNode
   (extent: OTIDocumentExtent,
    u: UMLStructuredActivityNode[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7166,13 +6087,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLStructuredActivityNode(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            mustIsolate = u.mustIsolate,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -7209,7 +6124,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLSubstitution
   (extent: OTIDocumentExtent,
    u: UMLSubstitution[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7218,10 +6133,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLSubstitution(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -7238,7 +6150,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTemplateBinding
   (extent: OTIDocumentExtent,
    u: UMLTemplateBinding[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7247,8 +6159,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTemplateBinding(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -7257,7 +6168,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTemplateParameter
   (extent: OTIDocumentExtent,
    u: UMLTemplateParameter[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7266,8 +6177,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTemplateParameter(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -7278,7 +6188,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTemplateParameterSubstitution
   (extent: OTIDocumentExtent,
    u: UMLTemplateParameterSubstitution[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7287,8 +6197,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTemplateParameterSubstitution(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedActual, OTIUMLA_ownedActual_owningTemplateParameterSubstitution)
     val e2 = 
@@ -7297,7 +6206,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTemplateSignature
   (extent: OTIDocumentExtent,
    u: UMLTemplateSignature[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7306,8 +6215,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTemplateSignature(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -7318,7 +6226,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTestIdentityAction
   (extent: OTIDocumentExtent,
    u: UMLTestIdentityAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7327,12 +6235,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTestIdentityAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.first, OTIUMLA_first_testIdentityAction)
     val e2 = 
@@ -7359,7 +6262,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTimeConstraint
   (extent: OTIDocumentExtent,
    u: UMLTimeConstraint[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7368,11 +6271,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTimeConstraint(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            firstEvent = u.firstEvent,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -7387,7 +6286,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTimeEvent
   (extent: OTIDocumentExtent,
    u: UMLTimeEvent[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7396,11 +6295,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTimeEvent(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isRelative = u.isRelative,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -7413,7 +6308,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTimeExpression
   (extent: OTIDocumentExtent,
    u: UMLTimeExpression[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7422,10 +6317,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTimeExpression(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_timeExpression)
     val e2 = 
@@ -7440,7 +6332,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTimeInterval
   (extent: OTIDocumentExtent,
    u: UMLTimeInterval[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7449,10 +6341,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTimeInterval(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -7463,7 +6352,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTimeObservation
   (extent: OTIDocumentExtent,
    u: UMLTimeObservation[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7472,11 +6361,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTimeObservation(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            firstEvent = u.firstEvent,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -7487,7 +6372,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTransition
   (extent: OTIDocumentExtent,
    u: UMLTransition[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7496,12 +6381,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTransition(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            kind = u.kind,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition)
     val e2 = 
@@ -7522,7 +6402,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLTrigger
   (extent: OTIDocumentExtent,
    u: UMLTrigger[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7531,10 +6411,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLTrigger(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -7545,7 +6422,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLUnmarshallAction
   (extent: OTIDocumentExtent,
    u: UMLUnmarshallAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7554,12 +6431,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLUnmarshallAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -7584,7 +6456,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLUsage
   (extent: OTIDocumentExtent,
    u: UMLUsage[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7593,10 +6465,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLUsage(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -7611,7 +6480,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLUseCase
   (extent: OTIDocumentExtent,
    u: UMLUseCase[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7620,13 +6489,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLUseCase(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isAbstract = u.isAbstract,
-            isFinalSpecialization = u.isFinalSpecialization,
-            isLeaf = u.isLeaf,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -7675,7 +6538,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLValuePin
   (extent: OTIDocumentExtent,
    u: UMLValuePin[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7684,16 +6547,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLValuePin(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isControl = u.isControl,
-            isControlType = u.isControlType,
-            isLeaf = u.isLeaf,
-            isOrdered = u.isOrdered,
-            isUnique = u.isUnique,
-            name = u.name,
-            ordering = u.ordering,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -7718,7 +6572,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLValueSpecificationAction
   (extent: OTIDocumentExtent,
    u: UMLValueSpecificationAction[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7727,12 +6581,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLValueSpecificationAction(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isLeaf = u.isLeaf,
-            isLocallyReentrant = u.isLocallyReentrant,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -7757,7 +6606,7 @@ case class OTIJsonSerializationHelper
     result
   }
 
-  def toOTI
+  def addOTIUMLVariable
   (extent: OTIDocumentExtent,
    u: UMLVariable[Uml])
   (implicit ops: UMLOps[Uml])
@@ -7766,12 +6615,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          OTIMOFElement.OTIUMLVariable(
-            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            isOrdered = u.isOrdered,
-            isUnique = u.isUnique,
-            name = u.name,
-            visibility = u.visibility))
+          otiJsonElementHelper.toOTIMOFElement(u, ud)
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
