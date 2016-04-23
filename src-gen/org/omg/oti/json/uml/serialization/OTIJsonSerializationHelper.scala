@@ -136,69 +136,30 @@ case class OTIJsonSerializationHelper
 
   // ============
 
-  def toCompositeFirstEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  def toCompositeOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
    v : V,
    vIndex: Int,
-   ctor: (ElementLocation, Int, ElementLocation) => OTIMOFCompositeFirstEndOrderedLink)
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFCompositeOrderedLink)
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
     extent.copy(
-      compositeFirstEndOrderedLinkExtent =
-        extent.compositeFirstEndOrderedLinkExtent :+
-          ctor(
-            ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            vIndex,
-            toElementLocation(ud, v, vd)))
-  }
-
-  def toCompositeFirstEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
-  (extent: OTIDocumentExtent,
-   ud: Document[Uml],
-   u : U,
-   v : Seq[V],
-   ctor: (ElementLocation, Int, ElementLocation) => OTIMOFCompositeFirstEndOrderedLink,
-   vExcludes: scala.collection.Iterable[V]*)
-  : OTIDocumentExtent
-  = {
-    val excluded = allExcluded[V](vExcludes)
-
-    ( extent /: v.zipWithIndex ) { case (ei, (uv, uvIndex)) =>
-      if (excluded.contains(uv))
-        ei
-      else
-        toCompositeFirstEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
-    }
-  }
-
-  // ============
-
-  def toCompositeSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
-  (extent: OTIDocumentExtent,
-   ud: Document[Uml],
-   u : U,
-   v : V,
-   vIndex: Int,
-   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFCompositeSecondEndOrderedLink)
-  : OTIDocumentExtent
-  = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
-    extent.copy(
-      compositeSecondEndOrderedLinkExtent =
-        extent.compositeSecondEndOrderedLinkExtent :+
+      compositeOrderedLinkExtent =
+        extent.compositeOrderedLinkExtent :+
           ctor(
             ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             toElementLocation(ud, v, vd),
             vIndex))
   }
 
-  def toCompositeSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  def toCompositeOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
    v : scala.collection.Iterable[V],
-   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFCompositeSecondEndOrderedLink,
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFCompositeOrderedLink,
    vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
   = {
@@ -208,7 +169,7 @@ case class OTIJsonSerializationHelper
       if (excluded.contains(uv))
         ei
       else
-        toCompositeSecondEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
+        toCompositeOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
     }
   }
 
@@ -251,30 +212,30 @@ case class OTIJsonSerializationHelper
 
   // ============
 
-  def toReferenceSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  def toReferenceOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
    v : V,
    vIndex: Int,
-   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFReferenceSecondEndOrderedLink)
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFReferenceOrderedLink)
   : OTIDocumentExtent
   = odsa.ds.lookupDocumentByExtent(v).fold[OTIDocumentExtent](extent) { vd =>
     extent.copy(
-      referenceSecondEndOrderedLinkExtent =
-        extent.referenceSecondEndOrderedLinkExtent :+
+      referenceOrderedLinkExtent =
+        extent.referenceOrderedLinkExtent :+
           ctor(
             ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             toElementLocation(ud, v, vd),
             vIndex))
   }
 
-  def toReferenceSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
+  def toReferenceOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
   (extent: OTIDocumentExtent,
    ud: Document[Uml],
    u : U,
    v : Seq[V],
-   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFReferenceSecondEndOrderedLink,
+   ctor: (ElementLocation, ElementLocation, Int) => OTIMOFReferenceOrderedLink,
    vExcludes: scala.collection.Iterable[V]*)
   : OTIDocumentExtent
   = {
@@ -284,7 +245,7 @@ case class OTIJsonSerializationHelper
       if (excluded.contains(uv))
         ei
       else
-        toReferenceSecondEndOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
+        toReferenceOrderedLinkExtent(extent, ud, u, uv, uvIndex, ctor)
     }
   }
 
