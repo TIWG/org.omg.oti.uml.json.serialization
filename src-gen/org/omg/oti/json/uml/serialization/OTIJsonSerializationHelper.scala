@@ -762,7 +762,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAbstraction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -791,7 +791,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAcceptCallAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isUnmarshall = u.isUnmarshall,
@@ -833,7 +833,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAcceptEventAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isUnmarshall = u.isUnmarshall,
@@ -873,7 +873,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLActionExecutionSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -898,7 +898,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLActionInputPin(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControl = u.isControl,
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
@@ -941,7 +941,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLActivity(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -1033,7 +1033,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLActivityFinalNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -1061,7 +1061,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLActivityParameterNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
             name = u.name,
@@ -1095,7 +1095,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLActivityPartition(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isDimension = u.isDimension,
             isExternal = u.isExternal,
             name = u.name,
@@ -1124,7 +1124,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLActor(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -1180,7 +1180,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAddStructuralFeatureValueAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isReplaceAll = u.isReplaceAll,
@@ -1224,7 +1224,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAddVariableValueAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isReplaceAll = u.isReplaceAll,
@@ -1264,7 +1264,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAnyReceiveEvent(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -1287,7 +1287,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLArtifact(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             fileName = u.fileName,
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -1346,7 +1346,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAssociation(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isDerived = u.isDerived,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -1403,7 +1403,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLAssociationClass(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isDerived = u.isDerived,
@@ -1477,7 +1477,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLBehaviorExecutionSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -1502,7 +1502,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLBroadcastSignalAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -1539,7 +1539,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCallBehaviorAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isSynchronous = u.isSynchronous,
@@ -1579,7 +1579,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCallEvent(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -1602,7 +1602,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCallOperationAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isSynchronous = u.isSynchronous,
@@ -1644,7 +1644,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCentralBufferNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
             name = u.name,
@@ -1678,7 +1678,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLChangeEvent(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -1703,7 +1703,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLClass(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -1770,7 +1770,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLClassifierTemplateParameter(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             allowSubstitutable = u.allowSubstitutable))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
@@ -1794,7 +1794,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLClause(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -1821,7 +1821,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLClearAssociationAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -1860,7 +1860,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLClearStructuralFeatureAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -1899,7 +1899,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLClearVariableAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -1934,7 +1934,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCollaboration(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -1996,7 +1996,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCollaborationUse(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -2019,7 +2019,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCombinedFragment(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             interactionOperator = u.interactionOperator,
             name = u.name,
             visibility = u.visibility))
@@ -2049,7 +2049,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLComment(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             body = u.body))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
@@ -2069,7 +2069,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCommunicationPath(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isDerived = u.isDerived,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -2126,7 +2126,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLComponent(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -2198,7 +2198,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLComponentRealization(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -2229,7 +2229,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLConditionalNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAssured = u.isAssured,
             isDeterminate = u.isDeterminate,
             isLeaf = u.isLeaf,
@@ -2285,7 +2285,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLConnectableElementTemplateParameter(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -2306,7 +2306,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLConnectionPointReference(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -2331,7 +2331,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLConnector(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isStatic = u.isStatic,
             name = u.name,
@@ -2360,7 +2360,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLConnectorEnd(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isOrdered = u.isOrdered,
             isUnique = u.isUnique))
     val e1 = 
@@ -2383,7 +2383,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLConsiderIgnoreFragment(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             interactionOperator = u.interactionOperator,
             name = u.name,
             visibility = u.visibility))
@@ -2415,7 +2415,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLConstraint(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -2442,7 +2442,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLContinuation(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             setting = u.setting,
             visibility = u.visibility))
@@ -2468,7 +2468,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLControlFlow(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -2496,7 +2496,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCreateLinkAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -2535,7 +2535,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCreateLinkObjectAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -2576,7 +2576,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLCreateObjectAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -2613,7 +2613,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDataStoreNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
             name = u.name,
@@ -2647,7 +2647,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDataType(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -2701,7 +2701,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDecisionNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -2731,7 +2731,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDependency(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -2758,7 +2758,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDeployment(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -2789,7 +2789,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDeploymentSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             deploymentLocation = u.deploymentLocation,
             executionLocation = u.executionLocation,
             fileName = u.fileName,
@@ -2850,7 +2850,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDestroyLinkAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -2889,7 +2889,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDestroyObjectAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isDestroyLinks = u.isDestroyLinks,
             isDestroyOwnedObjects = u.isDestroyOwnedObjects,
             isLeaf = u.isLeaf,
@@ -2928,7 +2928,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDestructionOccurrenceSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -2957,7 +2957,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDevice(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -3028,7 +3028,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDuration(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3055,7 +3055,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDurationConstraint(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             firstEvent = u.firstEvent,
             name = u.name,
             visibility = u.visibility))
@@ -3083,7 +3083,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDurationInterval(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3106,7 +3106,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLDurationObservation(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             firstEvent = u.firstEvent,
             name = u.name,
             visibility = u.visibility))
@@ -3132,7 +3132,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLElementImport(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             alias = u.alias,
             visibility = u.visibility))
     val e1 = 
@@ -3151,7 +3151,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLElementValue(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3174,7 +3174,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLEnumeration(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -3230,7 +3230,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLEnumerationLiteral(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3259,7 +3259,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExceptionHandler(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -3278,7 +3278,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExecutionEnvironment(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -3349,7 +3349,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExecutionOccurrenceSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3378,7 +3378,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExpansionNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
             name = u.name,
@@ -3412,7 +3412,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExpansionRegion(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             mode = u.mode,
@@ -3469,7 +3469,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExpression(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             symbol = u.symbol,
             visibility = u.visibility))
@@ -3495,7 +3495,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExtend(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3520,7 +3520,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExtension(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isDerived = u.isDerived,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -3577,7 +3577,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExtensionEnd(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             aggregation = u.aggregation,
             isDerived = u.isDerived,
             isDerivedUnion = u.isDerivedUnion,
@@ -3623,7 +3623,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLExtensionPoint(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -3645,7 +3645,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLFinalState(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -3689,7 +3689,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLFlowFinalNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -3717,7 +3717,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLForkNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -3745,7 +3745,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLFunctionBehavior(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             body = u.body,
             isAbstract = u.isAbstract,
             isActive = u.isActive,
@@ -3825,7 +3825,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLGate(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3848,7 +3848,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLGeneralOrdering(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3869,7 +3869,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLGeneralization(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isSubstitutable = u.isSubstitutable))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
@@ -3887,7 +3887,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLGeneralizationSet(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isCovering = u.isCovering,
             isDisjoint = u.isDisjoint,
             name = u.name,
@@ -3914,7 +3914,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLImage(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             content = u.content,
             format = u.format,
             location = u.location))
@@ -3934,7 +3934,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInclude(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3955,7 +3955,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInformationFlow(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -3992,7 +3992,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInformationItem(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -4044,7 +4044,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInitialNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -4072,7 +4072,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInputPin(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControl = u.isControl,
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
@@ -4113,7 +4113,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInstanceSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4144,7 +4144,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInstanceValue(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4167,7 +4167,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInteraction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -4259,7 +4259,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInteractionConstraint(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4290,7 +4290,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInteractionOperand(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4325,7 +4325,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInteractionUse(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4356,7 +4356,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInterface(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -4418,7 +4418,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInterfaceRealization(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4447,7 +4447,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInterruptibleActivityRegion(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4472,7 +4472,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLInterval(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4495,7 +4495,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLIntervalConstraint(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4522,7 +4522,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLJoinNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isCombineDuplicate = u.isCombineDuplicate,
             isLeaf = u.isLeaf,
             name = u.name,
@@ -4553,7 +4553,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLifeline(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4578,7 +4578,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLinkEndCreationData(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isReplaceAll = u.isReplaceAll))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
@@ -4602,7 +4602,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLinkEndData(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -4623,7 +4623,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLinkEndDestructionData(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isDestroyDuplicates = u.isDestroyDuplicates))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
@@ -4647,7 +4647,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLiteralBoolean(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             value = u.value,
             visibility = u.visibility))
@@ -4671,7 +4671,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLiteralInteger(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             value = u.value,
             visibility = u.visibility))
@@ -4695,7 +4695,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLiteralNull(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4718,7 +4718,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLiteralReal(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             value = u.value,
             visibility = u.visibility))
@@ -4742,7 +4742,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLiteralString(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             value = u.value,
             visibility = u.visibility))
@@ -4766,7 +4766,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLiteralUnlimitedNatural(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             value = u.value,
             visibility = u.visibility))
@@ -4790,7 +4790,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLLoopNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isTestedFirst = u.isTestedFirst,
@@ -4855,7 +4855,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLManifestation(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4884,7 +4884,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLMergeNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -4912,7 +4912,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLMessage(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             messageSort = u.messageSort,
             name = u.name,
             visibility = u.visibility))
@@ -4940,7 +4940,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLMessageOccurrenceSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -4969,7 +4969,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLModel(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             URI = u.URI,
             name = u.name,
             viewpoint = u.viewpoint,
@@ -5010,7 +5010,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -5081,7 +5081,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLObjectFlow(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isMulticast = u.isMulticast,
             isMultireceive = u.isMultireceive,
@@ -5111,7 +5111,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLOccurrenceSpecification(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -5138,7 +5138,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLOpaqueAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             body = u.body,
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
@@ -5179,7 +5179,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLOpaqueBehavior(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             body = u.body,
             isAbstract = u.isAbstract,
             isActive = u.isActive,
@@ -5259,7 +5259,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLOpaqueExpression(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             body = u.body,
             language = u.language,
             name = u.name,
@@ -5284,7 +5284,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLOperation(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             concurrency = u.concurrency,
             isAbstract = u.isAbstract,
             isLeaf = u.isLeaf,
@@ -5338,7 +5338,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLOperationTemplateParameter(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -5359,7 +5359,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLOutputPin(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControl = u.isControl,
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
@@ -5400,7 +5400,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLPackage(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             URI = u.URI,
             name = u.name,
             visibility = u.visibility))
@@ -5440,7 +5440,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLPackageImport(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             visibility = u.visibility))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
@@ -5458,7 +5458,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLPackageMerge(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -5475,7 +5475,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLParameter(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             direction = u.direction,
             effect = u.effect,
             isException = u.isException,
@@ -5512,7 +5512,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLParameterSet(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -5535,7 +5535,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLPartDecomposition(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -5566,7 +5566,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLPort(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             aggregation = u.aggregation,
             isBehavior = u.isBehavior,
             isConjugated = u.isConjugated,
@@ -5617,7 +5617,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLPrimitiveType(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -5671,7 +5671,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLProfile(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             URI = u.URI,
             name = u.name,
             visibility = u.visibility))
@@ -5715,7 +5715,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLProfileApplication(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isStrict = u.isStrict))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
@@ -5733,7 +5733,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLProperty(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             aggregation = u.aggregation,
             isDerived = u.isDerived,
             isDerivedUnion = u.isDerivedUnion,
@@ -5779,7 +5779,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLProtocolConformance(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -5796,7 +5796,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLProtocolStateMachine(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -5882,7 +5882,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLProtocolTransition(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             kind = u.kind,
             name = u.name,
@@ -5921,7 +5921,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLPseudostate(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             kind = u.kind,
             name = u.name,
             visibility = u.visibility))
@@ -5943,7 +5943,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLQualifierValue(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -5962,7 +5962,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLRaiseExceptionAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -5999,7 +5999,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadExtentAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6038,7 +6038,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadIsClassifiedObjectAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isDirect = u.isDirect,
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
@@ -6078,7 +6078,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadLinkAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6119,7 +6119,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadLinkObjectEndAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6160,7 +6160,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadLinkObjectEndQualifierAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6201,7 +6201,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadSelfAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6238,7 +6238,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadStructuralFeatureAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6277,7 +6277,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReadVariableAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6314,7 +6314,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLRealization(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -6343,7 +6343,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReception(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             concurrency = u.concurrency,
             isAbstract = u.isAbstract,
             isLeaf = u.isLeaf,
@@ -6382,7 +6382,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReclassifyObjectAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isReplaceAll = u.isReplaceAll,
@@ -6424,7 +6424,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLRedefinableTemplateSignature(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -6452,7 +6452,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReduceAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isOrdered = u.isOrdered,
@@ -6492,7 +6492,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLRegion(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -6524,7 +6524,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLRemoveStructuralFeatureValueAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isRemoveDuplicates = u.isRemoveDuplicates,
@@ -6568,7 +6568,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLRemoveVariableValueAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isRemoveDuplicates = u.isRemoveDuplicates,
@@ -6608,7 +6608,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLReplyAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6649,7 +6649,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLSendObjectAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6688,7 +6688,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLSendSignalAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6727,7 +6727,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLSequenceNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             mustIsolate = u.mustIsolate,
@@ -6779,7 +6779,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLSignal(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -6831,7 +6831,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLSignalEvent(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -6854,7 +6854,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLSlot(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -6873,7 +6873,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLStartClassifierBehaviorAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -6910,7 +6910,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLStartObjectBehaviorAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             isSynchronous = u.isSynchronous,
@@ -6952,7 +6952,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLState(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             name = u.name,
             visibility = u.visibility))
@@ -6996,7 +6996,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLStateInvariant(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -7021,7 +7021,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLStateMachine(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -7105,7 +7105,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLStereotype(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isActive = u.isActive,
             isFinalSpecialization = u.isFinalSpecialization,
@@ -7174,7 +7174,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLStringExpression(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             symbol = u.symbol,
             visibility = u.visibility))
@@ -7206,7 +7206,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLStructuredActivityNode(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             mustIsolate = u.mustIsolate,
@@ -7258,7 +7258,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLSubstitution(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -7287,7 +7287,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTemplateBinding(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -7306,7 +7306,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTemplateParameter(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -7327,7 +7327,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTemplateParameterSubstitution(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedActual, OTIUMLA_ownedActual_owningTemplateParameterSubstitution)
     val e2 = 
@@ -7346,7 +7346,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTemplateSignature(
-            toolSpecific_id = u.toolSpecific_id))
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -7367,7 +7367,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTestIdentityAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -7408,7 +7408,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTimeConstraint(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             firstEvent = u.firstEvent,
             name = u.name,
             visibility = u.visibility))
@@ -7436,7 +7436,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTimeEvent(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isRelative = u.isRelative,
             name = u.name,
             visibility = u.visibility))
@@ -7462,7 +7462,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTimeExpression(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -7489,7 +7489,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTimeInterval(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -7512,7 +7512,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTimeObservation(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             firstEvent = u.firstEvent,
             name = u.name,
             visibility = u.visibility))
@@ -7536,7 +7536,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTransition(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             kind = u.kind,
             name = u.name,
@@ -7571,7 +7571,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLTrigger(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -7594,7 +7594,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLUnmarshallAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -7633,7 +7633,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLUsage(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             name = u.name,
             visibility = u.visibility))
     val e1 = 
@@ -7660,7 +7660,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLUseCase(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isAbstract = u.isAbstract,
             isFinalSpecialization = u.isFinalSpecialization,
             isLeaf = u.isLeaf,
@@ -7724,7 +7724,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLValuePin(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isControl = u.isControl,
             isControlType = u.isControlType,
             isLeaf = u.isLeaf,
@@ -7767,7 +7767,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLValueSpecificationAction(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isLeaf = u.isLeaf,
             isLocallyReentrant = u.isLocallyReentrant,
             name = u.name,
@@ -7806,7 +7806,7 @@ case class OTIJsonSerializationHelper
       elementExtent = 
         extent.elementExtent :+
           OTIMOFElement.OTIUMLVariable(
-            toolSpecific_id = u.toolSpecific_id,
+            otiMOFElementLocation = ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
             isOrdered = u.isOrdered,
             isUnique = u.isUnique,
             name = u.name,
