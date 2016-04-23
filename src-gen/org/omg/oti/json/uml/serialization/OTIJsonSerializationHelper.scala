@@ -473,7 +473,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -499,7 +499,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -535,7 +535,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -569,7 +569,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -591,7 +591,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.fromAction, OTIUMLA_fromAction_actionInputPin)
     val e2 = 
@@ -625,7 +625,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -707,7 +707,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -731,7 +731,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -759,7 +759,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -783,7 +783,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -833,7 +833,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -871,7 +871,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -905,7 +905,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -925,7 +925,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -977,7 +977,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1027,7 +1027,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1093,7 +1093,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -1115,7 +1115,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -1147,7 +1147,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -1181,7 +1181,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1201,7 +1201,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -1237,7 +1237,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1265,7 +1265,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.changeExpression, OTIUMLA_changeExpression_changeEvent)
     val e2 = 
@@ -1287,7 +1287,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1347,7 +1347,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -1369,7 +1369,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -1395,7 +1395,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1429,7 +1429,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1463,7 +1463,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -1493,7 +1493,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1549,7 +1549,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1569,7 +1569,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment)
     val e2 = 
@@ -1595,7 +1595,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -1613,7 +1613,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1663,7 +1663,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -1727,7 +1727,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -1755,7 +1755,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.clause, OTIUMLA_clause_conditionalNode)
     val e2 = 
@@ -1803,7 +1803,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -1823,7 +1823,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1845,7 +1845,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.end, OTIUMLA_end_connector)
     val e2 = 
@@ -1869,7 +1869,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -1889,7 +1889,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment)
     val e2 = 
@@ -1917,7 +1917,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -1941,7 +1941,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -1963,7 +1963,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge)
     val e2 = 
@@ -1987,7 +1987,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction)
     val e2 = 
@@ -2021,7 +2021,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction)
     val e2 = 
@@ -2057,7 +2057,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -2089,7 +2089,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2117,7 +2117,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2165,7 +2165,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2191,7 +2191,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2215,7 +2215,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.configuration, OTIUMLA_configuration_deployment)
     val e2 = 
@@ -2243,7 +2243,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2295,7 +2295,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_destroyLinkAction)
     val e2 = 
@@ -2329,7 +2329,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -2361,7 +2361,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -2387,7 +2387,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2451,7 +2451,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_duration)
     val e2 = 
@@ -2475,7 +2475,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2499,7 +2499,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2519,7 +2519,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2541,7 +2541,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -2557,7 +2557,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2577,7 +2577,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2627,7 +2627,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location)
     val e2 = 
@@ -2653,7 +2653,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -2671,7 +2671,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2735,7 +2735,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -2761,7 +2761,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2789,7 +2789,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -2839,7 +2839,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2861,7 +2861,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_extend)
     val e2 = 
@@ -2883,7 +2883,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -2933,7 +2933,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
     val e2 = 
@@ -2967,7 +2967,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -2985,7 +2985,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state)
     val e2 = 
@@ -3025,7 +3025,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3049,7 +3049,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3073,7 +3073,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3143,7 +3143,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3163,7 +3163,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3181,7 +3181,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -3197,7 +3197,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3219,7 +3219,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -3235,7 +3235,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3253,7 +3253,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3287,7 +3287,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3333,7 +3333,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3357,7 +3357,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -3389,7 +3389,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location)
     val e2 = 
@@ -3417,7 +3417,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3437,7 +3437,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.action, OTIUMLA_action_interaction)
     val e2 = 
@@ -3521,7 +3521,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.maxint, OTIUMLA_maxint_interactionConstraint)
     val e2 = 
@@ -3549,7 +3549,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -3581,7 +3581,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
     val e2 = 
@@ -3609,7 +3609,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -3665,7 +3665,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -3691,7 +3691,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3713,7 +3713,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3733,7 +3733,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3757,7 +3757,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.joinSpec, OTIUMLA_joinSpec_joinNode)
     val e2 = 
@@ -3783,7 +3783,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3805,7 +3805,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -3827,7 +3827,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -3847,7 +3847,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -3869,7 +3869,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3889,7 +3889,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3909,7 +3909,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3929,7 +3929,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3949,7 +3949,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3969,7 +3969,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -3989,7 +3989,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -4047,7 +4047,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -4073,7 +4073,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4097,7 +4097,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_message)
     val e2 = 
@@ -4121,7 +4121,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -4147,7 +4147,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -4183,7 +4183,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -4247,7 +4247,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge)
     val e2 = 
@@ -4271,7 +4271,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -4295,7 +4295,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -4329,7 +4329,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -4399,7 +4399,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4419,7 +4419,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.bodyCondition, OTIUMLA_bodyCondition_bodyContext)
     val e2 = 
@@ -4465,7 +4465,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -4485,7 +4485,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -4517,7 +4517,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -4553,7 +4553,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -4569,7 +4569,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -4585,7 +4585,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningParameter)
     val e2 = 
@@ -4613,7 +4613,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_parameterSet)
     val e2 = 
@@ -4633,7 +4633,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
     val e2 = 
@@ -4661,7 +4661,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
     val e2 = 
@@ -4697,7 +4697,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -4745,7 +4745,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace, u.metaclassReference)
     val e2 = 
@@ -4785,7 +4785,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -4801,7 +4801,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
     val e2 = 
@@ -4835,7 +4835,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val result = e1  
@@ -4851,7 +4851,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -4929,7 +4929,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition)
     val e2 = 
@@ -4963,7 +4963,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -4981,7 +4981,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 =
@@ -4999,7 +4999,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.exception, OTIUMLA_exception_raiseExceptionAction)
     val e2 = 
@@ -5031,7 +5031,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5065,7 +5065,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5099,7 +5099,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_linkAction)
     val e2 = 
@@ -5135,7 +5135,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5171,7 +5171,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5207,7 +5207,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5239,7 +5239,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5273,7 +5273,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5305,7 +5305,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -5331,7 +5331,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -5363,7 +5363,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5399,7 +5399,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -5423,7 +5423,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collection, OTIUMLA_collection_reduceAction)
     val e2 = 
@@ -5457,7 +5457,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
@@ -5485,7 +5485,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5523,7 +5523,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5557,7 +5557,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5593,7 +5593,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5627,7 +5627,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -5661,7 +5661,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -5707,7 +5707,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -5753,7 +5753,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -5773,7 +5773,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -5791,7 +5791,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -5823,7 +5823,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
@@ -5859,7 +5859,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state)
     val e2 = 
@@ -5899,7 +5899,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e2 = 
@@ -5921,7 +5921,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -5997,7 +5997,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -6059,7 +6059,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6087,7 +6087,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
     val e2 = 
@@ -6133,7 +6133,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
     val e2 = 
@@ -6159,7 +6159,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -6177,7 +6177,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -6197,7 +6197,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedActual, OTIUMLA_ownedActual_owningTemplateParameterSubstitution)
     val e2 = 
@@ -6215,7 +6215,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
@@ -6235,7 +6235,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.first, OTIUMLA_first_testIdentityAction)
     val e2 = 
@@ -6271,7 +6271,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6295,7 +6295,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6317,7 +6317,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_timeExpression)
     val e2 = 
@@ -6341,7 +6341,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6361,7 +6361,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6381,7 +6381,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition)
     val e2 = 
@@ -6411,7 +6411,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6431,7 +6431,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6465,7 +6465,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
@@ -6489,7 +6489,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
     val e2 = 
@@ -6547,7 +6547,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
@@ -6581,7 +6581,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e2 = 
@@ -6615,7 +6615,7 @@ case class OTIJsonSerializationHelper
     val e0 = extent.copy(
       elementExtent = 
         extent.elementExtent :+
-          otiJsonElementHelper.toOTIMOFElement(u, ud)
+          otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
     val e2 = 
