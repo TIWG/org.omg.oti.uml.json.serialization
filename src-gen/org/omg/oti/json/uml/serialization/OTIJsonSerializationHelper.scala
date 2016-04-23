@@ -808,7 +808,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.returnInformation, OTIUMLA_returnInformation_acceptCallAction)
     val e8 = 
@@ -850,7 +850,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.trigger, OTIUMLA_trigger_acceptEventAction)
     val e8 =
@@ -966,11 +966,11 @@ case class OTIJsonSerializationHelper
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e8 = 
-      toCompositeSecondEndOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e9 = 
       toCompositeLinkExtent(e8, ud, u, u.node, OTIUMLA_node_activity, u.structuredNode)
     val e10 = 
-      toCompositeFirstEndOrderedLinkExtent(e9, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e9, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e11 = 
       toCompositeLinkExtent(e10, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e12 = 
@@ -978,9 +978,9 @@ case class OTIJsonSerializationHelper
     val e13 = 
       toCompositeLinkExtent(e12, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e14 = 
-      toCompositeSecondEndOrderedLinkExtent(e13, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e13, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e15 = 
-      toCompositeSecondEndOrderedLinkExtent(e14, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e14, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
     val e16 = 
       toCompositeLinkExtent(e15, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
     val e17 = 
@@ -1307,11 +1307,11 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.nestedArtifact, OTIUMLA_nestedArtifact_artifact)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e9 = 
-      toCompositeSecondEndOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact)
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
     val e11 = 
@@ -1364,7 +1364,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeFirstEndOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
     val e8 = 
@@ -1378,7 +1378,7 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
     val e13 =
-      toReferenceFirstEndOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
     val e14 =
       toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
     val e15 =
@@ -1422,9 +1422,9 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e9 = 
@@ -1432,9 +1432,9 @@ case class OTIJsonSerializationHelper
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e11 = 
-      toCompositeFirstEndOrderedLinkExtent(e10, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
     val e12 = 
-      toCompositeSecondEndOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e13 = 
       toCompositeLinkExtent(e12, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
     val e14 = 
@@ -1452,7 +1452,7 @@ case class OTIJsonSerializationHelper
     val e20 =
       toReferenceLinkExtent(e19, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
     val e21 =
-      toReferenceFirstEndOrderedLinkExtent(e20, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e20, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
     val e22 =
       toReferenceLinkExtent(e21, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
     val e23 =
@@ -1508,7 +1508,7 @@ case class OTIJsonSerializationHelper
             name = u.name,
             visibility = u.visibility))
     val e1 = 
-      toCompositeSecondEndOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e3 = 
@@ -1546,7 +1546,7 @@ case class OTIJsonSerializationHelper
             name = u.name,
             visibility = u.visibility))
     val e1 = 
-      toCompositeSecondEndOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e3 = 
@@ -1558,7 +1558,7 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction)
     val e8 =
       toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
     val e9 =
@@ -1609,7 +1609,7 @@ case class OTIJsonSerializationHelper
             name = u.name,
             visibility = u.visibility))
     val e1 = 
-      toCompositeSecondEndOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e3 = 
@@ -1621,7 +1621,7 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.target, OTIUMLA_target_callOperationAction)
     val e9 =
@@ -1721,9 +1721,9 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e9 = 
@@ -1731,7 +1731,7 @@ case class OTIJsonSerializationHelper
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e11 = 
-      toCompositeSecondEndOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
     val e13 = 
@@ -1800,7 +1800,7 @@ case class OTIJsonSerializationHelper
     val e2 =
       toReferenceLinkExtent(e1, ud, u, u.body, OTIUMLA_body_clause)
     val e3 =
-      toReferenceSecondEndOrderedLinkExtent(e2, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_clause)
+      toReferenceOrderedLinkExtent(e2, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_clause)
     val e4 =
       toReferenceLinkExtent(e3, ud, u, u.decider, OTIUMLA_decider_clause)
     val e5 =
@@ -1951,7 +1951,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_structuredClassifier)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_structuredClassifier)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e8 = 
@@ -2030,7 +2030,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e4 = 
-      toCompositeSecondEndOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment)
+      toCompositeOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment)
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 =
@@ -2087,7 +2087,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeFirstEndOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
     val e8 = 
@@ -2101,7 +2101,7 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
     val e13 =
-      toReferenceFirstEndOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
     val e14 =
       toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
     val e15 =
@@ -2145,9 +2145,9 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e9 = 
@@ -2155,7 +2155,7 @@ case class OTIJsonSerializationHelper
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e11 = 
-      toCompositeSecondEndOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
     val e13 = 
@@ -2260,7 +2260,7 @@ case class OTIJsonSerializationHelper
     val e11 = 
       toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
     val e12 = 
-      toCompositeSecondEndOrderedLinkExtent(e11, ud, u, u.result, OTIUMLA_result_conditionalNode)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.result, OTIUMLA_result_conditionalNode)
     val e13 = 
       toCompositeLinkExtent(e12, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode)
     val e14 = 
@@ -2337,7 +2337,7 @@ case class OTIJsonSerializationHelper
             name = u.name,
             visibility = u.visibility))
     val e1 = 
-      toCompositeSecondEndOrderedLinkExtent(e0, ud, u, u.end, OTIUMLA_end_connector)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.end, OTIUMLA_end_connector)
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e3 = 
@@ -2394,7 +2394,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e4 = 
-      toCompositeSecondEndOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment)
+      toCompositeOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment)
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 =
@@ -2425,7 +2425,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_owningConstraint)
     val e4 =
-      toReferenceSecondEndOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
     val e5 =
       toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
     val result = e5  
@@ -2662,11 +2662,11 @@ case class OTIJsonSerializationHelper
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e5 = 
-      toCompositeFirstEndOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
     val e9 = 
@@ -2811,11 +2811,11 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.nestedArtifact, OTIUMLA_nestedArtifact_artifact)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e9 = 
-      toCompositeSecondEndOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact)
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
     val e11 = 
@@ -2977,11 +2977,11 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node)
     val e9 = 
-      toCompositeFirstEndOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e11 = 
@@ -2989,7 +2989,7 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e13 = 
-      toCompositeSecondEndOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e14 = 
       toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
     val e15 = 
@@ -3066,7 +3066,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_durationConstraint)
     val e4 =
-      toReferenceSecondEndOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
     val e5 =
       toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
     val result = e5  
@@ -3115,7 +3115,7 @@ case class OTIJsonSerializationHelper
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e3 =
-      toReferenceSecondEndOrderedLinkExtent(e2, ud, u, u.event, OTIUMLA_event_durationObservation)
+      toReferenceOrderedLinkExtent(e2, ud, u, u.event, OTIUMLA_event_durationObservation)
     val e4 =
       toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
     val result = e4  
@@ -3189,13 +3189,13 @@ case class OTIJsonSerializationHelper
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e5 = 
-      toCompositeFirstEndOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedLiteral, OTIUMLA_ownedLiteral_enumeration)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedLiteral, OTIUMLA_ownedLiteral_enumeration)
     val e8 = 
-      toCompositeFirstEndOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
     val e9 = 
       toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
     val e10 = 
@@ -3298,11 +3298,11 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node)
     val e9 = 
-      toCompositeFirstEndOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e11 = 
@@ -3310,7 +3310,7 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e13 = 
-      toCompositeSecondEndOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e14 = 
       toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
     val e15 = 
@@ -3476,7 +3476,7 @@ case class OTIJsonSerializationHelper
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
-      toCompositeSecondEndOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression)
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e4 =
@@ -3505,7 +3505,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e4 =
-      toReferenceSecondEndOrderedLinkExtent(e3, ud, u, u.extensionLocation, OTIUMLA_extensionLocation_extension)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.extensionLocation, OTIUMLA_extensionLocation_extension)
     val result = e4  
     result
   }
@@ -3552,7 +3552,7 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
     val e13 =
-      toReferenceFirstEndOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
     val e14 =
       toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
     val e15 =
@@ -3600,7 +3600,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
     val e8 =
@@ -3766,9 +3766,9 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e9 = 
@@ -3776,9 +3776,9 @@ case class OTIJsonSerializationHelper
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e11 = 
-      toCompositeSecondEndOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e12 = 
-      toCompositeSecondEndOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
     val e13 = 
       toCompositeLinkExtent(e12, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
     val e14 = 
@@ -4184,7 +4184,7 @@ case class OTIJsonSerializationHelper
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.formalGate, OTIUMLA_formalGate_interaction)
     val e5 = 
-      toCompositeSecondEndOrderedLinkExtent(e4, ud, u, u.fragment, OTIUMLA_fragment_enclosingInteraction)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.fragment, OTIUMLA_fragment_enclosingInteraction)
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e7 = 
@@ -4198,9 +4198,9 @@ case class OTIJsonSerializationHelper
     val e11 = 
       toCompositeLinkExtent(e10, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e12 = 
-      toCompositeSecondEndOrderedLinkExtent(e11, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e13 = 
-      toCompositeFirstEndOrderedLinkExtent(e12, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e14 = 
       toCompositeLinkExtent(e13, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e15 = 
@@ -4208,9 +4208,9 @@ case class OTIJsonSerializationHelper
     val e16 = 
       toCompositeLinkExtent(e15, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e17 = 
-      toCompositeSecondEndOrderedLinkExtent(e16, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e16, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e18 = 
-      toCompositeSecondEndOrderedLinkExtent(e17, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e17, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
     val e19 = 
       toCompositeLinkExtent(e18, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
     val e20 = 
@@ -4273,7 +4273,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.specification, OTIUMLA_specification_owningConstraint)
     val e6 =
-      toReferenceSecondEndOrderedLinkExtent(e5, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e5, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
     val e7 =
       toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
     val result = e7  
@@ -4296,7 +4296,7 @@ case class OTIJsonSerializationHelper
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e2 = 
-      toCompositeFirstEndOrderedLinkExtent(e1, ud, u, u.fragment, OTIUMLA_fragment_enclosingOperand)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.fragment, OTIUMLA_fragment_enclosingOperand)
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e4 = 
@@ -4331,7 +4331,7 @@ case class OTIJsonSerializationHelper
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
     val e2 = 
-      toCompositeSecondEndOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse)
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e4 = 
@@ -4371,13 +4371,13 @@ case class OTIJsonSerializationHelper
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e5 = 
-      toCompositeSecondEndOrderedLinkExtent(e4, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_interface)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_interface)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_interface)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_interface)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e8 = 
-      toCompositeSecondEndOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_interface)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_interface)
     val e9 = 
       toCompositeLinkExtent(e8, ud, u, u.ownedReception, OTIUMLA_ownedReception_interface)
     val e10 = 
@@ -4505,7 +4505,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_intervalConstraint)
     val e4 =
-      toReferenceSecondEndOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
     val e5 =
       toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
     val result = e5  
@@ -4808,9 +4808,9 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.loopVariable, OTIUMLA_loopVariable_loopNode)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.loopVariable, OTIUMLA_loopVariable_loopNode)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.loopVariableInput, OTIUMLA_loopVariableInput_loopNode)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.loopVariableInput, OTIUMLA_loopVariableInput_loopNode)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e9 = 
@@ -4822,11 +4822,11 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
     val e13 = 
-      toCompositeSecondEndOrderedLinkExtent(e12, ud, u, u.result, OTIUMLA_result_loopNode)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.result, OTIUMLA_result_loopNode)
     val e14 = 
       toCompositeLinkExtent(e13, ud, u, u.variable, OTIUMLA_variable_scope)
     val e15 =
-      toReferenceSecondEndOrderedLinkExtent(e14, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_loopNode)
+      toReferenceOrderedLinkExtent(e14, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_loopNode)
     val e16 =
       toReferenceLinkExtent(e15, ud, u, u.bodyPart, OTIUMLA_bodyPart_loopNode)
     val e17 =
@@ -4917,7 +4917,7 @@ case class OTIJsonSerializationHelper
             name = u.name,
             visibility = u.visibility))
     val e1 = 
-      toCompositeSecondEndOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_message)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_message)
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e3 = 
@@ -5030,11 +5030,11 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node)
     val e9 = 
-      toCompositeFirstEndOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e11 = 
@@ -5042,7 +5042,7 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e13 = 
-      toCompositeSecondEndOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e14 = 
       toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
     val e15 = 
@@ -5200,9 +5200,9 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e9 = 
@@ -5210,9 +5210,9 @@ case class OTIJsonSerializationHelper
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e11 = 
-      toCompositeSecondEndOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e12 = 
-      toCompositeSecondEndOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
     val e13 = 
       toCompositeLinkExtent(e12, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
     val e14 = 
@@ -5301,7 +5301,7 @@ case class OTIJsonSerializationHelper
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e5 = 
-      toCompositeFirstEndOrderedLinkExtent(e4, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_operation)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_operation)
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavioralFeature)
     val e7 = 
@@ -5541,7 +5541,7 @@ case class OTIJsonSerializationHelper
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
     val e2 = 
-      toCompositeSecondEndOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse)
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
     val e4 = 
@@ -5592,7 +5592,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
     val e8 =
@@ -5632,11 +5632,11 @@ case class OTIJsonSerializationHelper
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e5 = 
-      toCompositeFirstEndOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e7 = 
-      toCompositeFirstEndOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
     val e8 = 
       toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
     val e9 = 
@@ -5756,7 +5756,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
     val e8 =
@@ -5819,9 +5819,9 @@ case class OTIJsonSerializationHelper
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e8 = 
-      toCompositeSecondEndOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e9 = 
-      toCompositeFirstEndOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e10 = 
       toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e11 = 
@@ -5829,9 +5829,9 @@ case class OTIJsonSerializationHelper
     val e12 = 
       toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e13 = 
-      toCompositeSecondEndOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e14 = 
-      toCompositeSecondEndOrderedLinkExtent(e13, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e13, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
     val e15 = 
       toCompositeLinkExtent(e14, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
     val e16 = 
@@ -6357,7 +6357,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e4 = 
-      toCompositeSecondEndOrderedLinkExtent(e3, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_ownerFormalParam)
+      toCompositeOrderedLinkExtent(e3, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_ownerFormalParam)
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavioralFeature)
     val e6 = 
@@ -6433,11 +6433,11 @@ case class OTIJsonSerializationHelper
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e3 = 
-      toCompositeFirstEndOrderedLinkExtent(e2, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
+      toCompositeOrderedLinkExtent(e2, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
     val e4 =
       toReferenceLinkExtent(e3, ud, u, u.extendedSignature, OTIUMLA_extendedSignature_redefinableTemplateSignature)
     val e5 =
-      toReferenceSecondEndOrderedLinkExtent(e4, ud, u, u.parameter, OTIUMLA_parameter_templateSignature)
+      toReferenceOrderedLinkExtent(e4, ud, u, u.parameter, OTIUMLA_parameter_templateSignature)
     val result = e5  
     result
   }
@@ -6624,7 +6624,7 @@ case class OTIJsonSerializationHelper
     val e5 = 
       toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e6 = 
-      toCompositeSecondEndOrderedLinkExtent(e5, ud, u, u.replyValue, OTIUMLA_replyValue_replyAction)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.replyValue, OTIUMLA_replyValue_replyAction)
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.returnInformation, OTIUMLA_returnInformation_replyAction)
     val e8 =
@@ -6694,7 +6694,7 @@ case class OTIJsonSerializationHelper
             name = u.name,
             visibility = u.visibility))
     val e1 = 
-      toCompositeSecondEndOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e3 = 
@@ -6738,7 +6738,7 @@ case class OTIJsonSerializationHelper
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
     val e3 = 
-      toCompositeSecondEndOrderedLinkExtent(e2, ud, u, u.executableNode, OTIUMLA_executableNode_sequenceNode)
+      toCompositeOrderedLinkExtent(e2, ud, u, u.executableNode, OTIUMLA_executableNode_sequenceNode)
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e5 = 
@@ -6794,7 +6794,7 @@ case class OTIJsonSerializationHelper
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e5 = 
-      toCompositeSecondEndOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_owningSignal)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_owningSignal)
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e7 = 
@@ -6858,7 +6858,7 @@ case class OTIJsonSerializationHelper
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
-      toCompositeSecondEndOrderedLinkExtent(e1, ud, u, u.value, OTIUMLA_value_owningSlot)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.value, OTIUMLA_value_owningSlot)
     val result = e2  
     result
   }
@@ -6917,7 +6917,7 @@ case class OTIJsonSerializationHelper
             name = u.name,
             visibility = u.visibility))
     val e1 = 
-      toCompositeSecondEndOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
     val e2 = 
       toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
     val e3 = 
@@ -6931,7 +6931,7 @@ case class OTIJsonSerializationHelper
     val e7 = 
       toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e8 = 
-      toCompositeSecondEndOrderedLinkExtent(e7, ud, u, u.result, OTIUMLA_result_callAction)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.result, OTIUMLA_result_callAction)
     val e9 =
       toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
     val e10 =
@@ -7042,9 +7042,9 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e8 = 
-      toCompositeFirstEndOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e9 = 
       toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e10 = 
@@ -7052,9 +7052,9 @@ case class OTIJsonSerializationHelper
     val e11 = 
       toCompositeLinkExtent(e10, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e12 = 
-      toCompositeSecondEndOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e13 = 
-      toCompositeSecondEndOrderedLinkExtent(e12, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
     val e14 = 
       toCompositeLinkExtent(e13, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
     val e15 = 
@@ -7125,9 +7125,9 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
     val e8 = 
-      toCompositeFirstEndOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
     val e9 = 
       toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
     val e10 = 
@@ -7135,7 +7135,7 @@ case class OTIJsonSerializationHelper
     val e11 = 
       toCompositeLinkExtent(e10, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
     val e12 = 
-      toCompositeSecondEndOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
     val e13 = 
       toCompositeLinkExtent(e12, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
     val e14 = 
@@ -7181,13 +7181,13 @@ case class OTIJsonSerializationHelper
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
     val e2 = 
-      toCompositeSecondEndOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression)
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e4 = 
       toCompositeLinkExtent(e3, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template)
     val e5 = 
-      toCompositeSecondEndOrderedLinkExtent(e4, ud, u, u.subExpression, OTIUMLA_subExpression_owningExpression)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.subExpression, OTIUMLA_subExpression_owningExpression)
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
     val e7 =
@@ -7350,9 +7350,9 @@ case class OTIJsonSerializationHelper
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e2 = 
-      toCompositeFirstEndOrderedLinkExtent(e1, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
     val e3 =
-      toReferenceSecondEndOrderedLinkExtent(e2, ud, u, u.parameter, OTIUMLA_parameter_templateSignature)
+      toReferenceOrderedLinkExtent(e2, ud, u, u.parameter, OTIUMLA_parameter_templateSignature)
     val result = e3  
     result
   }
@@ -7419,7 +7419,7 @@ case class OTIJsonSerializationHelper
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_timeConstraint)
     val e4 =
-      toReferenceSecondEndOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
     val e5 =
       toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
     val result = e5  
@@ -7612,7 +7612,7 @@ case class OTIJsonSerializationHelper
     val e6 = 
       toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
     val e7 = 
-      toCompositeSecondEndOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_unmarshallAction)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_unmarshallAction)
     val e8 =
       toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
     val e9 =
