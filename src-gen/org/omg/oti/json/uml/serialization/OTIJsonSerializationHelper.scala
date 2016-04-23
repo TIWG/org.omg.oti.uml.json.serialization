@@ -84,6 +84,16 @@ case class OTIJsonSerializationHelper
 
   // <!-- Start of user code additions -->
 
+  def toElementLocation
+  ( context: Document[Uml],
+    element: UMLElement[Uml],
+    elementDocument: Document[Uml] )
+  : ElementLocation
+  = if (context == elementDocument)
+    ElementLocation_ToolSpecific_ID(element.toolSpecific_id)
+  else
+    ElementLocation_ToolSpecific_ID_OTI_URL(element.toolSpecific_id, elementDocument.info.documentURL)
+
   def allExcluded[V <: UMLElement[Uml]]
   (vExcludes: scala.collection.Seq[scala.collection.Iterable[V]])
   : Set[V]
@@ -102,7 +112,7 @@ case class OTIJsonSerializationHelper
         extent.compositeLinkExtent :+
           ctor(
             ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            ElementLocation.toElementLocation(ud, v, vd)))
+            toElementLocation(ud, v, vd)))
   }
 
   def toCompositeLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
@@ -140,7 +150,8 @@ case class OTIJsonSerializationHelper
         extent.compositeFirstEndOrderedLinkExtent :+
           ctor(
             ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            ElementLocation.toElementLocation(ud, v, vd, Some(vIndex))))
+            vIndex,
+            toElementLocation(ud, v, vd)))
   }
 
   def toCompositeFirstEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
@@ -178,7 +189,8 @@ case class OTIJsonSerializationHelper
         extent.compositeSecondEndOrderedLinkExtent :+
           ctor(
             ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            ElementLocation.toElementLocation(ud, v, vd, Some(vIndex))))
+            toElementLocation(ud, v, vd),
+            vIndex))
   }
 
   def toCompositeSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
@@ -215,7 +227,7 @@ case class OTIJsonSerializationHelper
         extent.referenceLinkExtent :+
           ctor(
             ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            ElementLocation.toElementLocation(ud, v, vd)))
+            toElementLocation(ud, v, vd)))
   }
 
   def toReferenceLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
@@ -253,7 +265,8 @@ case class OTIJsonSerializationHelper
         extent.referenceSecondEndOrderedLinkExtent :+
           ctor(
             ElementLocation_ToolSpecific_ID(u.toolSpecific_id),
-            ElementLocation.toElementLocation(ud, v, vd, Some(vIndex))))
+            toElementLocation(ud, v, vd),
+            vIndex))
   }
 
   def toReferenceSecondEndOrderedLinkExtent[U <: UMLElement[Uml], V <: UMLElement[Uml]]
