@@ -256,9 +256,9 @@ case class OTIJsonSerializationHelper
   : Option[V]
   = value.map(u2v)
 
-  // <!-- End of user code additions -->
-
   val otiJsonElementHelper = OTIJsonElementHelper(odsa.otiAdapter, Some(odsa.ds))
+
+  // <!-- End of user code additions -->
 
   def addToOTIDocumentExtent
   (extent: OTIDocumentExtent,

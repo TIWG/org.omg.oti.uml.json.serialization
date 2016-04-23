@@ -577,6 +577,12 @@ case class OTIJsonElementHelper
       json.uml.enums.UMLVisibilityKind.public
   }
 
+
+  implicit def toOTIUMLAbstraction
+  (u: Uml#Abstraction)
+  : OTIMOFElement.OTIUMLAbstraction
+  = toOTIUMLAbstraction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLAbstraction
   (u: UMLAbstraction[Uml],
    context: Option[Document[Uml]] = None)
@@ -585,6 +591,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLAcceptCallAction
+  (u: Uml#AcceptCallAction)
+  : OTIMOFElement.OTIUMLAcceptCallAction
+  = toOTIUMLAcceptCallAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLAcceptCallAction
   (u: UMLAcceptCallAction[Uml],
@@ -598,6 +610,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLAcceptEventAction
+  (u: Uml#AcceptEventAction)
+  : OTIMOFElement.OTIUMLAcceptEventAction
+  = toOTIUMLAcceptEventAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLAcceptEventAction
   (u: UMLAcceptEventAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -610,6 +628,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLActionExecutionSpecification
+  (u: Uml#ActionExecutionSpecification)
+  : OTIMOFElement.OTIUMLActionExecutionSpecification
+  = toOTIUMLActionExecutionSpecification(u, Option.empty[Document[Uml]])
+
   def toOTIUMLActionExecutionSpecification
   (u: UMLActionExecutionSpecification[Uml],
    context: Option[Document[Uml]] = None)
@@ -618,6 +642,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLActionInputPin
+  (u: Uml#ActionInputPin)
+  : OTIMOFElement.OTIUMLActionInputPin
+  = toOTIUMLActionInputPin(u, Option.empty[Document[Uml]])
 
   def toOTIUMLActionInputPin
   (u: UMLActionInputPin[Uml],
@@ -633,6 +663,12 @@ case class OTIJsonElementHelper
      name = u.name,
      ordering = u.ordering,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLActivity
+  (u: Uml#Activity)
+  : OTIMOFElement.OTIUMLActivity
+  = toOTIUMLActivity(u, Option.empty[Document[Uml]])
 
   def toOTIUMLActivity
   (u: UMLActivity[Uml],
@@ -650,6 +686,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLActivityFinalNode
+  (u: Uml#ActivityFinalNode)
+  : OTIMOFElement.OTIUMLActivityFinalNode
+  = toOTIUMLActivityFinalNode(u, Option.empty[Document[Uml]])
+
   def toOTIUMLActivityFinalNode
   (u: UMLActivityFinalNode[Uml],
    context: Option[Document[Uml]] = None)
@@ -659,6 +701,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLActivityParameterNode
+  (u: Uml#ActivityParameterNode)
+  : OTIMOFElement.OTIUMLActivityParameterNode
+  = toOTIUMLActivityParameterNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLActivityParameterNode
   (u: UMLActivityParameterNode[Uml],
@@ -672,6 +720,12 @@ case class OTIJsonElementHelper
      ordering = u.ordering,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLActivityPartition
+  (u: Uml#ActivityPartition)
+  : OTIMOFElement.OTIUMLActivityPartition
+  = toOTIUMLActivityPartition(u, Option.empty[Document[Uml]])
+
   def toOTIUMLActivityPartition
   (u: UMLActivityPartition[Uml],
    context: Option[Document[Uml]] = None)
@@ -682,6 +736,12 @@ case class OTIJsonElementHelper
      isExternal = u.isExternal,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLActor
+  (u: Uml#Actor)
+  : OTIMOFElement.OTIUMLActor
+  = toOTIUMLActor(u, Option.empty[Document[Uml]])
 
   def toOTIUMLActor
   (u: UMLActor[Uml],
@@ -695,6 +755,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLAddStructuralFeatureValueAction
+  (u: Uml#AddStructuralFeatureValueAction)
+  : OTIMOFElement.OTIUMLAddStructuralFeatureValueAction
+  = toOTIUMLAddStructuralFeatureValueAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLAddStructuralFeatureValueAction
   (u: UMLAddStructuralFeatureValueAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -706,6 +772,12 @@ case class OTIJsonElementHelper
      isReplaceAll = u.isReplaceAll,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLAddVariableValueAction
+  (u: Uml#AddVariableValueAction)
+  : OTIMOFElement.OTIUMLAddVariableValueAction
+  = toOTIUMLAddVariableValueAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLAddVariableValueAction
   (u: UMLAddVariableValueAction[Uml],
@@ -719,6 +791,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLAnyReceiveEvent
+  (u: Uml#AnyReceiveEvent)
+  : OTIMOFElement.OTIUMLAnyReceiveEvent
+  = toOTIUMLAnyReceiveEvent(u, Option.empty[Document[Uml]])
+
   def toOTIUMLAnyReceiveEvent
   (u: UMLAnyReceiveEvent[Uml],
    context: Option[Document[Uml]] = None)
@@ -727,6 +805,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLArtifact
+  (u: Uml#Artifact)
+  : OTIMOFElement.OTIUMLArtifact
+  = toOTIUMLArtifact(u, Option.empty[Document[Uml]])
 
   def toOTIUMLArtifact
   (u: UMLArtifact[Uml],
@@ -741,6 +825,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLAssociation
+  (u: Uml#Association)
+  : OTIMOFElement.OTIUMLAssociation
+  = toOTIUMLAssociation(u, Option.empty[Document[Uml]])
+
   def toOTIUMLAssociation
   (u: UMLAssociation[Uml],
    context: Option[Document[Uml]] = None)
@@ -753,6 +843,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLAssociationClass
+  (u: Uml#AssociationClass)
+  : OTIMOFElement.OTIUMLAssociationClass
+  = toOTIUMLAssociationClass(u, Option.empty[Document[Uml]])
 
   def toOTIUMLAssociationClass
   (u: UMLAssociationClass[Uml],
@@ -768,6 +864,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLBehaviorExecutionSpecification
+  (u: Uml#BehaviorExecutionSpecification)
+  : OTIMOFElement.OTIUMLBehaviorExecutionSpecification
+  = toOTIUMLBehaviorExecutionSpecification(u, Option.empty[Document[Uml]])
+
   def toOTIUMLBehaviorExecutionSpecification
   (u: UMLBehaviorExecutionSpecification[Uml],
    context: Option[Document[Uml]] = None)
@@ -776,6 +878,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLBroadcastSignalAction
+  (u: Uml#BroadcastSignalAction)
+  : OTIMOFElement.OTIUMLBroadcastSignalAction
+  = toOTIUMLBroadcastSignalAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLBroadcastSignalAction
   (u: UMLBroadcastSignalAction[Uml],
@@ -787,6 +895,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLCallBehaviorAction
+  (u: Uml#CallBehaviorAction)
+  : OTIMOFElement.OTIUMLCallBehaviorAction
+  = toOTIUMLCallBehaviorAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLCallBehaviorAction
   (u: UMLCallBehaviorAction[Uml],
@@ -800,6 +914,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLCallEvent
+  (u: Uml#CallEvent)
+  : OTIMOFElement.OTIUMLCallEvent
+  = toOTIUMLCallEvent(u, Option.empty[Document[Uml]])
+
   def toOTIUMLCallEvent
   (u: UMLCallEvent[Uml],
    context: Option[Document[Uml]] = None)
@@ -808,6 +928,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLCallOperationAction
+  (u: Uml#CallOperationAction)
+  : OTIMOFElement.OTIUMLCallOperationAction
+  = toOTIUMLCallOperationAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLCallOperationAction
   (u: UMLCallOperationAction[Uml],
@@ -821,6 +947,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLCentralBufferNode
+  (u: Uml#CentralBufferNode)
+  : OTIMOFElement.OTIUMLCentralBufferNode
+  = toOTIUMLCentralBufferNode(u, Option.empty[Document[Uml]])
+
   def toOTIUMLCentralBufferNode
   (u: UMLCentralBufferNode[Uml],
    context: Option[Document[Uml]] = None)
@@ -833,6 +965,12 @@ case class OTIJsonElementHelper
      ordering = u.ordering,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLChangeEvent
+  (u: Uml#ChangeEvent)
+  : OTIMOFElement.OTIUMLChangeEvent
+  = toOTIUMLChangeEvent(u, Option.empty[Document[Uml]])
+
   def toOTIUMLChangeEvent
   (u: UMLChangeEvent[Uml],
    context: Option[Document[Uml]] = None)
@@ -841,6 +979,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLClass
+  (u: Uml#Class)
+  : OTIMOFElement.OTIUMLClass
+  = toOTIUMLClass(u, Option.empty[Document[Uml]])
 
   def toOTIUMLClass
   (u: UMLClass[Uml],
@@ -855,6 +999,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLClassifierTemplateParameter
+  (u: Uml#ClassifierTemplateParameter)
+  : OTIMOFElement.OTIUMLClassifierTemplateParameter
+  = toOTIUMLClassifierTemplateParameter(u, Option.empty[Document[Uml]])
+
   def toOTIUMLClassifierTemplateParameter
   (u: UMLClassifierTemplateParameter[Uml],
    context: Option[Document[Uml]] = None)
@@ -863,12 +1013,24 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      allowSubstitutable = u.allowSubstitutable)
 
+
+  implicit def toOTIUMLClause
+  (u: Uml#Clause)
+  : OTIMOFElement.OTIUMLClause
+  = toOTIUMLClause(u, Option.empty[Document[Uml]])
+
   def toOTIUMLClause
   (u: UMLClause[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLClause(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLClearAssociationAction
+  (u: Uml#ClearAssociationAction)
+  : OTIMOFElement.OTIUMLClearAssociationAction
+  = toOTIUMLClearAssociationAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLClearAssociationAction
   (u: UMLClearAssociationAction[Uml],
@@ -881,6 +1043,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLClearStructuralFeatureAction
+  (u: Uml#ClearStructuralFeatureAction)
+  : OTIMOFElement.OTIUMLClearStructuralFeatureAction
+  = toOTIUMLClearStructuralFeatureAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLClearStructuralFeatureAction
   (u: UMLClearStructuralFeatureAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -892,6 +1060,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLClearVariableAction
+  (u: Uml#ClearVariableAction)
+  : OTIMOFElement.OTIUMLClearVariableAction
+  = toOTIUMLClearVariableAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLClearVariableAction
   (u: UMLClearVariableAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -902,6 +1076,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLCollaboration
+  (u: Uml#Collaboration)
+  : OTIMOFElement.OTIUMLCollaboration
+  = toOTIUMLCollaboration(u, Option.empty[Document[Uml]])
 
   def toOTIUMLCollaboration
   (u: UMLCollaboration[Uml],
@@ -915,6 +1095,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLCollaborationUse
+  (u: Uml#CollaborationUse)
+  : OTIMOFElement.OTIUMLCollaborationUse
+  = toOTIUMLCollaborationUse(u, Option.empty[Document[Uml]])
+
   def toOTIUMLCollaborationUse
   (u: UMLCollaborationUse[Uml],
    context: Option[Document[Uml]] = None)
@@ -923,6 +1109,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLCombinedFragment
+  (u: Uml#CombinedFragment)
+  : OTIMOFElement.OTIUMLCombinedFragment
+  = toOTIUMLCombinedFragment(u, Option.empty[Document[Uml]])
 
   def toOTIUMLCombinedFragment
   (u: UMLCombinedFragment[Uml],
@@ -934,6 +1126,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLComment
+  (u: Uml#Comment)
+  : OTIMOFElement.OTIUMLComment
+  = toOTIUMLComment(u, Option.empty[Document[Uml]])
+
   def toOTIUMLComment
   (u: UMLComment[Uml],
    context: Option[Document[Uml]] = None)
@@ -941,6 +1139,12 @@ case class OTIJsonElementHelper
   = OTIMOFElement.OTIUMLComment(
      otiMOFElementLocation = getElementLocationOf(u, context),
      body = u.body)
+
+
+  implicit def toOTIUMLCommunicationPath
+  (u: Uml#CommunicationPath)
+  : OTIMOFElement.OTIUMLCommunicationPath
+  = toOTIUMLCommunicationPath(u, Option.empty[Document[Uml]])
 
   def toOTIUMLCommunicationPath
   (u: UMLCommunicationPath[Uml],
@@ -954,6 +1158,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLComponent
+  (u: Uml#Component)
+  : OTIMOFElement.OTIUMLComponent
+  = toOTIUMLComponent(u, Option.empty[Document[Uml]])
 
   def toOTIUMLComponent
   (u: UMLComponent[Uml],
@@ -969,6 +1179,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLComponentRealization
+  (u: Uml#ComponentRealization)
+  : OTIMOFElement.OTIUMLComponentRealization
+  = toOTIUMLComponentRealization(u, Option.empty[Document[Uml]])
+
   def toOTIUMLComponentRealization
   (u: UMLComponentRealization[Uml],
    context: Option[Document[Uml]] = None)
@@ -977,6 +1193,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLConditionalNode
+  (u: Uml#ConditionalNode)
+  : OTIMOFElement.OTIUMLConditionalNode
+  = toOTIUMLConditionalNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLConditionalNode
   (u: UMLConditionalNode[Uml],
@@ -992,12 +1214,24 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLConnectableElementTemplateParameter
+  (u: Uml#ConnectableElementTemplateParameter)
+  : OTIMOFElement.OTIUMLConnectableElementTemplateParameter
+  = toOTIUMLConnectableElementTemplateParameter(u, Option.empty[Document[Uml]])
+
   def toOTIUMLConnectableElementTemplateParameter
   (u: UMLConnectableElementTemplateParameter[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLConnectableElementTemplateParameter(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLConnectionPointReference
+  (u: Uml#ConnectionPointReference)
+  : OTIMOFElement.OTIUMLConnectionPointReference
+  = toOTIUMLConnectionPointReference(u, Option.empty[Document[Uml]])
 
   def toOTIUMLConnectionPointReference
   (u: UMLConnectionPointReference[Uml],
@@ -1007,6 +1241,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLConnector
+  (u: Uml#Connector)
+  : OTIMOFElement.OTIUMLConnector
+  = toOTIUMLConnector(u, Option.empty[Document[Uml]])
 
   def toOTIUMLConnector
   (u: UMLConnector[Uml],
@@ -1019,6 +1259,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLConnectorEnd
+  (u: Uml#ConnectorEnd)
+  : OTIMOFElement.OTIUMLConnectorEnd
+  = toOTIUMLConnectorEnd(u, Option.empty[Document[Uml]])
+
   def toOTIUMLConnectorEnd
   (u: UMLConnectorEnd[Uml],
    context: Option[Document[Uml]] = None)
@@ -1027,6 +1273,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      isOrdered = u.isOrdered,
      isUnique = u.isUnique)
+
+
+  implicit def toOTIUMLConsiderIgnoreFragment
+  (u: Uml#ConsiderIgnoreFragment)
+  : OTIMOFElement.OTIUMLConsiderIgnoreFragment
+  = toOTIUMLConsiderIgnoreFragment(u, Option.empty[Document[Uml]])
 
   def toOTIUMLConsiderIgnoreFragment
   (u: UMLConsiderIgnoreFragment[Uml],
@@ -1038,6 +1290,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLConstraint
+  (u: Uml#Constraint)
+  : OTIMOFElement.OTIUMLConstraint
+  = toOTIUMLConstraint(u, Option.empty[Document[Uml]])
+
   def toOTIUMLConstraint
   (u: UMLConstraint[Uml],
    context: Option[Document[Uml]] = None)
@@ -1046,6 +1304,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLContinuation
+  (u: Uml#Continuation)
+  : OTIMOFElement.OTIUMLContinuation
+  = toOTIUMLContinuation(u, Option.empty[Document[Uml]])
 
   def toOTIUMLContinuation
   (u: UMLContinuation[Uml],
@@ -1057,6 +1321,12 @@ case class OTIJsonElementHelper
      setting = u.setting,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLControlFlow
+  (u: Uml#ControlFlow)
+  : OTIMOFElement.OTIUMLControlFlow
+  = toOTIUMLControlFlow(u, Option.empty[Document[Uml]])
+
   def toOTIUMLControlFlow
   (u: UMLControlFlow[Uml],
    context: Option[Document[Uml]] = None)
@@ -1066,6 +1336,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLCreateLinkAction
+  (u: Uml#CreateLinkAction)
+  : OTIMOFElement.OTIUMLCreateLinkAction
+  = toOTIUMLCreateLinkAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLCreateLinkAction
   (u: UMLCreateLinkAction[Uml],
@@ -1078,6 +1354,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLCreateLinkObjectAction
+  (u: Uml#CreateLinkObjectAction)
+  : OTIMOFElement.OTIUMLCreateLinkObjectAction
+  = toOTIUMLCreateLinkObjectAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLCreateLinkObjectAction
   (u: UMLCreateLinkObjectAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -1089,6 +1371,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLCreateObjectAction
+  (u: Uml#CreateObjectAction)
+  : OTIMOFElement.OTIUMLCreateObjectAction
+  = toOTIUMLCreateObjectAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLCreateObjectAction
   (u: UMLCreateObjectAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -1099,6 +1387,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLDataStoreNode
+  (u: Uml#DataStoreNode)
+  : OTIMOFElement.OTIUMLDataStoreNode
+  = toOTIUMLDataStoreNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLDataStoreNode
   (u: UMLDataStoreNode[Uml],
@@ -1112,6 +1406,12 @@ case class OTIJsonElementHelper
      ordering = u.ordering,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDataType
+  (u: Uml#DataType)
+  : OTIMOFElement.OTIUMLDataType
+  = toOTIUMLDataType(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDataType
   (u: UMLDataType[Uml],
    context: Option[Document[Uml]] = None)
@@ -1124,6 +1424,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDecisionNode
+  (u: Uml#DecisionNode)
+  : OTIMOFElement.OTIUMLDecisionNode
+  = toOTIUMLDecisionNode(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDecisionNode
   (u: UMLDecisionNode[Uml],
    context: Option[Document[Uml]] = None)
@@ -1134,6 +1440,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDependency
+  (u: Uml#Dependency)
+  : OTIMOFElement.OTIUMLDependency
+  = toOTIUMLDependency(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDependency
   (u: UMLDependency[Uml],
    context: Option[Document[Uml]] = None)
@@ -1143,6 +1455,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDeployment
+  (u: Uml#Deployment)
+  : OTIMOFElement.OTIUMLDeployment
+  = toOTIUMLDeployment(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDeployment
   (u: UMLDeployment[Uml],
    context: Option[Document[Uml]] = None)
@@ -1151,6 +1469,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLDeploymentSpecification
+  (u: Uml#DeploymentSpecification)
+  : OTIMOFElement.OTIUMLDeploymentSpecification
+  = toOTIUMLDeploymentSpecification(u, Option.empty[Document[Uml]])
 
   def toOTIUMLDeploymentSpecification
   (u: UMLDeploymentSpecification[Uml],
@@ -1167,6 +1491,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDestroyLinkAction
+  (u: Uml#DestroyLinkAction)
+  : OTIMOFElement.OTIUMLDestroyLinkAction
+  = toOTIUMLDestroyLinkAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDestroyLinkAction
   (u: UMLDestroyLinkAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -1177,6 +1507,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLDestroyObjectAction
+  (u: Uml#DestroyObjectAction)
+  : OTIMOFElement.OTIUMLDestroyObjectAction
+  = toOTIUMLDestroyObjectAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLDestroyObjectAction
   (u: UMLDestroyObjectAction[Uml],
@@ -1191,6 +1527,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDestructionOccurrenceSpecification
+  (u: Uml#DestructionOccurrenceSpecification)
+  : OTIMOFElement.OTIUMLDestructionOccurrenceSpecification
+  = toOTIUMLDestructionOccurrenceSpecification(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDestructionOccurrenceSpecification
   (u: UMLDestructionOccurrenceSpecification[Uml],
    context: Option[Document[Uml]] = None)
@@ -1199,6 +1541,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLDevice
+  (u: Uml#Device)
+  : OTIMOFElement.OTIUMLDevice
+  = toOTIUMLDevice(u, Option.empty[Document[Uml]])
 
   def toOTIUMLDevice
   (u: UMLDevice[Uml],
@@ -1213,6 +1561,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDuration
+  (u: Uml#Duration)
+  : OTIMOFElement.OTIUMLDuration
+  = toOTIUMLDuration(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDuration
   (u: UMLDuration[Uml],
    context: Option[Document[Uml]] = None)
@@ -1221,6 +1575,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLDurationConstraint
+  (u: Uml#DurationConstraint)
+  : OTIMOFElement.OTIUMLDurationConstraint
+  = toOTIUMLDurationConstraint(u, Option.empty[Document[Uml]])
 
   def toOTIUMLDurationConstraint
   (u: UMLDurationConstraint[Uml],
@@ -1232,6 +1592,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLDurationInterval
+  (u: Uml#DurationInterval)
+  : OTIMOFElement.OTIUMLDurationInterval
+  = toOTIUMLDurationInterval(u, Option.empty[Document[Uml]])
+
   def toOTIUMLDurationInterval
   (u: UMLDurationInterval[Uml],
    context: Option[Document[Uml]] = None)
@@ -1240,6 +1606,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLDurationObservation
+  (u: Uml#DurationObservation)
+  : OTIMOFElement.OTIUMLDurationObservation
+  = toOTIUMLDurationObservation(u, Option.empty[Document[Uml]])
 
   def toOTIUMLDurationObservation
   (u: UMLDurationObservation[Uml],
@@ -1251,6 +1623,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLElementImport
+  (u: Uml#ElementImport)
+  : OTIMOFElement.OTIUMLElementImport
+  = toOTIUMLElementImport(u, Option.empty[Document[Uml]])
+
   def toOTIUMLElementImport
   (u: UMLElementImport[Uml],
    context: Option[Document[Uml]] = None)
@@ -1260,6 +1638,12 @@ case class OTIJsonElementHelper
      alias = u.alias,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLElementValue
+  (u: Uml#ElementValue)
+  : OTIMOFElement.OTIUMLElementValue
+  = toOTIUMLElementValue(u, Option.empty[Document[Uml]])
+
   def toOTIUMLElementValue
   (u: UMLElementValue[Uml],
    context: Option[Document[Uml]] = None)
@@ -1268,6 +1652,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLEnumeration
+  (u: Uml#Enumeration)
+  : OTIMOFElement.OTIUMLEnumeration
+  = toOTIUMLEnumeration(u, Option.empty[Document[Uml]])
 
   def toOTIUMLEnumeration
   (u: UMLEnumeration[Uml],
@@ -1281,6 +1671,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLEnumerationLiteral
+  (u: Uml#EnumerationLiteral)
+  : OTIMOFElement.OTIUMLEnumerationLiteral
+  = toOTIUMLEnumerationLiteral(u, Option.empty[Document[Uml]])
+
   def toOTIUMLEnumerationLiteral
   (u: UMLEnumerationLiteral[Uml],
    context: Option[Document[Uml]] = None)
@@ -1290,12 +1686,24 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLExceptionHandler
+  (u: Uml#ExceptionHandler)
+  : OTIMOFElement.OTIUMLExceptionHandler
+  = toOTIUMLExceptionHandler(u, Option.empty[Document[Uml]])
+
   def toOTIUMLExceptionHandler
   (u: UMLExceptionHandler[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLExceptionHandler(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLExecutionEnvironment
+  (u: Uml#ExecutionEnvironment)
+  : OTIMOFElement.OTIUMLExecutionEnvironment
+  = toOTIUMLExecutionEnvironment(u, Option.empty[Document[Uml]])
 
   def toOTIUMLExecutionEnvironment
   (u: UMLExecutionEnvironment[Uml],
@@ -1310,6 +1718,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLExecutionOccurrenceSpecification
+  (u: Uml#ExecutionOccurrenceSpecification)
+  : OTIMOFElement.OTIUMLExecutionOccurrenceSpecification
+  = toOTIUMLExecutionOccurrenceSpecification(u, Option.empty[Document[Uml]])
+
   def toOTIUMLExecutionOccurrenceSpecification
   (u: UMLExecutionOccurrenceSpecification[Uml],
    context: Option[Document[Uml]] = None)
@@ -1318,6 +1732,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLExpansionNode
+  (u: Uml#ExpansionNode)
+  : OTIMOFElement.OTIUMLExpansionNode
+  = toOTIUMLExpansionNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLExpansionNode
   (u: UMLExpansionNode[Uml],
@@ -1330,6 +1750,12 @@ case class OTIJsonElementHelper
      name = u.name,
      ordering = u.ordering,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLExpansionRegion
+  (u: Uml#ExpansionRegion)
+  : OTIMOFElement.OTIUMLExpansionRegion
+  = toOTIUMLExpansionRegion(u, Option.empty[Document[Uml]])
 
   def toOTIUMLExpansionRegion
   (u: UMLExpansionRegion[Uml],
@@ -1344,6 +1770,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLExpression
+  (u: Uml#Expression)
+  : OTIMOFElement.OTIUMLExpression
+  = toOTIUMLExpression(u, Option.empty[Document[Uml]])
+
   def toOTIUMLExpression
   (u: UMLExpression[Uml],
    context: Option[Document[Uml]] = None)
@@ -1354,6 +1786,12 @@ case class OTIJsonElementHelper
      symbol = u.symbol,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLExtend
+  (u: Uml#Extend)
+  : OTIMOFElement.OTIUMLExtend
+  = toOTIUMLExtend(u, Option.empty[Document[Uml]])
+
   def toOTIUMLExtend
   (u: UMLExtend[Uml],
    context: Option[Document[Uml]] = None)
@@ -1362,6 +1800,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLExtension
+  (u: Uml#Extension)
+  : OTIMOFElement.OTIUMLExtension
+  = toOTIUMLExtension(u, Option.empty[Document[Uml]])
 
   def toOTIUMLExtension
   (u: UMLExtension[Uml],
@@ -1375,6 +1819,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLExtensionEnd
+  (u: Uml#ExtensionEnd)
+  : OTIMOFElement.OTIUMLExtensionEnd
+  = toOTIUMLExtensionEnd(u, Option.empty[Document[Uml]])
 
   def toOTIUMLExtensionEnd
   (u: UMLExtensionEnd[Uml],
@@ -1394,6 +1844,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLExtensionPoint
+  (u: Uml#ExtensionPoint)
+  : OTIMOFElement.OTIUMLExtensionPoint
+  = toOTIUMLExtensionPoint(u, Option.empty[Document[Uml]])
+
   def toOTIUMLExtensionPoint
   (u: UMLExtensionPoint[Uml],
    context: Option[Document[Uml]] = None)
@@ -1403,6 +1859,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLFinalState
+  (u: Uml#FinalState)
+  : OTIMOFElement.OTIUMLFinalState
+  = toOTIUMLFinalState(u, Option.empty[Document[Uml]])
 
   def toOTIUMLFinalState
   (u: UMLFinalState[Uml],
@@ -1414,6 +1876,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLFlowFinalNode
+  (u: Uml#FlowFinalNode)
+  : OTIMOFElement.OTIUMLFlowFinalNode
+  = toOTIUMLFlowFinalNode(u, Option.empty[Document[Uml]])
+
   def toOTIUMLFlowFinalNode
   (u: UMLFlowFinalNode[Uml],
    context: Option[Document[Uml]] = None)
@@ -1424,6 +1892,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLForkNode
+  (u: Uml#ForkNode)
+  : OTIMOFElement.OTIUMLForkNode
+  = toOTIUMLForkNode(u, Option.empty[Document[Uml]])
+
   def toOTIUMLForkNode
   (u: UMLForkNode[Uml],
    context: Option[Document[Uml]] = None)
@@ -1433,6 +1907,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLFunctionBehavior
+  (u: Uml#FunctionBehavior)
+  : OTIMOFElement.OTIUMLFunctionBehavior
+  = toOTIUMLFunctionBehavior(u, Option.empty[Document[Uml]])
 
   def toOTIUMLFunctionBehavior
   (u: UMLFunctionBehavior[Uml],
@@ -1450,6 +1930,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLGate
+  (u: Uml#Gate)
+  : OTIMOFElement.OTIUMLGate
+  = toOTIUMLGate(u, Option.empty[Document[Uml]])
+
   def toOTIUMLGate
   (u: UMLGate[Uml],
    context: Option[Document[Uml]] = None)
@@ -1458,6 +1944,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLGeneralOrdering
+  (u: Uml#GeneralOrdering)
+  : OTIMOFElement.OTIUMLGeneralOrdering
+  = toOTIUMLGeneralOrdering(u, Option.empty[Document[Uml]])
 
   def toOTIUMLGeneralOrdering
   (u: UMLGeneralOrdering[Uml],
@@ -1468,6 +1960,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLGeneralization
+  (u: Uml#Generalization)
+  : OTIMOFElement.OTIUMLGeneralization
+  = toOTIUMLGeneralization(u, Option.empty[Document[Uml]])
+
   def toOTIUMLGeneralization
   (u: UMLGeneralization[Uml],
    context: Option[Document[Uml]] = None)
@@ -1475,6 +1973,12 @@ case class OTIJsonElementHelper
   = OTIMOFElement.OTIUMLGeneralization(
      otiMOFElementLocation = getElementLocationOf(u, context),
      isSubstitutable = u.isSubstitutable)
+
+
+  implicit def toOTIUMLGeneralizationSet
+  (u: Uml#GeneralizationSet)
+  : OTIMOFElement.OTIUMLGeneralizationSet
+  = toOTIUMLGeneralizationSet(u, Option.empty[Document[Uml]])
 
   def toOTIUMLGeneralizationSet
   (u: UMLGeneralizationSet[Uml],
@@ -1487,6 +1991,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLImage
+  (u: Uml#Image)
+  : OTIMOFElement.OTIUMLImage
+  = toOTIUMLImage(u, Option.empty[Document[Uml]])
+
   def toOTIUMLImage
   (u: UMLImage[Uml],
    context: Option[Document[Uml]] = None)
@@ -1497,6 +2007,12 @@ case class OTIJsonElementHelper
      format = u.format,
      location = u.location)
 
+
+  implicit def toOTIUMLInclude
+  (u: Uml#Include)
+  : OTIMOFElement.OTIUMLInclude
+  = toOTIUMLInclude(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInclude
   (u: UMLInclude[Uml],
    context: Option[Document[Uml]] = None)
@@ -1506,6 +2022,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInformationFlow
+  (u: Uml#InformationFlow)
+  : OTIMOFElement.OTIUMLInformationFlow
+  = toOTIUMLInformationFlow(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInformationFlow
   (u: UMLInformationFlow[Uml],
    context: Option[Document[Uml]] = None)
@@ -1514,6 +2036,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLInformationItem
+  (u: Uml#InformationItem)
+  : OTIMOFElement.OTIUMLInformationItem
+  = toOTIUMLInformationItem(u, Option.empty[Document[Uml]])
 
   def toOTIUMLInformationItem
   (u: UMLInformationItem[Uml],
@@ -1527,6 +2055,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInitialNode
+  (u: Uml#InitialNode)
+  : OTIMOFElement.OTIUMLInitialNode
+  = toOTIUMLInitialNode(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInitialNode
   (u: UMLInitialNode[Uml],
    context: Option[Document[Uml]] = None)
@@ -1536,6 +2070,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLInputPin
+  (u: Uml#InputPin)
+  : OTIMOFElement.OTIUMLInputPin
+  = toOTIUMLInputPin(u, Option.empty[Document[Uml]])
 
   def toOTIUMLInputPin
   (u: UMLInputPin[Uml],
@@ -1552,6 +2092,12 @@ case class OTIJsonElementHelper
      ordering = u.ordering,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInstanceSpecification
+  (u: Uml#InstanceSpecification)
+  : OTIMOFElement.OTIUMLInstanceSpecification
+  = toOTIUMLInstanceSpecification(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInstanceSpecification
   (u: UMLInstanceSpecification[Uml],
    context: Option[Document[Uml]] = None)
@@ -1561,6 +2107,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInstanceValue
+  (u: Uml#InstanceValue)
+  : OTIMOFElement.OTIUMLInstanceValue
+  = toOTIUMLInstanceValue(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInstanceValue
   (u: UMLInstanceValue[Uml],
    context: Option[Document[Uml]] = None)
@@ -1569,6 +2121,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLInteraction
+  (u: Uml#Interaction)
+  : OTIMOFElement.OTIUMLInteraction
+  = toOTIUMLInteraction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLInteraction
   (u: UMLInteraction[Uml],
@@ -1584,6 +2142,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInteractionConstraint
+  (u: Uml#InteractionConstraint)
+  : OTIMOFElement.OTIUMLInteractionConstraint
+  = toOTIUMLInteractionConstraint(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInteractionConstraint
   (u: UMLInteractionConstraint[Uml],
    context: Option[Document[Uml]] = None)
@@ -1592,6 +2156,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLInteractionOperand
+  (u: Uml#InteractionOperand)
+  : OTIMOFElement.OTIUMLInteractionOperand
+  = toOTIUMLInteractionOperand(u, Option.empty[Document[Uml]])
 
   def toOTIUMLInteractionOperand
   (u: UMLInteractionOperand[Uml],
@@ -1602,6 +2172,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInteractionUse
+  (u: Uml#InteractionUse)
+  : OTIMOFElement.OTIUMLInteractionUse
+  = toOTIUMLInteractionUse(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInteractionUse
   (u: UMLInteractionUse[Uml],
    context: Option[Document[Uml]] = None)
@@ -1610,6 +2186,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLInterface
+  (u: Uml#Interface)
+  : OTIMOFElement.OTIUMLInterface
+  = toOTIUMLInterface(u, Option.empty[Document[Uml]])
 
   def toOTIUMLInterface
   (u: UMLInterface[Uml],
@@ -1623,6 +2205,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInterfaceRealization
+  (u: Uml#InterfaceRealization)
+  : OTIMOFElement.OTIUMLInterfaceRealization
+  = toOTIUMLInterfaceRealization(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInterfaceRealization
   (u: UMLInterfaceRealization[Uml],
    context: Option[Document[Uml]] = None)
@@ -1631,6 +2219,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLInterruptibleActivityRegion
+  (u: Uml#InterruptibleActivityRegion)
+  : OTIMOFElement.OTIUMLInterruptibleActivityRegion
+  = toOTIUMLInterruptibleActivityRegion(u, Option.empty[Document[Uml]])
 
   def toOTIUMLInterruptibleActivityRegion
   (u: UMLInterruptibleActivityRegion[Uml],
@@ -1641,6 +2235,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLInterval
+  (u: Uml#Interval)
+  : OTIMOFElement.OTIUMLInterval
+  = toOTIUMLInterval(u, Option.empty[Document[Uml]])
+
   def toOTIUMLInterval
   (u: UMLInterval[Uml],
    context: Option[Document[Uml]] = None)
@@ -1650,6 +2250,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLIntervalConstraint
+  (u: Uml#IntervalConstraint)
+  : OTIMOFElement.OTIUMLIntervalConstraint
+  = toOTIUMLIntervalConstraint(u, Option.empty[Document[Uml]])
+
   def toOTIUMLIntervalConstraint
   (u: UMLIntervalConstraint[Uml],
    context: Option[Document[Uml]] = None)
@@ -1658,6 +2264,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLJoinNode
+  (u: Uml#JoinNode)
+  : OTIMOFElement.OTIUMLJoinNode
+  = toOTIUMLJoinNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLJoinNode
   (u: UMLJoinNode[Uml],
@@ -1670,6 +2282,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLLifeline
+  (u: Uml#Lifeline)
+  : OTIMOFElement.OTIUMLLifeline
+  = toOTIUMLLifeline(u, Option.empty[Document[Uml]])
+
   def toOTIUMLLifeline
   (u: UMLLifeline[Uml],
    context: Option[Document[Uml]] = None)
@@ -1679,6 +2297,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLLinkEndCreationData
+  (u: Uml#LinkEndCreationData)
+  : OTIMOFElement.OTIUMLLinkEndCreationData
+  = toOTIUMLLinkEndCreationData(u, Option.empty[Document[Uml]])
+
   def toOTIUMLLinkEndCreationData
   (u: UMLLinkEndCreationData[Uml],
    context: Option[Document[Uml]] = None)
@@ -1687,12 +2311,24 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      isReplaceAll = u.isReplaceAll)
 
+
+  implicit def toOTIUMLLinkEndData
+  (u: Uml#LinkEndData)
+  : OTIMOFElement.OTIUMLLinkEndData
+  = toOTIUMLLinkEndData(u, Option.empty[Document[Uml]])
+
   def toOTIUMLLinkEndData
   (u: UMLLinkEndData[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLLinkEndData(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLLinkEndDestructionData
+  (u: Uml#LinkEndDestructionData)
+  : OTIMOFElement.OTIUMLLinkEndDestructionData
+  = toOTIUMLLinkEndDestructionData(u, Option.empty[Document[Uml]])
 
   def toOTIUMLLinkEndDestructionData
   (u: UMLLinkEndDestructionData[Uml],
@@ -1701,6 +2337,12 @@ case class OTIJsonElementHelper
   = OTIMOFElement.OTIUMLLinkEndDestructionData(
      otiMOFElementLocation = getElementLocationOf(u, context),
      isDestroyDuplicates = u.isDestroyDuplicates)
+
+
+  implicit def toOTIUMLLiteralBoolean
+  (u: Uml#LiteralBoolean)
+  : OTIMOFElement.OTIUMLLiteralBoolean
+  = toOTIUMLLiteralBoolean(u, Option.empty[Document[Uml]])
 
   def toOTIUMLLiteralBoolean
   (u: UMLLiteralBoolean[Uml],
@@ -1712,6 +2354,12 @@ case class OTIJsonElementHelper
      value = u.value,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLLiteralInteger
+  (u: Uml#LiteralInteger)
+  : OTIMOFElement.OTIUMLLiteralInteger
+  = toOTIUMLLiteralInteger(u, Option.empty[Document[Uml]])
+
   def toOTIUMLLiteralInteger
   (u: UMLLiteralInteger[Uml],
    context: Option[Document[Uml]] = None)
@@ -1722,6 +2370,12 @@ case class OTIJsonElementHelper
      value = u.value,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLLiteralNull
+  (u: Uml#LiteralNull)
+  : OTIMOFElement.OTIUMLLiteralNull
+  = toOTIUMLLiteralNull(u, Option.empty[Document[Uml]])
+
   def toOTIUMLLiteralNull
   (u: UMLLiteralNull[Uml],
    context: Option[Document[Uml]] = None)
@@ -1730,6 +2384,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLLiteralReal
+  (u: Uml#LiteralReal)
+  : OTIMOFElement.OTIUMLLiteralReal
+  = toOTIUMLLiteralReal(u, Option.empty[Document[Uml]])
 
   def toOTIUMLLiteralReal
   (u: UMLLiteralReal[Uml],
@@ -1741,6 +2401,12 @@ case class OTIJsonElementHelper
      value = u.value,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLLiteralString
+  (u: Uml#LiteralString)
+  : OTIMOFElement.OTIUMLLiteralString
+  = toOTIUMLLiteralString(u, Option.empty[Document[Uml]])
+
   def toOTIUMLLiteralString
   (u: UMLLiteralString[Uml],
    context: Option[Document[Uml]] = None)
@@ -1751,6 +2417,12 @@ case class OTIJsonElementHelper
      value = u.value,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLLiteralUnlimitedNatural
+  (u: Uml#LiteralUnlimitedNatural)
+  : OTIMOFElement.OTIUMLLiteralUnlimitedNatural
+  = toOTIUMLLiteralUnlimitedNatural(u, Option.empty[Document[Uml]])
+
   def toOTIUMLLiteralUnlimitedNatural
   (u: UMLLiteralUnlimitedNatural[Uml],
    context: Option[Document[Uml]] = None)
@@ -1760,6 +2432,12 @@ case class OTIJsonElementHelper
      name = u.name,
      value = u.value,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLLoopNode
+  (u: Uml#LoopNode)
+  : OTIMOFElement.OTIUMLLoopNode
+  = toOTIUMLLoopNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLLoopNode
   (u: UMLLoopNode[Uml],
@@ -1774,6 +2452,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLManifestation
+  (u: Uml#Manifestation)
+  : OTIMOFElement.OTIUMLManifestation
+  = toOTIUMLManifestation(u, Option.empty[Document[Uml]])
+
   def toOTIUMLManifestation
   (u: UMLManifestation[Uml],
    context: Option[Document[Uml]] = None)
@@ -1782,6 +2466,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLMergeNode
+  (u: Uml#MergeNode)
+  : OTIMOFElement.OTIUMLMergeNode
+  = toOTIUMLMergeNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLMergeNode
   (u: UMLMergeNode[Uml],
@@ -1793,6 +2483,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLMessage
+  (u: Uml#Message)
+  : OTIMOFElement.OTIUMLMessage
+  = toOTIUMLMessage(u, Option.empty[Document[Uml]])
+
   def toOTIUMLMessage
   (u: UMLMessage[Uml],
    context: Option[Document[Uml]] = None)
@@ -1803,6 +2499,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLMessageOccurrenceSpecification
+  (u: Uml#MessageOccurrenceSpecification)
+  : OTIMOFElement.OTIUMLMessageOccurrenceSpecification
+  = toOTIUMLMessageOccurrenceSpecification(u, Option.empty[Document[Uml]])
+
   def toOTIUMLMessageOccurrenceSpecification
   (u: UMLMessageOccurrenceSpecification[Uml],
    context: Option[Document[Uml]] = None)
@@ -1811,6 +2513,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLModel
+  (u: Uml#Model)
+  : OTIMOFElement.OTIUMLModel
+  = toOTIUMLModel(u, Option.empty[Document[Uml]])
 
   def toOTIUMLModel
   (u: UMLModel[Uml],
@@ -1822,6 +2530,12 @@ case class OTIJsonElementHelper
      name = u.name,
      viewpoint = u.viewpoint,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLNode
+  (u: Uml#Node)
+  : OTIMOFElement.OTIUMLNode
+  = toOTIUMLNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLNode
   (u: UMLNode[Uml],
@@ -1836,6 +2550,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLObjectFlow
+  (u: Uml#ObjectFlow)
+  : OTIMOFElement.OTIUMLObjectFlow
+  = toOTIUMLObjectFlow(u, Option.empty[Document[Uml]])
+
   def toOTIUMLObjectFlow
   (u: UMLObjectFlow[Uml],
    context: Option[Document[Uml]] = None)
@@ -1848,6 +2568,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLOccurrenceSpecification
+  (u: Uml#OccurrenceSpecification)
+  : OTIMOFElement.OTIUMLOccurrenceSpecification
+  = toOTIUMLOccurrenceSpecification(u, Option.empty[Document[Uml]])
+
   def toOTIUMLOccurrenceSpecification
   (u: UMLOccurrenceSpecification[Uml],
    context: Option[Document[Uml]] = None)
@@ -1856,6 +2582,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLOpaqueAction
+  (u: Uml#OpaqueAction)
+  : OTIMOFElement.OTIUMLOpaqueAction
+  = toOTIUMLOpaqueAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLOpaqueAction
   (u: UMLOpaqueAction[Uml],
@@ -1869,6 +2601,12 @@ case class OTIJsonElementHelper
      language = u.language,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLOpaqueBehavior
+  (u: Uml#OpaqueBehavior)
+  : OTIMOFElement.OTIUMLOpaqueBehavior
+  = toOTIUMLOpaqueBehavior(u, Option.empty[Document[Uml]])
 
   def toOTIUMLOpaqueBehavior
   (u: UMLOpaqueBehavior[Uml],
@@ -1886,6 +2624,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLOpaqueExpression
+  (u: Uml#OpaqueExpression)
+  : OTIMOFElement.OTIUMLOpaqueExpression
+  = toOTIUMLOpaqueExpression(u, Option.empty[Document[Uml]])
+
   def toOTIUMLOpaqueExpression
   (u: UMLOpaqueExpression[Uml],
    context: Option[Document[Uml]] = None)
@@ -1896,6 +2640,12 @@ case class OTIJsonElementHelper
      language = u.language,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLOperation
+  (u: Uml#Operation)
+  : OTIMOFElement.OTIUMLOperation
+  = toOTIUMLOperation(u, Option.empty[Document[Uml]])
 
   def toOTIUMLOperation
   (u: UMLOperation[Uml],
@@ -1911,12 +2661,24 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLOperationTemplateParameter
+  (u: Uml#OperationTemplateParameter)
+  : OTIMOFElement.OTIUMLOperationTemplateParameter
+  = toOTIUMLOperationTemplateParameter(u, Option.empty[Document[Uml]])
+
   def toOTIUMLOperationTemplateParameter
   (u: UMLOperationTemplateParameter[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLOperationTemplateParameter(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLOutputPin
+  (u: Uml#OutputPin)
+  : OTIMOFElement.OTIUMLOutputPin
+  = toOTIUMLOutputPin(u, Option.empty[Document[Uml]])
 
   def toOTIUMLOutputPin
   (u: UMLOutputPin[Uml],
@@ -1933,6 +2695,12 @@ case class OTIJsonElementHelper
      ordering = u.ordering,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLPackage
+  (u: Uml#Package)
+  : OTIMOFElement.OTIUMLPackage
+  = toOTIUMLPackage(u, Option.empty[Document[Uml]])
+
   def toOTIUMLPackage
   (u: UMLPackage[Uml],
    context: Option[Document[Uml]] = None)
@@ -1943,6 +2711,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLPackageImport
+  (u: Uml#PackageImport)
+  : OTIMOFElement.OTIUMLPackageImport
+  = toOTIUMLPackageImport(u, Option.empty[Document[Uml]])
+
   def toOTIUMLPackageImport
   (u: UMLPackageImport[Uml],
    context: Option[Document[Uml]] = None)
@@ -1951,12 +2725,24 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLPackageMerge
+  (u: Uml#PackageMerge)
+  : OTIMOFElement.OTIUMLPackageMerge
+  = toOTIUMLPackageMerge(u, Option.empty[Document[Uml]])
+
   def toOTIUMLPackageMerge
   (u: UMLPackageMerge[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLPackageMerge(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLParameter
+  (u: Uml#Parameter)
+  : OTIMOFElement.OTIUMLParameter
+  = toOTIUMLParameter(u, Option.empty[Document[Uml]])
 
   def toOTIUMLParameter
   (u: UMLParameter[Uml],
@@ -1973,6 +2759,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLParameterSet
+  (u: Uml#ParameterSet)
+  : OTIMOFElement.OTIUMLParameterSet
+  = toOTIUMLParameterSet(u, Option.empty[Document[Uml]])
+
   def toOTIUMLParameterSet
   (u: UMLParameterSet[Uml],
    context: Option[Document[Uml]] = None)
@@ -1982,6 +2774,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLPartDecomposition
+  (u: Uml#PartDecomposition)
+  : OTIMOFElement.OTIUMLPartDecomposition
+  = toOTIUMLPartDecomposition(u, Option.empty[Document[Uml]])
+
   def toOTIUMLPartDecomposition
   (u: UMLPartDecomposition[Uml],
    context: Option[Document[Uml]] = None)
@@ -1990,6 +2788,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLPort
+  (u: Uml#Port)
+  : OTIMOFElement.OTIUMLPort
+  = toOTIUMLPort(u, Option.empty[Document[Uml]])
 
   def toOTIUMLPort
   (u: UMLPort[Uml],
@@ -2012,6 +2816,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLPrimitiveType
+  (u: Uml#PrimitiveType)
+  : OTIMOFElement.OTIUMLPrimitiveType
+  = toOTIUMLPrimitiveType(u, Option.empty[Document[Uml]])
+
   def toOTIUMLPrimitiveType
   (u: UMLPrimitiveType[Uml],
    context: Option[Document[Uml]] = None)
@@ -2024,6 +2834,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLProfile
+  (u: Uml#Profile)
+  : OTIMOFElement.OTIUMLProfile
+  = toOTIUMLProfile(u, Option.empty[Document[Uml]])
+
   def toOTIUMLProfile
   (u: UMLProfile[Uml],
    context: Option[Document[Uml]] = None)
@@ -2034,6 +2850,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLProfileApplication
+  (u: Uml#ProfileApplication)
+  : OTIMOFElement.OTIUMLProfileApplication
+  = toOTIUMLProfileApplication(u, Option.empty[Document[Uml]])
+
   def toOTIUMLProfileApplication
   (u: UMLProfileApplication[Uml],
    context: Option[Document[Uml]] = None)
@@ -2041,6 +2863,12 @@ case class OTIJsonElementHelper
   = OTIMOFElement.OTIUMLProfileApplication(
      otiMOFElementLocation = getElementLocationOf(u, context),
      isStrict = u.isStrict)
+
+
+  implicit def toOTIUMLProperty
+  (u: Uml#Property)
+  : OTIMOFElement.OTIUMLProperty
+  = toOTIUMLProperty(u, Option.empty[Document[Uml]])
 
   def toOTIUMLProperty
   (u: UMLProperty[Uml],
@@ -2060,12 +2888,24 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLProtocolConformance
+  (u: Uml#ProtocolConformance)
+  : OTIMOFElement.OTIUMLProtocolConformance
+  = toOTIUMLProtocolConformance(u, Option.empty[Document[Uml]])
+
   def toOTIUMLProtocolConformance
   (u: UMLProtocolConformance[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLProtocolConformance(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLProtocolStateMachine
+  (u: Uml#ProtocolStateMachine)
+  : OTIMOFElement.OTIUMLProtocolStateMachine
+  = toOTIUMLProtocolStateMachine(u, Option.empty[Document[Uml]])
 
   def toOTIUMLProtocolStateMachine
   (u: UMLProtocolStateMachine[Uml],
@@ -2081,6 +2921,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLProtocolTransition
+  (u: Uml#ProtocolTransition)
+  : OTIMOFElement.OTIUMLProtocolTransition
+  = toOTIUMLProtocolTransition(u, Option.empty[Document[Uml]])
+
   def toOTIUMLProtocolTransition
   (u: UMLProtocolTransition[Uml],
    context: Option[Document[Uml]] = None)
@@ -2092,6 +2938,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLPseudostate
+  (u: Uml#Pseudostate)
+  : OTIMOFElement.OTIUMLPseudostate
+  = toOTIUMLPseudostate(u, Option.empty[Document[Uml]])
+
   def toOTIUMLPseudostate
   (u: UMLPseudostate[Uml],
    context: Option[Document[Uml]] = None)
@@ -2102,12 +2954,24 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLQualifierValue
+  (u: Uml#QualifierValue)
+  : OTIMOFElement.OTIUMLQualifierValue
+  = toOTIUMLQualifierValue(u, Option.empty[Document[Uml]])
+
   def toOTIUMLQualifierValue
   (u: UMLQualifierValue[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLQualifierValue(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLRaiseExceptionAction
+  (u: Uml#RaiseExceptionAction)
+  : OTIMOFElement.OTIUMLRaiseExceptionAction
+  = toOTIUMLRaiseExceptionAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLRaiseExceptionAction
   (u: UMLRaiseExceptionAction[Uml],
@@ -2120,6 +2984,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLReadExtentAction
+  (u: Uml#ReadExtentAction)
+  : OTIMOFElement.OTIUMLReadExtentAction
+  = toOTIUMLReadExtentAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLReadExtentAction
   (u: UMLReadExtentAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2130,6 +3000,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLReadIsClassifiedObjectAction
+  (u: Uml#ReadIsClassifiedObjectAction)
+  : OTIMOFElement.OTIUMLReadIsClassifiedObjectAction
+  = toOTIUMLReadIsClassifiedObjectAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLReadIsClassifiedObjectAction
   (u: UMLReadIsClassifiedObjectAction[Uml],
@@ -2143,6 +3019,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLReadLinkAction
+  (u: Uml#ReadLinkAction)
+  : OTIMOFElement.OTIUMLReadLinkAction
+  = toOTIUMLReadLinkAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLReadLinkAction
   (u: UMLReadLinkAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2153,6 +3035,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLReadLinkObjectEndAction
+  (u: Uml#ReadLinkObjectEndAction)
+  : OTIMOFElement.OTIUMLReadLinkObjectEndAction
+  = toOTIUMLReadLinkObjectEndAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLReadLinkObjectEndAction
   (u: UMLReadLinkObjectEndAction[Uml],
@@ -2165,6 +3053,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLReadLinkObjectEndQualifierAction
+  (u: Uml#ReadLinkObjectEndQualifierAction)
+  : OTIMOFElement.OTIUMLReadLinkObjectEndQualifierAction
+  = toOTIUMLReadLinkObjectEndQualifierAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLReadLinkObjectEndQualifierAction
   (u: UMLReadLinkObjectEndQualifierAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2175,6 +3069,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLReadSelfAction
+  (u: Uml#ReadSelfAction)
+  : OTIMOFElement.OTIUMLReadSelfAction
+  = toOTIUMLReadSelfAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLReadSelfAction
   (u: UMLReadSelfAction[Uml],
@@ -2187,6 +3087,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLReadStructuralFeatureAction
+  (u: Uml#ReadStructuralFeatureAction)
+  : OTIMOFElement.OTIUMLReadStructuralFeatureAction
+  = toOTIUMLReadStructuralFeatureAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLReadStructuralFeatureAction
   (u: UMLReadStructuralFeatureAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2197,6 +3103,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLReadVariableAction
+  (u: Uml#ReadVariableAction)
+  : OTIMOFElement.OTIUMLReadVariableAction
+  = toOTIUMLReadVariableAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLReadVariableAction
   (u: UMLReadVariableAction[Uml],
@@ -2209,6 +3121,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLRealization
+  (u: Uml#Realization)
+  : OTIMOFElement.OTIUMLRealization
+  = toOTIUMLRealization(u, Option.empty[Document[Uml]])
+
   def toOTIUMLRealization
   (u: UMLRealization[Uml],
    context: Option[Document[Uml]] = None)
@@ -2217,6 +3135,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLReception
+  (u: Uml#Reception)
+  : OTIMOFElement.OTIUMLReception
+  = toOTIUMLReception(u, Option.empty[Document[Uml]])
 
   def toOTIUMLReception
   (u: UMLReception[Uml],
@@ -2231,6 +3155,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLReclassifyObjectAction
+  (u: Uml#ReclassifyObjectAction)
+  : OTIMOFElement.OTIUMLReclassifyObjectAction
+  = toOTIUMLReclassifyObjectAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLReclassifyObjectAction
   (u: UMLReclassifyObjectAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2243,6 +3173,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLRedefinableTemplateSignature
+  (u: Uml#RedefinableTemplateSignature)
+  : OTIMOFElement.OTIUMLRedefinableTemplateSignature
+  = toOTIUMLRedefinableTemplateSignature(u, Option.empty[Document[Uml]])
+
   def toOTIUMLRedefinableTemplateSignature
   (u: UMLRedefinableTemplateSignature[Uml],
    context: Option[Document[Uml]] = None)
@@ -2252,6 +3188,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLReduceAction
+  (u: Uml#ReduceAction)
+  : OTIMOFElement.OTIUMLReduceAction
+  = toOTIUMLReduceAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLReduceAction
   (u: UMLReduceAction[Uml],
@@ -2265,6 +3207,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLRegion
+  (u: Uml#Region)
+  : OTIMOFElement.OTIUMLRegion
+  = toOTIUMLRegion(u, Option.empty[Document[Uml]])
+
   def toOTIUMLRegion
   (u: UMLRegion[Uml],
    context: Option[Document[Uml]] = None)
@@ -2274,6 +3222,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLRemoveStructuralFeatureValueAction
+  (u: Uml#RemoveStructuralFeatureValueAction)
+  : OTIMOFElement.OTIUMLRemoveStructuralFeatureValueAction
+  = toOTIUMLRemoveStructuralFeatureValueAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLRemoveStructuralFeatureValueAction
   (u: UMLRemoveStructuralFeatureValueAction[Uml],
@@ -2287,6 +3241,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLRemoveVariableValueAction
+  (u: Uml#RemoveVariableValueAction)
+  : OTIMOFElement.OTIUMLRemoveVariableValueAction
+  = toOTIUMLRemoveVariableValueAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLRemoveVariableValueAction
   (u: UMLRemoveVariableValueAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2299,6 +3259,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLReplyAction
+  (u: Uml#ReplyAction)
+  : OTIMOFElement.OTIUMLReplyAction
+  = toOTIUMLReplyAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLReplyAction
   (u: UMLReplyAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2309,6 +3275,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLSendObjectAction
+  (u: Uml#SendObjectAction)
+  : OTIMOFElement.OTIUMLSendObjectAction
+  = toOTIUMLSendObjectAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLSendObjectAction
   (u: UMLSendObjectAction[Uml],
@@ -2321,6 +3293,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLSendSignalAction
+  (u: Uml#SendSignalAction)
+  : OTIMOFElement.OTIUMLSendSignalAction
+  = toOTIUMLSendSignalAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLSendSignalAction
   (u: UMLSendSignalAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2331,6 +3309,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLSequenceNode
+  (u: Uml#SequenceNode)
+  : OTIMOFElement.OTIUMLSequenceNode
+  = toOTIUMLSequenceNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLSequenceNode
   (u: UMLSequenceNode[Uml],
@@ -2344,6 +3328,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLSignal
+  (u: Uml#Signal)
+  : OTIMOFElement.OTIUMLSignal
+  = toOTIUMLSignal(u, Option.empty[Document[Uml]])
+
   def toOTIUMLSignal
   (u: UMLSignal[Uml],
    context: Option[Document[Uml]] = None)
@@ -2356,6 +3346,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLSignalEvent
+  (u: Uml#SignalEvent)
+  : OTIMOFElement.OTIUMLSignalEvent
+  = toOTIUMLSignalEvent(u, Option.empty[Document[Uml]])
+
   def toOTIUMLSignalEvent
   (u: UMLSignalEvent[Uml],
    context: Option[Document[Uml]] = None)
@@ -2365,12 +3361,24 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLSlot
+  (u: Uml#Slot)
+  : OTIMOFElement.OTIUMLSlot
+  = toOTIUMLSlot(u, Option.empty[Document[Uml]])
+
   def toOTIUMLSlot
   (u: UMLSlot[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLSlot(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLStartClassifierBehaviorAction
+  (u: Uml#StartClassifierBehaviorAction)
+  : OTIMOFElement.OTIUMLStartClassifierBehaviorAction
+  = toOTIUMLStartClassifierBehaviorAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLStartClassifierBehaviorAction
   (u: UMLStartClassifierBehaviorAction[Uml],
@@ -2382,6 +3390,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLStartObjectBehaviorAction
+  (u: Uml#StartObjectBehaviorAction)
+  : OTIMOFElement.OTIUMLStartObjectBehaviorAction
+  = toOTIUMLStartObjectBehaviorAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLStartObjectBehaviorAction
   (u: UMLStartObjectBehaviorAction[Uml],
@@ -2395,6 +3409,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLState
+  (u: Uml#State)
+  : OTIMOFElement.OTIUMLState
+  = toOTIUMLState(u, Option.empty[Document[Uml]])
+
   def toOTIUMLState
   (u: UMLState[Uml],
    context: Option[Document[Uml]] = None)
@@ -2405,6 +3425,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLStateInvariant
+  (u: Uml#StateInvariant)
+  : OTIMOFElement.OTIUMLStateInvariant
+  = toOTIUMLStateInvariant(u, Option.empty[Document[Uml]])
+
   def toOTIUMLStateInvariant
   (u: UMLStateInvariant[Uml],
    context: Option[Document[Uml]] = None)
@@ -2413,6 +3439,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLStateMachine
+  (u: Uml#StateMachine)
+  : OTIMOFElement.OTIUMLStateMachine
+  = toOTIUMLStateMachine(u, Option.empty[Document[Uml]])
 
   def toOTIUMLStateMachine
   (u: UMLStateMachine[Uml],
@@ -2428,6 +3460,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLStereotype
+  (u: Uml#Stereotype)
+  : OTIMOFElement.OTIUMLStereotype
+  = toOTIUMLStereotype(u, Option.empty[Document[Uml]])
+
   def toOTIUMLStereotype
   (u: UMLStereotype[Uml],
    context: Option[Document[Uml]] = None)
@@ -2441,6 +3479,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLStringExpression
+  (u: Uml#StringExpression)
+  : OTIMOFElement.OTIUMLStringExpression
+  = toOTIUMLStringExpression(u, Option.empty[Document[Uml]])
+
   def toOTIUMLStringExpression
   (u: UMLStringExpression[Uml],
    context: Option[Document[Uml]] = None)
@@ -2450,6 +3494,12 @@ case class OTIJsonElementHelper
      name = u.name,
      symbol = u.symbol,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLStructuredActivityNode
+  (u: Uml#StructuredActivityNode)
+  : OTIMOFElement.OTIUMLStructuredActivityNode
+  = toOTIUMLStructuredActivityNode(u, Option.empty[Document[Uml]])
 
   def toOTIUMLStructuredActivityNode
   (u: UMLStructuredActivityNode[Uml],
@@ -2463,6 +3513,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLSubstitution
+  (u: Uml#Substitution)
+  : OTIMOFElement.OTIUMLSubstitution
+  = toOTIUMLSubstitution(u, Option.empty[Document[Uml]])
+
   def toOTIUMLSubstitution
   (u: UMLSubstitution[Uml],
    context: Option[Document[Uml]] = None)
@@ -2472,12 +3528,24 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLTemplateBinding
+  (u: Uml#TemplateBinding)
+  : OTIMOFElement.OTIUMLTemplateBinding
+  = toOTIUMLTemplateBinding(u, Option.empty[Document[Uml]])
+
   def toOTIUMLTemplateBinding
   (u: UMLTemplateBinding[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLTemplateBinding(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLTemplateParameter
+  (u: Uml#TemplateParameter)
+  : OTIMOFElement.OTIUMLTemplateParameter
+  = toOTIUMLTemplateParameter(u, Option.empty[Document[Uml]])
 
   def toOTIUMLTemplateParameter
   (u: UMLTemplateParameter[Uml],
@@ -2486,6 +3554,12 @@ case class OTIJsonElementHelper
   = OTIMOFElement.OTIUMLTemplateParameter(
      otiMOFElementLocation = getElementLocationOf(u, context))
 
+
+  implicit def toOTIUMLTemplateParameterSubstitution
+  (u: Uml#TemplateParameterSubstitution)
+  : OTIMOFElement.OTIUMLTemplateParameterSubstitution
+  = toOTIUMLTemplateParameterSubstitution(u, Option.empty[Document[Uml]])
+
   def toOTIUMLTemplateParameterSubstitution
   (u: UMLTemplateParameterSubstitution[Uml],
    context: Option[Document[Uml]] = None)
@@ -2493,12 +3567,24 @@ case class OTIJsonElementHelper
   = OTIMOFElement.OTIUMLTemplateParameterSubstitution(
      otiMOFElementLocation = getElementLocationOf(u, context))
 
+
+  implicit def toOTIUMLTemplateSignature
+  (u: Uml#TemplateSignature)
+  : OTIMOFElement.OTIUMLTemplateSignature
+  = toOTIUMLTemplateSignature(u, Option.empty[Document[Uml]])
+
   def toOTIUMLTemplateSignature
   (u: UMLTemplateSignature[Uml],
    context: Option[Document[Uml]] = None)
   : OTIMOFElement
   = OTIMOFElement.OTIUMLTemplateSignature(
      otiMOFElementLocation = getElementLocationOf(u, context))
+
+
+  implicit def toOTIUMLTestIdentityAction
+  (u: Uml#TestIdentityAction)
+  : OTIMOFElement.OTIUMLTestIdentityAction
+  = toOTIUMLTestIdentityAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLTestIdentityAction
   (u: UMLTestIdentityAction[Uml],
@@ -2511,6 +3597,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLTimeConstraint
+  (u: Uml#TimeConstraint)
+  : OTIMOFElement.OTIUMLTimeConstraint
+  = toOTIUMLTimeConstraint(u, Option.empty[Document[Uml]])
+
   def toOTIUMLTimeConstraint
   (u: UMLTimeConstraint[Uml],
    context: Option[Document[Uml]] = None)
@@ -2520,6 +3612,12 @@ case class OTIJsonElementHelper
      firstEvent = u.firstEvent,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLTimeEvent
+  (u: Uml#TimeEvent)
+  : OTIMOFElement.OTIUMLTimeEvent
+  = toOTIUMLTimeEvent(u, Option.empty[Document[Uml]])
 
   def toOTIUMLTimeEvent
   (u: UMLTimeEvent[Uml],
@@ -2531,6 +3629,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLTimeExpression
+  (u: Uml#TimeExpression)
+  : OTIMOFElement.OTIUMLTimeExpression
+  = toOTIUMLTimeExpression(u, Option.empty[Document[Uml]])
+
   def toOTIUMLTimeExpression
   (u: UMLTimeExpression[Uml],
    context: Option[Document[Uml]] = None)
@@ -2539,6 +3643,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLTimeInterval
+  (u: Uml#TimeInterval)
+  : OTIMOFElement.OTIUMLTimeInterval
+  = toOTIUMLTimeInterval(u, Option.empty[Document[Uml]])
 
   def toOTIUMLTimeInterval
   (u: UMLTimeInterval[Uml],
@@ -2549,6 +3659,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLTimeObservation
+  (u: Uml#TimeObservation)
+  : OTIMOFElement.OTIUMLTimeObservation
+  = toOTIUMLTimeObservation(u, Option.empty[Document[Uml]])
+
   def toOTIUMLTimeObservation
   (u: UMLTimeObservation[Uml],
    context: Option[Document[Uml]] = None)
@@ -2558,6 +3674,12 @@ case class OTIJsonElementHelper
      firstEvent = u.firstEvent,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLTransition
+  (u: Uml#Transition)
+  : OTIMOFElement.OTIUMLTransition
+  = toOTIUMLTransition(u, Option.empty[Document[Uml]])
 
   def toOTIUMLTransition
   (u: UMLTransition[Uml],
@@ -2570,6 +3692,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLTrigger
+  (u: Uml#Trigger)
+  : OTIMOFElement.OTIUMLTrigger
+  = toOTIUMLTrigger(u, Option.empty[Document[Uml]])
+
   def toOTIUMLTrigger
   (u: UMLTrigger[Uml],
    context: Option[Document[Uml]] = None)
@@ -2578,6 +3706,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLUnmarshallAction
+  (u: Uml#UnmarshallAction)
+  : OTIMOFElement.OTIUMLUnmarshallAction
+  = toOTIUMLUnmarshallAction(u, Option.empty[Document[Uml]])
 
   def toOTIUMLUnmarshallAction
   (u: UMLUnmarshallAction[Uml],
@@ -2590,6 +3724,12 @@ case class OTIJsonElementHelper
      name = u.name,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLUsage
+  (u: Uml#Usage)
+  : OTIMOFElement.OTIUMLUsage
+  = toOTIUMLUsage(u, Option.empty[Document[Uml]])
+
   def toOTIUMLUsage
   (u: UMLUsage[Uml],
    context: Option[Document[Uml]] = None)
@@ -2598,6 +3738,12 @@ case class OTIJsonElementHelper
      otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLUseCase
+  (u: Uml#UseCase)
+  : OTIMOFElement.OTIUMLUseCase
+  = toOTIUMLUseCase(u, Option.empty[Document[Uml]])
 
   def toOTIUMLUseCase
   (u: UMLUseCase[Uml],
@@ -2610,6 +3756,12 @@ case class OTIJsonElementHelper
      isLeaf = u.isLeaf,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLValuePin
+  (u: Uml#ValuePin)
+  : OTIMOFElement.OTIUMLValuePin
+  = toOTIUMLValuePin(u, Option.empty[Document[Uml]])
 
   def toOTIUMLValuePin
   (u: UMLValuePin[Uml],
@@ -2626,6 +3778,12 @@ case class OTIJsonElementHelper
      ordering = u.ordering,
      visibility = u.visibility)
 
+
+  implicit def toOTIUMLValueSpecificationAction
+  (u: Uml#ValueSpecificationAction)
+  : OTIMOFElement.OTIUMLValueSpecificationAction
+  = toOTIUMLValueSpecificationAction(u, Option.empty[Document[Uml]])
+
   def toOTIUMLValueSpecificationAction
   (u: UMLValueSpecificationAction[Uml],
    context: Option[Document[Uml]] = None)
@@ -2636,6 +3794,12 @@ case class OTIJsonElementHelper
      isLocallyReentrant = u.isLocallyReentrant,
      name = u.name,
      visibility = u.visibility)
+
+
+  implicit def toOTIUMLVariable
+  (u: Uml#Variable)
+  : OTIMOFElement.OTIUMLVariable
+  = toOTIUMLVariable(u, Option.empty[Document[Uml]])
 
   def toOTIUMLVariable
   (u: UMLVariable[Uml],
