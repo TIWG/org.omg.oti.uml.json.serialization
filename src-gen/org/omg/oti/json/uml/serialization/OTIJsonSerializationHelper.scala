@@ -474,17 +474,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
+      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e6  
     result
   }
@@ -500,27 +500,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.returnInformation, OTIUMLA_returnInformation_acceptCallAction)
+      toCompositeLinkExtent(e6, ud, u, u.returnInformation, OTIUMLA_returnInformation_acceptCallAction.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.trigger, OTIUMLA_trigger_acceptEventAction)
+      toCompositeLinkExtent(e7, ud, u, u.trigger, OTIUMLA_trigger_acceptEventAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -536,25 +536,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.result, OTIUMLA_result_acceptEventAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.trigger, OTIUMLA_trigger_acceptEventAction)
+      toCompositeLinkExtent(e6, ud, u, u.trigger, OTIUMLA_trigger_acceptEventAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -570,13 +570,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e3, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val result = e4  
     result
   }
@@ -592,25 +592,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.fromAction, OTIUMLA_fromAction_actionInputPin)
+      toCompositeLinkExtent(e0, ud, u, u.fromAction, OTIUMLA_fromAction_actionInputPin.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e1, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e4, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e5, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e6, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -626,73 +626,73 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.edge, OTIUMLA_edge_activity)
+      toCompositeLinkExtent(e1, ud, u, u.edge, OTIUMLA_edge_activity.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.group, OTIUMLA_group_inActivity, u.structuredNode)
+      toCompositeLinkExtent(e4, ud, u, u.group, OTIUMLA_group_inActivity.apply _, u.structuredNode)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e5, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e8 = 
-      toCompositeOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.node, OTIUMLA_node_activity, u.structuredNode)
+      toCompositeLinkExtent(e8, ud, u, u.node, OTIUMLA_node_activity.apply _, u.structuredNode)
     val e10 = 
-      toCompositeOrderedLinkExtent(e9, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e9, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e11, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e12, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e14 = 
-      toCompositeOrderedLinkExtent(e13, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e13, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e15 = 
-      toCompositeOrderedLinkExtent(e14, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e14, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
+      toCompositeLinkExtent(e15, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e16, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.postcondition, u.precondition)
+      toCompositeLinkExtent(e17, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.postcondition, u.precondition)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e18, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e19, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e21 = 
-      toCompositeLinkExtent(e20, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e20, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e22 = 
-      toCompositeLinkExtent(e21, ud, u, u.postcondition, OTIUMLA_postcondition_behavior)
+      toCompositeLinkExtent(e21, ud, u, u.postcondition, OTIUMLA_postcondition_behavior.apply _)
     val e23 = 
-      toCompositeLinkExtent(e22, ud, u, u.precondition, OTIUMLA_precondition_behavior)
+      toCompositeLinkExtent(e22, ud, u, u.precondition, OTIUMLA_precondition_behavior.apply _)
     val e24 = 
-      toCompositeLinkExtent(e23, ud, u, u.structuredNode, OTIUMLA_structuredNode_activity)
+      toCompositeLinkExtent(e23, ud, u, u.structuredNode, OTIUMLA_structuredNode_activity.apply _)
     val e25 = 
-      toCompositeLinkExtent(e24, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e24, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e26 = 
-      toCompositeLinkExtent(e25, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e25, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e27 = 
-      toCompositeLinkExtent(e26, ud, u, u.variable, OTIUMLA_variable_activityScope)
+      toCompositeLinkExtent(e26, ud, u, u.variable, OTIUMLA_variable_activityScope.apply _)
     val e28 =
-      toReferenceLinkExtent(e27, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e27, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e29 =
-      toReferenceLinkExtent(e28, ud, u, u.partition, OTIUMLA_partition_activity)
+      toReferenceLinkExtent(e28, ud, u, u.partition, OTIUMLA_partition_activity.apply _)
     val e30 =
-      toReferenceLinkExtent(e29, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e29, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e31 =
-      toReferenceLinkExtent(e30, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior)
+      toReferenceLinkExtent(e30, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior.apply _)
     val e32 =
-      toReferenceLinkExtent(e31, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier, u.redefinedBehavior)
+      toReferenceLinkExtent(e31, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _, u.redefinedBehavior)
     val e33 =
-      toReferenceLinkExtent(e32, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e32, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e34 =
-      toReferenceLinkExtent(e33, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e33, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e34  
     result
   }
@@ -708,15 +708,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e5  
     result
   }
@@ -732,19 +732,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e7  
     result
   }
@@ -760,15 +760,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.subpartition, OTIUMLA_subpartition_superPartition)
+      toCompositeLinkExtent(e2, ud, u, u.subpartition, OTIUMLA_subpartition_superPartition.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.edge, OTIUMLA_edge_inPartition)
+      toReferenceLinkExtent(e3, ud, u, u.edge, OTIUMLA_edge_inPartition.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.node, OTIUMLA_inPartition_node)
+      toReferenceLinkExtent(e4, ud, u, u.node, OTIUMLA_inPartition_node.apply _)
     val result = e5  
     result
   }
@@ -784,41 +784,41 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e5, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e11, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e12, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e13, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e18  
     result
   }
@@ -834,29 +834,29 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.insertAt, OTIUMLA_insertAt_addStructuralFeatureValueAction)
+      toCompositeLinkExtent(e1, ud, u, u.insertAt, OTIUMLA_insertAt_addStructuralFeatureValueAction.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u._object, OTIUMLA_object_structuralFeatureAction)
+      toCompositeLinkExtent(e5, ud, u, u._object, OTIUMLA_object_structuralFeatureAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_writeStructuralFeatureAction)
+      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_writeStructuralFeatureAction.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.value, OTIUMLA_value_writeStructuralFeatureAction)
+      toCompositeLinkExtent(e8, ud, u, u.value, OTIUMLA_value_writeStructuralFeatureAction.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e9, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e10, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e12 =
-      toReferenceLinkExtent(e11, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e11, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e12  
     result
   }
@@ -872,25 +872,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.insertAt, OTIUMLA_insertAt_addVariableValueAction)
+      toCompositeLinkExtent(e1, ud, u, u.insertAt, OTIUMLA_insertAt_addVariableValueAction.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.value, OTIUMLA_value_writeVariableAction)
+      toCompositeLinkExtent(e6, ud, u, u.value, OTIUMLA_value_writeVariableAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -906,11 +906,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -926,43 +926,43 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.manifestation, OTIUMLA_manifestation_artifact)
+      toCompositeLinkExtent(e3, ud, u, u.manifestation, OTIUMLA_manifestation_artifact.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nestedArtifact, OTIUMLA_nestedArtifact_artifact)
+      toCompositeLinkExtent(e5, ud, u, u.nestedArtifact, OTIUMLA_nestedArtifact_artifact.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e9 = 
-      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e13, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e14, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e15, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e16, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e17, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e19 =
-      toReferenceLinkExtent(e18, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e18, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e19  
     result
   }
@@ -978,41 +978,41 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e13 =
-      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association.apply _, u.navigableOwnedEnd)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
+      toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e18  
     result
   }
@@ -1028,57 +1028,57 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e11 = 
-      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation.apply _)
     val e12 = 
-      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e12, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e13, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e14, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e16, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e17, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e18, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e20 =
-      toReferenceLinkExtent(e19, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e19, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e21 =
-      toReferenceOrderedLinkExtent(e20, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e20, ud, u, u.memberEnd, OTIUMLA_memberEnd_association.apply _, u.navigableOwnedEnd)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
+      toReferenceLinkExtent(e21, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e22, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e23, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e24, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e26 =
-      toReferenceLinkExtent(e25, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e25, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e26  
     result
   }
@@ -1094,13 +1094,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e3, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val result = e4  
     result
   }
@@ -1116,23 +1116,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -1148,25 +1148,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -1182,11 +1182,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -1202,27 +1202,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_callAction.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.target, OTIUMLA_target_callOperationAction)
+      toCompositeLinkExtent(e7, ud, u, u.target, OTIUMLA_target_callOperationAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -1238,19 +1238,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e7  
     result
   }
@@ -1266,13 +1266,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.changeExpression, OTIUMLA_changeExpression_changeEvent)
+      toCompositeLinkExtent(e0, ud, u, u.changeExpression, OTIUMLA_changeExpression_changeEvent.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e4  
     result
   }
@@ -1288,51 +1288,51 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e11 = 
-      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e11, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e12, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e13, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e14, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e15, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e16, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e17, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e19 =
-      toReferenceLinkExtent(e18, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e18, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e20 =
-      toReferenceLinkExtent(e19, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e19, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e20, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e21, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e22, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e23  
     result
   }
@@ -1348,13 +1348,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter)
+      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter)
+      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.constrainingClassifier, OTIUMLA_constrainingClassifier_classifierTemplateParameter)
+      toReferenceLinkExtent(e3, ud, u, u.constrainingClassifier, OTIUMLA_constrainingClassifier_classifierTemplateParameter.apply _)
     val result = e4  
     result
   }
@@ -1370,17 +1370,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 =
-      toReferenceLinkExtent(e1, ud, u, u.body, OTIUMLA_body_clause)
+      toReferenceLinkExtent(e1, ud, u, u.body, OTIUMLA_body_clause.apply _)
     val e3 =
-      toReferenceOrderedLinkExtent(e2, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_clause)
+      toReferenceOrderedLinkExtent(e2, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_clause.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.decider, OTIUMLA_decider_clause)
+      toReferenceLinkExtent(e3, ud, u, u.decider, OTIUMLA_decider_clause.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.predecessorClause, OTIUMLA_predecessorClause_successorClause)
+      toReferenceLinkExtent(e4, ud, u, u.predecessorClause, OTIUMLA_predecessorClause_successorClause.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.test, OTIUMLA_test_clause)
+      toReferenceLinkExtent(e5, ud, u, u.test, OTIUMLA_test_clause.apply _)
     val result = e6  
     result
   }
@@ -1396,25 +1396,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_clearAssociationAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_clearAssociationAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.association, OTIUMLA_association_clearAssociationAction)
+      toReferenceLinkExtent(e6, ud, u, u.association, OTIUMLA_association_clearAssociationAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -1430,25 +1430,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_structuralFeatureAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_structuralFeatureAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_clearStructuralFeatureAction)
+      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_clearStructuralFeatureAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -1464,21 +1464,21 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e5, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e6, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e7, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e8  
     result
   }
@@ -1494,47 +1494,47 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_structuredClassifier)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_structuredClassifier.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e6, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e13, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e14, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e15, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.collaborationRole, OTIUMLA_collaborationRole_collaboration)
+      toReferenceLinkExtent(e16, ud, u, u.collaborationRole, OTIUMLA_collaborationRole_collaboration.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e17, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e19 =
-      toReferenceLinkExtent(e18, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e18, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e20 =
-      toReferenceLinkExtent(e19, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e19, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e20, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e21  
     result
   }
@@ -1550,11 +1550,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.roleBinding, OTIUMLA_roleBinding_collaborationUse)
+      toCompositeLinkExtent(e2, ud, u, u.roleBinding, OTIUMLA_roleBinding_collaborationUse.apply _)
     val result = e3  
     result
   }
@@ -1570,17 +1570,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment)
+      toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e1, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e4 = 
-      toCompositeOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment)
+      toCompositeOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e5, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val result = e6  
     result
   }
@@ -1596,9 +1596,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 =
-      toReferenceLinkExtent(e1, ud, u, u.annotatedElement, OTIUMLA_annotatedElement_comment)
+      toReferenceLinkExtent(e1, ud, u, u.annotatedElement, OTIUMLA_annotatedElement_comment.apply _)
     val result = e2  
     result
   }
@@ -1614,41 +1614,41 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_owningAssociation.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e13 =
-      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association.apply _, u.navigableOwnedEnd)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
+      toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e18  
     result
   }
@@ -1664,55 +1664,55 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e11 = 
-      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e11, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e12, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e13, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e14, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e15, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.packagedElement, OTIUMLA_packagedElement_component)
+      toCompositeLinkExtent(e16, ud, u, u.packagedElement, OTIUMLA_packagedElement_component.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.realization, OTIUMLA_realization_abstraction_component)
+      toCompositeLinkExtent(e17, ud, u, u.realization, OTIUMLA_realization_abstraction_component.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e25  
     result
   }
@@ -1728,19 +1728,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
+      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client, u.realizingClassifier)
+      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client.apply _, u.realizingClassifier)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.realizingClassifier, OTIUMLA_realizingClassifier_componentRealization)
+      toReferenceLinkExtent(e4, ud, u, u.realizingClassifier, OTIUMLA_realizingClassifier_componentRealization.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e5, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e7  
     result
   }
@@ -1756,39 +1756,39 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.clause, OTIUMLA_clause_conditionalNode)
+      toCompositeLinkExtent(e0, ud, u, u.clause, OTIUMLA_clause_conditionalNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
+      toCompositeLinkExtent(e1, ud, u, u.edge, OTIUMLA_edge_inStructuredNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e3, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e5, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.node, OTIUMLA_node_inStructuredNode)
+      toCompositeLinkExtent(e7, ud, u, u.node, OTIUMLA_node_inStructuredNode.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e12 = 
-      toCompositeOrderedLinkExtent(e11, ud, u, u.result, OTIUMLA_result_conditionalNode)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.result, OTIUMLA_result_conditionalNode.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode)
+      toCompositeLinkExtent(e12, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.variable, OTIUMLA_variable_scope)
+      toCompositeLinkExtent(e13, ud, u, u.variable, OTIUMLA_variable_scope.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e14, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e15, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e16, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e17  
     result
   }
@@ -1804,11 +1804,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter)
+      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter)
+      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter.apply _)
     val result = e3  
     result
   }
@@ -1824,13 +1824,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.entry, OTIUMLA_entry_connectionPointReference)
+      toReferenceLinkExtent(e2, ud, u, u.entry, OTIUMLA_entry_connectionPointReference.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.exit, OTIUMLA_exit_connectionPointReference)
+      toReferenceLinkExtent(e3, ud, u, u.exit, OTIUMLA_exit_connectionPointReference.apply _)
     val result = e4  
     result
   }
@@ -1846,15 +1846,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeOrderedLinkExtent(e0, ud, u, u.end, OTIUMLA_end_connector)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.end, OTIUMLA_end_connector.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.contract, OTIUMLA_contract_connector)
+      toReferenceLinkExtent(e3, ud, u, u.contract, OTIUMLA_contract_connector.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedConnector, OTIUMLA_redefinedConnector_connector)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedConnector, OTIUMLA_redefinedConnector_connector.apply _)
     val result = e5  
     result
   }
@@ -1870,11 +1870,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e2, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val result = e3  
     result
   }
@@ -1890,19 +1890,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment)
+      toCompositeLinkExtent(e0, ud, u, u.cfragmentGate, OTIUMLA_cfragmentGate_combinedFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e1, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e4 = 
-      toCompositeOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment)
+      toCompositeOrderedLinkExtent(e3, ud, u, u.operand, OTIUMLA_operand_combinedFragment.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e5, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.message, OTIUMLA_message_considerIgnoreFragment)
+      toReferenceLinkExtent(e6, ud, u, u.message, OTIUMLA_message_considerIgnoreFragment.apply _)
     val result = e7  
     result
   }
@@ -1918,15 +1918,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_owningConstraint)
+      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_owningConstraint.apply _)
     val e4 =
-      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -1942,13 +1942,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e3, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val result = e4  
     result
   }
@@ -1964,15 +1964,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge)
+      toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.weight, OTIUMLA_weight_activityEdge)
+      toCompositeLinkExtent(e3, ud, u, u.weight, OTIUMLA_weight_activityEdge.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedEdge, OTIUMLA_redefinedEdge_activityEdge)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedEdge, OTIUMLA_redefinedEdge_activityEdge.apply _)
     val result = e5  
     result
   }
@@ -1988,25 +1988,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction)
+      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction)
+      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -2022,27 +2022,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction)
+      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_createLinkAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction)
+      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_createLinkObjectAction)
+      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_createLinkObjectAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -2058,23 +2058,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_createObjectAction)
+      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_createObjectAction.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -2090,19 +2090,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e7  
     result
   }
@@ -2118,39 +2118,39 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e11, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e12, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e13, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e14, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e15, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e16, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e17  
     result
   }
@@ -2166,17 +2166,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.decisionInputFlow, OTIUMLA_decisionInputFlow_decisionNode)
+      toReferenceLinkExtent(e2, ud, u, u.decisionInputFlow, OTIUMLA_decisionInputFlow_decisionNode.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e3, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e4, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e5, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e6  
     result
   }
@@ -2192,15 +2192,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e2, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e3, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -2216,19 +2216,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.configuration, OTIUMLA_configuration_deployment)
+      toCompositeLinkExtent(e0, ud, u, u.configuration, OTIUMLA_configuration_deployment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.deployedArtifact, OTIUMLA_deployedArtifact_deploymentForArtifact)
+      toReferenceLinkExtent(e4, ud, u, u.deployedArtifact, OTIUMLA_deployedArtifact_deploymentForArtifact.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency, u.deployedArtifact)
+      toReferenceLinkExtent(e5, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _, u.deployedArtifact)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e7  
     result
   }
@@ -2244,43 +2244,43 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.manifestation, OTIUMLA_manifestation_artifact)
+      toCompositeLinkExtent(e3, ud, u, u.manifestation, OTIUMLA_manifestation_artifact.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nestedArtifact, OTIUMLA_nestedArtifact_artifact)
+      toCompositeLinkExtent(e5, ud, u, u.nestedArtifact, OTIUMLA_nestedArtifact_artifact.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_artifact.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e9 = 
-      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_artifact.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e13, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e14, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e15, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e16, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e17, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e19 =
-      toReferenceLinkExtent(e18, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e18, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e19  
     result
   }
@@ -2296,25 +2296,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_destroyLinkAction)
+      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_destroyLinkAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction)
+      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -2330,23 +2330,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.target, OTIUMLA_target_destroyObjectAction)
+      toCompositeLinkExtent(e5, ud, u, u.target, OTIUMLA_target_destroyObjectAction.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -2362,17 +2362,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.message, OTIUMLA_message_messageEnd)
+      toReferenceLinkExtent(e3, ud, u, u.message, OTIUMLA_message_messageEnd.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.toAfter, OTIUMLA_before_toAfter)
+      toReferenceLinkExtent(e4, ud, u, u.toAfter, OTIUMLA_before_toAfter.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.toBefore, OTIUMLA_toBefore_after)
+      toReferenceLinkExtent(e5, ud, u, u.toBefore, OTIUMLA_toBefore_after.apply _)
     val result = e6  
     result
   }
@@ -2388,55 +2388,55 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node)
+      toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node.apply _)
     val e9 = 
-      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e13 = 
-      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e25  
     result
   }
@@ -2452,15 +2452,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_duration)
+      toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_duration.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.observation, OTIUMLA_observation_duration)
+      toReferenceLinkExtent(e3, ud, u, u.observation, OTIUMLA_observation_duration.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -2476,15 +2476,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_durationConstraint)
+      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_durationConstraint.apply _)
     val e4 =
-      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -2500,11 +2500,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -2520,13 +2520,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceOrderedLinkExtent(e2, ud, u, u.event, OTIUMLA_event_durationObservation)
+      toReferenceOrderedLinkExtent(e2, ud, u, u.event, OTIUMLA_event_durationObservation.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e4  
     result
   }
@@ -2542,7 +2542,7 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e1  
     result
   }
@@ -2558,11 +2558,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -2578,41 +2578,41 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedLiteral, OTIUMLA_ownedLiteral_enumeration)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedLiteral, OTIUMLA_ownedLiteral_enumeration.apply _)
     val e8 = 
-      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e11, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e12, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e13, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e18  
     result
   }
@@ -2628,17 +2628,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.slot, OTIUMLA_slot_owningInstance)
+      toCompositeLinkExtent(e3, ud, u, u.slot, OTIUMLA_slot_owningInstance.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.specification, OTIUMLA_specification_owningInstanceSpec)
+      toCompositeLinkExtent(e4, ud, u, u.specification, OTIUMLA_specification_owningInstanceSpec.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e6  
     result
   }
@@ -2654,9 +2654,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 =
-      toReferenceLinkExtent(e1, ud, u, u.exceptionType, OTIUMLA_exceptionType_exceptionHandler)
+      toReferenceLinkExtent(e1, ud, u, u.exceptionType, OTIUMLA_exceptionType_exceptionHandler.apply _)
     val result = e2  
     result
   }
@@ -2672,55 +2672,55 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node)
+      toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node.apply _)
     val e9 = 
-      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e13 = 
-      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e25  
     result
   }
@@ -2736,17 +2736,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.execution, OTIUMLA_execution_executionOccurrenceSpecification)
+      toReferenceLinkExtent(e3, ud, u, u.execution, OTIUMLA_execution_executionOccurrenceSpecification.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.toAfter, OTIUMLA_before_toAfter)
+      toReferenceLinkExtent(e4, ud, u, u.toAfter, OTIUMLA_before_toAfter.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.toBefore, OTIUMLA_toBefore_after)
+      toReferenceLinkExtent(e5, ud, u, u.toBefore, OTIUMLA_toBefore_after.apply _)
     val result = e6  
     result
   }
@@ -2762,19 +2762,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e2, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e3, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e4, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e5, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e6, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e7  
     result
   }
@@ -2790,41 +2790,41 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
+      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e2, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.node, OTIUMLA_node_inStructuredNode)
+      toCompositeLinkExtent(e6, ud, u, u.node, OTIUMLA_node_inStructuredNode.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode)
+      toCompositeLinkExtent(e10, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.structuredNodeOutput, OTIUMLA_structuredNodeOutput_structuredActivityNode)
+      toCompositeLinkExtent(e11, ud, u, u.structuredNodeOutput, OTIUMLA_structuredNodeOutput_structuredActivityNode.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.variable, OTIUMLA_variable_scope)
+      toCompositeLinkExtent(e12, ud, u, u.variable, OTIUMLA_variable_scope.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e13, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.inputElement, OTIUMLA_inputElement_regionAsInput)
+      toReferenceLinkExtent(e14, ud, u, u.inputElement, OTIUMLA_inputElement_regionAsInput.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e15, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.outputElement, OTIUMLA_outputElement_regionAsOutput)
+      toReferenceLinkExtent(e16, ud, u, u.outputElement, OTIUMLA_outputElement_regionAsOutput.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e17, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e18  
     result
   }
@@ -2840,13 +2840,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e4  
     result
   }
@@ -2862,13 +2862,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_extend)
+      toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_extend.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceOrderedLinkExtent(e3, ud, u, u.extensionLocation, OTIUMLA_extensionLocation_extension)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.extensionLocation, OTIUMLA_extensionLocation_extension.apply _)
     val result = e4  
     result
   }
@@ -2884,41 +2884,41 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_extension)
+      toCompositeLinkExtent(e5, ud, u, u.ownedEnd, OTIUMLA_ownedEnd_extension.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e13 =
-      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association, u.navigableOwnedEnd)
+      toReferenceOrderedLinkExtent(e12, ud, u, u.memberEnd, OTIUMLA_memberEnd_association.apply _, u.navigableOwnedEnd)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association)
+      toReferenceLinkExtent(e13, ud, u, u.navigableOwnedEnd, OTIUMLA_navigableOwnedEnd_association.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e14, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e15, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e16, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e17, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e18  
     result
   }
@@ -2934,25 +2934,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
+      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e2, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.redefinedProperty, OTIUMLA_redefinedProperty_property)
+      toReferenceLinkExtent(e7, ud, u, u.redefinedProperty, OTIUMLA_redefinedProperty_property.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.subsettedProperty, OTIUMLA_subsettedProperty_property)
+      toReferenceLinkExtent(e8, ud, u, u.subsettedProperty, OTIUMLA_subsettedProperty_property.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e9, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement.apply _)
     val result = e10  
     result
   }
@@ -2968,9 +2968,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e2  
     result
   }
@@ -2986,31 +2986,31 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state)
+      toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_state)
+      toCompositeLinkExtent(e1, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_state.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.deferrableTrigger, OTIUMLA_deferrableTrigger_state)
+      toCompositeLinkExtent(e2, ud, u, u.deferrableTrigger, OTIUMLA_deferrableTrigger_state.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.doActivity, OTIUMLA_doActivity_state)
+      toCompositeLinkExtent(e3, ud, u, u.doActivity, OTIUMLA_doActivity_state.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e4, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.entry, OTIUMLA_entry_state)
+      toCompositeLinkExtent(e5, ud, u, u.entry, OTIUMLA_entry_state.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.exit, OTIUMLA_exit_state)
+      toCompositeLinkExtent(e6, ud, u, u.exit, OTIUMLA_exit_state.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.stateInvariant)
+      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.stateInvariant)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.region, OTIUMLA_region_state)
+      toCompositeLinkExtent(e11, ud, u, u.region, OTIUMLA_region_state.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.stateInvariant, OTIUMLA_stateInvariant_owningState)
+      toCompositeLinkExtent(e12, ud, u, u.stateInvariant, OTIUMLA_stateInvariant_owningState.apply _)
     val result = e13  
     result
   }
@@ -3026,15 +3026,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e5  
     result
   }
@@ -3050,15 +3050,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e5  
     result
   }
@@ -3074,61 +3074,61 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e11 = 
-      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e12 = 
-      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
+      toCompositeLinkExtent(e12, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.postcondition, u.precondition)
+      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.postcondition, u.precondition)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.postcondition, OTIUMLA_postcondition_behavior)
+      toCompositeLinkExtent(e18, ud, u, u.postcondition, OTIUMLA_postcondition_behavior.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.precondition, OTIUMLA_precondition_behavior)
+      toCompositeLinkExtent(e19, ud, u, u.precondition, OTIUMLA_precondition_behavior.apply _)
     val e21 = 
-      toCompositeLinkExtent(e20, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e20, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e22 = 
-      toCompositeLinkExtent(e21, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e21, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e22, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e23, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior)
+      toReferenceLinkExtent(e24, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior.apply _)
     val e26 =
-      toReferenceLinkExtent(e25, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier, u.redefinedBehavior)
+      toReferenceLinkExtent(e25, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _, u.redefinedBehavior)
     val e27 =
-      toReferenceLinkExtent(e26, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e26, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e28 =
-      toReferenceLinkExtent(e27, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e27, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e28  
     result
   }
@@ -3144,11 +3144,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.message, OTIUMLA_message_messageEnd)
+      toReferenceLinkExtent(e2, ud, u, u.message, OTIUMLA_message_messageEnd.apply _)
     val result = e3  
     result
   }
@@ -3164,9 +3164,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e2  
     result
   }
@@ -3182,7 +3182,7 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e1  
     result
   }
@@ -3198,13 +3198,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalizationSet_generalization)
+      toReferenceLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalizationSet_generalization.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e4  
     result
   }
@@ -3220,7 +3220,7 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e1  
     result
   }
@@ -3236,9 +3236,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e2  
     result
   }
@@ -3254,25 +3254,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.conveyed, OTIUMLA_conveyed_conveyingFlow)
+      toReferenceLinkExtent(e2, ud, u, u.conveyed, OTIUMLA_conveyed_conveyingFlow.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.informationSource, OTIUMLA_informationSource_informationFlow)
+      toReferenceLinkExtent(e3, ud, u, u.informationSource, OTIUMLA_informationSource_informationFlow.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.informationTarget, OTIUMLA_informationTarget_informationFlow)
+      toReferenceLinkExtent(e4, ud, u, u.informationTarget, OTIUMLA_informationTarget_informationFlow.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.realization, OTIUMLA_realization_abstraction_flow)
+      toReferenceLinkExtent(e5, ud, u, u.realization, OTIUMLA_realization_abstraction_flow.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.realizingActivityEdge, OTIUMLA_realizingActivityEdge_informationFlow)
+      toReferenceLinkExtent(e6, ud, u, u.realizingActivityEdge, OTIUMLA_realizingActivityEdge_informationFlow.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.realizingConnector, OTIUMLA_realizingConnector_informationFlow)
+      toReferenceLinkExtent(e7, ud, u, u.realizingConnector, OTIUMLA_realizingConnector_informationFlow.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.realizingMessage, OTIUMLA_realizingMessage_informationFlow)
+      toReferenceLinkExtent(e8, ud, u, u.realizingMessage, OTIUMLA_realizingMessage_informationFlow.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e9, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e10  
     result
   }
@@ -3288,37 +3288,37 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e6, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e8, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e10, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e12 =
-      toReferenceLinkExtent(e11, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e11, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e13 =
-      toReferenceLinkExtent(e12, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e12, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e13, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.represented, OTIUMLA_represented_representation)
+      toReferenceLinkExtent(e14, ud, u, u.represented, OTIUMLA_represented_representation.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e15, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e16  
     result
   }
@@ -3334,15 +3334,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e5  
     result
   }
@@ -3358,23 +3358,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e3, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e5, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -3390,19 +3390,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e0, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.slot, OTIUMLA_slot_owningInstance)
+      toCompositeLinkExtent(e3, ud, u, u.slot, OTIUMLA_slot_owningInstance.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.specification, OTIUMLA_specification_owningInstanceSpec)
+      toCompositeLinkExtent(e4, ud, u, u.specification, OTIUMLA_specification_owningInstanceSpec.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.classifier, OTIUMLA_classifier_instanceSpecification)
+      toReferenceLinkExtent(e5, ud, u, u.classifier, OTIUMLA_classifier_instanceSpecification.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e7  
     result
   }
@@ -3418,11 +3418,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3438,75 +3438,75 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.action, OTIUMLA_action_interaction)
+      toCompositeLinkExtent(e0, ud, u, u.action, OTIUMLA_action_interaction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e1, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.formalGate, OTIUMLA_formalGate_interaction)
+      toCompositeLinkExtent(e3, ud, u, u.formalGate, OTIUMLA_formalGate_interaction.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.fragment, OTIUMLA_fragment_enclosingInteraction)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.fragment, OTIUMLA_fragment_enclosingInteraction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e5, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e6, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e7, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.lifeline, OTIUMLA_lifeline_interaction)
+      toCompositeLinkExtent(e8, ud, u, u.lifeline, OTIUMLA_lifeline_interaction.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.message, OTIUMLA_message_interaction)
+      toCompositeLinkExtent(e9, ud, u, u.message, OTIUMLA_message_interaction.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e10, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e12 = 
-      toCompositeOrderedLinkExtent(e11, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e13 = 
-      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e13, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e14, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e17 = 
-      toCompositeOrderedLinkExtent(e16, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e16, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e18 = 
-      toCompositeOrderedLinkExtent(e17, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e17, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
+      toCompositeLinkExtent(e18, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e19, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e21 = 
-      toCompositeLinkExtent(e20, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.postcondition, u.precondition)
+      toCompositeLinkExtent(e20, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.postcondition, u.precondition)
     val e22 = 
-      toCompositeLinkExtent(e21, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e21, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e23 = 
-      toCompositeLinkExtent(e22, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e22, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e24 = 
-      toCompositeLinkExtent(e23, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e23, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e25 = 
-      toCompositeLinkExtent(e24, ud, u, u.postcondition, OTIUMLA_postcondition_behavior)
+      toCompositeLinkExtent(e24, ud, u, u.postcondition, OTIUMLA_postcondition_behavior.apply _)
     val e26 = 
-      toCompositeLinkExtent(e25, ud, u, u.precondition, OTIUMLA_precondition_behavior)
+      toCompositeLinkExtent(e25, ud, u, u.precondition, OTIUMLA_precondition_behavior.apply _)
     val e27 = 
-      toCompositeLinkExtent(e26, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e26, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e28 = 
-      toCompositeLinkExtent(e27, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e27, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e29 =
-      toReferenceLinkExtent(e28, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e28, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e30 =
-      toReferenceLinkExtent(e29, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e29, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val e31 =
-      toReferenceLinkExtent(e30, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e30, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e32 =
-      toReferenceLinkExtent(e31, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior)
+      toReferenceLinkExtent(e31, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior.apply _)
     val e33 =
-      toReferenceLinkExtent(e32, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier, u.redefinedBehavior)
+      toReferenceLinkExtent(e32, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _, u.redefinedBehavior)
     val e34 =
-      toReferenceLinkExtent(e33, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e33, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e35 =
-      toReferenceLinkExtent(e34, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e34, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e35  
     result
   }
@@ -3522,19 +3522,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.maxint, OTIUMLA_maxint_interactionConstraint)
+      toCompositeLinkExtent(e0, ud, u, u.maxint, OTIUMLA_maxint_interactionConstraint.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.minint, OTIUMLA_minint_interactionConstraint)
+      toCompositeLinkExtent(e1, ud, u, u.minint, OTIUMLA_minint_interactionConstraint.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.specification, OTIUMLA_specification_owningConstraint)
+      toCompositeLinkExtent(e4, ud, u, u.specification, OTIUMLA_specification_owningConstraint.apply _)
     val e6 =
-      toReferenceOrderedLinkExtent(e5, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e5, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e7  
     result
   }
@@ -3550,23 +3550,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e2 = 
-      toCompositeOrderedLinkExtent(e1, ud, u, u.fragment, OTIUMLA_fragment_enclosingOperand)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.fragment, OTIUMLA_fragment_enclosingOperand.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.guard, OTIUMLA_guard_interactionOperand)
+      toCompositeLinkExtent(e3, ud, u, u.guard, OTIUMLA_guard_interactionOperand.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e7, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e8, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val result = e9  
     result
   }
@@ -3582,19 +3582,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
+      toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse.apply _)
     val e2 = 
-      toCompositeOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.returnValue, OTIUMLA_returnValue_interactionUse)
+      toCompositeLinkExtent(e5, ud, u, u.returnValue, OTIUMLA_returnValue_interactionUse.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e6, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val result = e7  
     result
   }
@@ -3610,47 +3610,47 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_interface)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_interface.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_interface)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_interface.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 = 
-      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_interface)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_interface.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedReception, OTIUMLA_ownedReception_interface)
+      toCompositeLinkExtent(e8, ud, u, u.ownedReception, OTIUMLA_ownedReception_interface.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e12, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.protocol, OTIUMLA_protocol_interface)
+      toCompositeLinkExtent(e13, ud, u, u.protocol, OTIUMLA_protocol_interface.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e14, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e15, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e16, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier, u.redefinedInterface)
+      toReferenceLinkExtent(e17, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _, u.redefinedInterface)
     val e19 =
-      toReferenceLinkExtent(e18, ud, u, u.redefinedInterface, OTIUMLA_redefinedInterface_interface)
+      toReferenceLinkExtent(e18, ud, u, u.redefinedInterface, OTIUMLA_redefinedInterface_interface.apply _)
     val e20 =
-      toReferenceLinkExtent(e19, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e19, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e20, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e21  
     result
   }
@@ -3666,17 +3666,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
+      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e6  
     result
   }
@@ -3692,13 +3692,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.interruptingEdge, OTIUMLA_interruptingEdge_interrupts)
+      toReferenceLinkExtent(e2, ud, u, u.interruptingEdge, OTIUMLA_interruptingEdge_interrupts.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.node, OTIUMLA_inInterruptibleRegion_node)
+      toReferenceLinkExtent(e3, ud, u, u.node, OTIUMLA_inInterruptibleRegion_node.apply _)
     val result = e4  
     result
   }
@@ -3714,11 +3714,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3734,15 +3734,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_intervalConstraint)
+      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_intervalConstraint.apply _)
     val e4 =
-      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -3758,17 +3758,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.joinSpec, OTIUMLA_joinSpec_joinNode)
+      toCompositeLinkExtent(e0, ud, u, u.joinSpec, OTIUMLA_joinSpec_joinNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e3, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e4, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e5, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e6  
     result
   }
@@ -3784,13 +3784,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.selector, OTIUMLA_selector_lifeline)
+      toCompositeLinkExtent(e2, ud, u, u.selector, OTIUMLA_selector_lifeline.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.decomposedAs, OTIUMLA_decomposedAs_lifeline)
+      toReferenceLinkExtent(e3, ud, u, u.decomposedAs, OTIUMLA_decomposedAs_lifeline.apply _)
     val result = e4  
     result
   }
@@ -3806,13 +3806,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.qualifier, OTIUMLA_qualifier_linkEndData)
+      toCompositeLinkExtent(e1, ud, u, u.qualifier, OTIUMLA_qualifier_linkEndData.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.insertAt, OTIUMLA_insertAt_linkEndCreationData)
+      toReferenceLinkExtent(e2, ud, u, u.insertAt, OTIUMLA_insertAt_linkEndCreationData.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.value, OTIUMLA_value_linkEndData)
+      toReferenceLinkExtent(e3, ud, u, u.value, OTIUMLA_value_linkEndData.apply _)
     val result = e4  
     result
   }
@@ -3828,11 +3828,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.qualifier, OTIUMLA_qualifier_linkEndData)
+      toCompositeLinkExtent(e1, ud, u, u.qualifier, OTIUMLA_qualifier_linkEndData.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.value, OTIUMLA_value_linkEndData)
+      toReferenceLinkExtent(e2, ud, u, u.value, OTIUMLA_value_linkEndData.apply _)
     val result = e3  
     result
   }
@@ -3848,13 +3848,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.qualifier, OTIUMLA_qualifier_linkEndData)
+      toCompositeLinkExtent(e1, ud, u, u.qualifier, OTIUMLA_qualifier_linkEndData.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.destroyAt, OTIUMLA_destroyAt_linkEndDestructionData)
+      toReferenceLinkExtent(e2, ud, u, u.destroyAt, OTIUMLA_destroyAt_linkEndDestructionData.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.value, OTIUMLA_value_linkEndData)
+      toReferenceLinkExtent(e3, ud, u, u.value, OTIUMLA_value_linkEndData.apply _)
     val result = e4  
     result
   }
@@ -3870,11 +3870,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3890,11 +3890,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3910,11 +3910,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3930,11 +3930,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3950,11 +3950,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3970,11 +3970,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -3990,49 +3990,49 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
+      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e2, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.loopVariable, OTIUMLA_loopVariable_loopNode)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.loopVariable, OTIUMLA_loopVariable_loopNode.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.loopVariableInput, OTIUMLA_loopVariableInput_loopNode)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.loopVariableInput, OTIUMLA_loopVariableInput_loopNode.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.node, OTIUMLA_node_inStructuredNode)
+      toCompositeLinkExtent(e8, ud, u, u.node, OTIUMLA_node_inStructuredNode.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e10, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e11, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e13 = 
-      toCompositeOrderedLinkExtent(e12, ud, u, u.result, OTIUMLA_result_loopNode)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.result, OTIUMLA_result_loopNode.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.variable, OTIUMLA_variable_scope)
+      toCompositeLinkExtent(e13, ud, u, u.variable, OTIUMLA_variable_scope.apply _)
     val e15 =
-      toReferenceOrderedLinkExtent(e14, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_loopNode)
+      toReferenceOrderedLinkExtent(e14, ud, u, u.bodyOutput, OTIUMLA_bodyOutput_loopNode.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.bodyPart, OTIUMLA_bodyPart_loopNode)
+      toReferenceLinkExtent(e15, ud, u, u.bodyPart, OTIUMLA_bodyPart_loopNode.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.decider, OTIUMLA_decider_loopNode)
+      toReferenceLinkExtent(e16, ud, u, u.decider, OTIUMLA_decider_loopNode.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e17, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e19 =
-      toReferenceLinkExtent(e18, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e18, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e20 =
-      toReferenceLinkExtent(e19, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e19, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.setupPart, OTIUMLA_setupPart_loopNode)
+      toReferenceLinkExtent(e20, ud, u, u.setupPart, OTIUMLA_setupPart_loopNode.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.test, OTIUMLA_test_loopNode)
+      toReferenceLinkExtent(e21, ud, u, u.test, OTIUMLA_test_loopNode.apply _)
     val result = e22  
     result
   }
@@ -4048,17 +4048,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
+      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e6  
     result
   }
@@ -4074,15 +4074,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e2, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e3, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e5  
     result
   }
@@ -4098,15 +4098,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_message)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_message.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.receiveEvent, OTIUMLA_receiveEvent_endMessage)
+      toReferenceLinkExtent(e3, ud, u, u.receiveEvent, OTIUMLA_receiveEvent_endMessage.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.sendEvent, OTIUMLA_sendEvent_endMessage)
+      toReferenceLinkExtent(e4, ud, u, u.sendEvent, OTIUMLA_sendEvent_endMessage.apply _)
     val result = e5  
     result
   }
@@ -4122,17 +4122,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.message, OTIUMLA_message_messageEnd)
+      toReferenceLinkExtent(e3, ud, u, u.message, OTIUMLA_message_messageEnd.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.toAfter, OTIUMLA_before_toAfter)
+      toReferenceLinkExtent(e4, ud, u, u.toAfter, OTIUMLA_before_toAfter.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.toBefore, OTIUMLA_toBefore_after)
+      toReferenceLinkExtent(e5, ud, u, u.toBefore, OTIUMLA_toBefore_after.apply _)
     val result = e6  
     result
   }
@@ -4148,27 +4148,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e3, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template)
+      toCompositeLinkExtent(e4, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e5, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.packageMerge, OTIUMLA_packageMerge_receivingPackage)
+      toCompositeLinkExtent(e6, ud, u, u.packageMerge, OTIUMLA_packageMerge_receivingPackage.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.packagedElement, OTIUMLA_packagedElement_owningPackage)
+      toCompositeLinkExtent(e7, ud, u, u.packagedElement, OTIUMLA_packagedElement_owningPackage.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.profileApplication, OTIUMLA_profileApplication_applyingPackage)
+      toCompositeLinkExtent(e8, ud, u, u.profileApplication, OTIUMLA_profileApplication_applyingPackage.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e9, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e10, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e11  
     result
   }
@@ -4184,55 +4184,55 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node)
+      toCompositeLinkExtent(e7, ud, u, u.nestedNode, OTIUMLA_nestedNode_node.apply _)
     val e9 = 
-      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e13 = 
-      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e18, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e19, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e20, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e21, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e22, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e23, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e24, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e25  
     result
   }
@@ -4248,15 +4248,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge)
+      toCompositeLinkExtent(e0, ud, u, u.guard, OTIUMLA_guard_activityEdge.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.weight, OTIUMLA_weight_activityEdge)
+      toCompositeLinkExtent(e3, ud, u, u.weight, OTIUMLA_weight_activityEdge.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.redefinedEdge, OTIUMLA_redefinedEdge_activityEdge)
+      toReferenceLinkExtent(e4, ud, u, u.redefinedEdge, OTIUMLA_redefinedEdge_activityEdge.apply _)
     val result = e5  
     result
   }
@@ -4272,15 +4272,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.toAfter, OTIUMLA_before_toAfter)
+      toReferenceLinkExtent(e3, ud, u, u.toAfter, OTIUMLA_before_toAfter.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.toBefore, OTIUMLA_toBefore_after)
+      toReferenceLinkExtent(e4, ud, u, u.toBefore, OTIUMLA_toBefore_after.apply _)
     val result = e5  
     result
   }
@@ -4296,25 +4296,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.inputValue, OTIUMLA_inputValue_opaqueAction)
+      toCompositeLinkExtent(e1, ud, u, u.inputValue, OTIUMLA_inputValue_opaqueAction.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.outputValue, OTIUMLA_outputValue_opaqueAction)
+      toCompositeLinkExtent(e5, ud, u, u.outputValue, OTIUMLA_outputValue_opaqueAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -4330,61 +4330,61 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e3, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e11 = 
-      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e10, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e12 = 
-      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
+      toCompositeLinkExtent(e12, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e13, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.postcondition, u.precondition)
+      toCompositeLinkExtent(e14, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.postcondition, u.precondition)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e16, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e17, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.postcondition, OTIUMLA_postcondition_behavior)
+      toCompositeLinkExtent(e18, ud, u, u.postcondition, OTIUMLA_postcondition_behavior.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.precondition, OTIUMLA_precondition_behavior)
+      toCompositeLinkExtent(e19, ud, u, u.precondition, OTIUMLA_precondition_behavior.apply _)
     val e21 = 
-      toCompositeLinkExtent(e20, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e20, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e22 = 
-      toCompositeLinkExtent(e21, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e21, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e22, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e23, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior)
+      toReferenceLinkExtent(e24, ud, u, u.redefinedBehavior, OTIUMLA_redefinedBehavior_behavior.apply _)
     val e26 =
-      toReferenceLinkExtent(e25, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier, u.redefinedBehavior)
+      toReferenceLinkExtent(e25, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _, u.redefinedBehavior)
     val e27 =
-      toReferenceLinkExtent(e26, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e26, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e28 =
-      toReferenceLinkExtent(e27, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e27, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e28  
     result
   }
@@ -4400,11 +4400,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -4420,37 +4420,37 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.bodyCondition, OTIUMLA_bodyCondition_bodyContext)
+      toCompositeLinkExtent(e0, ud, u, u.bodyCondition, OTIUMLA_bodyCondition_bodyContext.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_operation)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_operation.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavioralFeature)
+      toCompositeLinkExtent(e5, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavioralFeature.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.bodyCondition, u.postcondition, u.precondition)
+      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.bodyCondition, u.postcondition, u.precondition)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template)
+      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e8, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.postcondition, OTIUMLA_postcondition_postContext)
+      toCompositeLinkExtent(e9, ud, u, u.postcondition, OTIUMLA_postcondition_postContext.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.precondition, OTIUMLA_precondition_preContext)
+      toCompositeLinkExtent(e10, ud, u, u.precondition, OTIUMLA_precondition_preContext.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e13 =
-      toReferenceLinkExtent(e12, ud, u, u.method, OTIUMLA_method_specification)
+      toReferenceLinkExtent(e12, ud, u, u.method, OTIUMLA_method_specification.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.raisedException, OTIUMLA_raisedException_operation)
+      toReferenceLinkExtent(e13, ud, u, u.raisedException, OTIUMLA_raisedException_operation.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.redefinedOperation, OTIUMLA_redefinedOperation_operation)
+      toReferenceLinkExtent(e14, ud, u, u.redefinedOperation, OTIUMLA_redefinedOperation_operation.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.templateParameter, OTIUMLA_operation_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e15, ud, u, u.templateParameter, OTIUMLA_operation_templateParameter_parameteredElement.apply _)
     val result = e16  
     result
   }
@@ -4466,11 +4466,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter)
+      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter)
+      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter.apply _)
     val result = e3  
     result
   }
@@ -4486,23 +4486,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e3, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e5, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -4518,27 +4518,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e3, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template)
+      toCompositeLinkExtent(e4, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e5, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.packageMerge, OTIUMLA_packageMerge_receivingPackage)
+      toCompositeLinkExtent(e6, ud, u, u.packageMerge, OTIUMLA_packageMerge_receivingPackage.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.packagedElement, OTIUMLA_packagedElement_owningPackage)
+      toCompositeLinkExtent(e7, ud, u, u.packagedElement, OTIUMLA_packagedElement_owningPackage.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.profileApplication, OTIUMLA_profileApplication_applyingPackage)
+      toCompositeLinkExtent(e8, ud, u, u.profileApplication, OTIUMLA_profileApplication_applyingPackage.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e9, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e10, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e11  
     result
   }
@@ -4554,7 +4554,7 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e1  
     result
   }
@@ -4570,7 +4570,7 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e1  
     result
   }
@@ -4586,19 +4586,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningParameter)
+      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningParameter.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e1, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.parameterSet, OTIUMLA_parameterSet_parameter)
+      toReferenceLinkExtent(e5, ud, u, u.parameterSet, OTIUMLA_parameterSet_parameter.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement.apply _)
     val result = e7  
     result
   }
@@ -4614,11 +4614,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_parameterSet)
+      toCompositeLinkExtent(e0, ud, u, u.condition, OTIUMLA_condition_parameterSet.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e3  
     result
   }
@@ -4634,19 +4634,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse)
+      toCompositeLinkExtent(e0, ud, u, u.actualGate, OTIUMLA_actualGate_interactionUse.apply _)
     val e2 = 
-      toCompositeOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.argument, OTIUMLA_argument_interactionUse.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e2, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.returnValue, OTIUMLA_returnValue_interactionUse)
+      toCompositeLinkExtent(e5, ud, u, u.returnValue, OTIUMLA_returnValue_interactionUse.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.covered, OTIUMLA_covered_coveredBy)
+      toReferenceLinkExtent(e6, ud, u, u.covered, OTIUMLA_covered_coveredBy.apply _)
     val result = e7  
     result
   }
@@ -4662,27 +4662,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
+      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e2, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.redefinedPort, OTIUMLA_redefinedPort_port)
+      toReferenceLinkExtent(e7, ud, u, u.redefinedPort, OTIUMLA_redefinedPort_port.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedProperty, OTIUMLA_redefinedProperty_property, u.redefinedPort)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedProperty, OTIUMLA_redefinedProperty_property.apply _, u.redefinedPort)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.subsettedProperty, OTIUMLA_subsettedProperty_property)
+      toReferenceLinkExtent(e9, ud, u, u.subsettedProperty, OTIUMLA_subsettedProperty_property.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e10, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement.apply _)
     val result = e11  
     result
   }
@@ -4698,39 +4698,39 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_datatype.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_datatype.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e7, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e11, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e12, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e13, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e14, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e15, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e16, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e17  
     result
   }
@@ -4746,31 +4746,31 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace, u.metaclassReference)
+      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _, u.metaclassReference)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.metaclassReference, OTIUMLA_metaclassReference_profile)
+      toCompositeLinkExtent(e1, ud, u, u.metaclassReference, OTIUMLA_metaclassReference_profile.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.metamodelReference, OTIUMLA_metamodelReference_profile)
+      toCompositeLinkExtent(e2, ud, u, u.metamodelReference, OTIUMLA_metamodelReference_profile.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template)
+      toCompositeLinkExtent(e6, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace, u.metamodelReference)
+      toCompositeLinkExtent(e7, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _, u.metamodelReference)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.packageMerge, OTIUMLA_packageMerge_receivingPackage)
+      toCompositeLinkExtent(e8, ud, u, u.packageMerge, OTIUMLA_packageMerge_receivingPackage.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packagedElement, OTIUMLA_packagedElement_owningPackage)
+      toCompositeLinkExtent(e9, ud, u, u.packagedElement, OTIUMLA_packagedElement_owningPackage.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.profileApplication, OTIUMLA_profileApplication_applyingPackage)
+      toCompositeLinkExtent(e10, ud, u, u.profileApplication, OTIUMLA_profileApplication_applyingPackage.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e13 =
-      toReferenceLinkExtent(e12, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e12, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e13  
     result
   }
@@ -4786,7 +4786,7 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e1  
     result
   }
@@ -4802,25 +4802,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty)
+      toCompositeLinkExtent(e0, ud, u, u.defaultValue, OTIUMLA_defaultValue_owningProperty.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location)
+      toCompositeLinkExtent(e1, ud, u, u.deployment, OTIUMLA_deployment_location.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e2, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.qualifier, OTIUMLA_qualifier_associationEnd.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e6, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.redefinedProperty, OTIUMLA_redefinedProperty_property)
+      toReferenceLinkExtent(e7, ud, u, u.redefinedProperty, OTIUMLA_redefinedProperty_property.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.subsettedProperty, OTIUMLA_subsettedProperty_property)
+      toReferenceLinkExtent(e8, ud, u, u.subsettedProperty, OTIUMLA_subsettedProperty_property.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e9, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement.apply _)
     val result = e10  
     result
   }
@@ -4836,7 +4836,7 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e1  
     result
   }
@@ -4852,69 +4852,69 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.conformance, OTIUMLA_conformance_specificMachine)
+      toCompositeLinkExtent(e1, ud, u, u.conformance, OTIUMLA_conformance_specificMachine.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_stateMachine)
+      toCompositeLinkExtent(e2, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_stateMachine.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e3, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e4, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e5, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e8 = 
-      toCompositeOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e9 = 
-      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e8, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e9, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e10, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e13 = 
-      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e14 = 
-      toCompositeOrderedLinkExtent(e13, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e13, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
+      toCompositeLinkExtent(e14, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e15, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.postcondition, u.precondition)
+      toCompositeLinkExtent(e16, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.postcondition, u.precondition)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e17, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e18, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e19, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e21 = 
-      toCompositeLinkExtent(e20, ud, u, u.postcondition, OTIUMLA_postcondition_behavior)
+      toCompositeLinkExtent(e20, ud, u, u.postcondition, OTIUMLA_postcondition_behavior.apply _)
     val e22 = 
-      toCompositeLinkExtent(e21, ud, u, u.precondition, OTIUMLA_precondition_behavior)
+      toCompositeLinkExtent(e21, ud, u, u.precondition, OTIUMLA_precondition_behavior.apply _)
     val e23 = 
-      toCompositeLinkExtent(e22, ud, u, u.region, OTIUMLA_region_stateMachine)
+      toCompositeLinkExtent(e22, ud, u, u.region, OTIUMLA_region_stateMachine.apply _)
     val e24 = 
-      toCompositeLinkExtent(e23, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e23, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e25 = 
-      toCompositeLinkExtent(e24, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e24, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e26 =
-      toReferenceLinkExtent(e25, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e25, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e27 =
-      toReferenceLinkExtent(e26, ud, u, u.extendedStateMachine, OTIUMLA_extendedStateMachine_stateMachine)
+      toReferenceLinkExtent(e26, ud, u, u.extendedStateMachine, OTIUMLA_extendedStateMachine_stateMachine.apply _)
     val e28 =
-      toReferenceLinkExtent(e27, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e27, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e29 =
-      toReferenceLinkExtent(e28, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier, u.extendedStateMachine)
+      toReferenceLinkExtent(e28, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _, u.extendedStateMachine)
     val e30 =
-      toReferenceLinkExtent(e29, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e29, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e31 =
-      toReferenceLinkExtent(e30, ud, u, u.submachineState, OTIUMLA_submachineState_submachine)
+      toReferenceLinkExtent(e30, ud, u, u.submachineState, OTIUMLA_submachineState_submachine.apply _)
     val e32 =
-      toReferenceLinkExtent(e31, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e31, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e32  
     result
   }
@@ -4930,25 +4930,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition)
+      toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.guard, OTIUMLA_guard_transition, u.preCondition)
+      toCompositeLinkExtent(e2, ud, u, u.guard, OTIUMLA_guard_transition.apply _, u.preCondition)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.guard, u.postCondition, u.preCondition)
+      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.guard, u.postCondition, u.preCondition)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e6, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.postCondition, OTIUMLA_postCondition_owningTransition)
+      toCompositeLinkExtent(e7, ud, u, u.postCondition, OTIUMLA_postCondition_owningTransition.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.preCondition, OTIUMLA_preCondition_protocolTransition)
+      toCompositeLinkExtent(e8, ud, u, u.preCondition, OTIUMLA_preCondition_protocolTransition.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.trigger, OTIUMLA_trigger_transition)
+      toCompositeLinkExtent(e9, ud, u, u.trigger, OTIUMLA_trigger_transition.apply _)
     val result = e10  
     result
   }
@@ -4964,9 +4964,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e2  
     result
   }
@@ -4982,9 +4982,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 =
-      toReferenceLinkExtent(e1, ud, u, u.value, OTIUMLA_value_qualifierValue)
+      toReferenceLinkExtent(e1, ud, u, u.value, OTIUMLA_value_qualifierValue.apply _)
     val result = e2  
     result
   }
@@ -5000,23 +5000,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.exception, OTIUMLA_exception_raiseExceptionAction)
+      toCompositeLinkExtent(e0, ud, u, u.exception, OTIUMLA_exception_raiseExceptionAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -5032,25 +5032,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_readExtentAction)
+      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_readExtentAction.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.classifier, OTIUMLA_classifier_readExtentAction)
+      toReferenceLinkExtent(e6, ud, u, u.classifier, OTIUMLA_classifier_readExtentAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -5066,25 +5066,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_readIsClassifiedObjectAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_readIsClassifiedObjectAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readIsClassifiedObjectAction)
+      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readIsClassifiedObjectAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -5100,27 +5100,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_linkAction)
+      toCompositeLinkExtent(e0, ud, u, u.endData, OTIUMLA_endData_linkAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction)
+      toCompositeLinkExtent(e2, ud, u, u.inputValue, OTIUMLA_inputValue_linkAction.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_readLinkAction)
+      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_readLinkAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -5136,27 +5136,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_readLinkObjectEndAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_readLinkObjectEndAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readLinkObjectEndAction)
+      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readLinkObjectEndAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.end, OTIUMLA_end_readLinkObjectEndAction)
+      toReferenceLinkExtent(e7, ud, u, u.end, OTIUMLA_end_readLinkObjectEndAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -5172,27 +5172,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_readLinkObjectEndQualifierAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_readLinkObjectEndQualifierAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readLinkObjectEndQualifierAction)
+      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readLinkObjectEndQualifierAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.qualifier, OTIUMLA_qualifier_readLinkObjectEndQualifierAction)
+      toReferenceLinkExtent(e9, ud, u, u.qualifier, OTIUMLA_qualifier_readLinkObjectEndQualifierAction.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -5208,23 +5208,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_readSelfAction)
+      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_readSelfAction.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -5240,25 +5240,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_structuralFeatureAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_structuralFeatureAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readStructuralFeatureAction)
+      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_readStructuralFeatureAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -5274,23 +5274,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_readVariableAction)
+      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_readVariableAction.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -5306,17 +5306,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
+      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e6  
     result
   }
@@ -5332,23 +5332,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeOrderedLinkExtent(e3, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_ownerFormalParam)
+      toCompositeOrderedLinkExtent(e3, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_ownerFormalParam.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavioralFeature)
+      toCompositeLinkExtent(e4, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavioralFeature.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e6, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.method, OTIUMLA_method_specification)
+      toReferenceLinkExtent(e7, ud, u, u.method, OTIUMLA_method_specification.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.raisedException, OTIUMLA_raisedException_behavioralFeature)
+      toReferenceLinkExtent(e8, ud, u, u.raisedException, OTIUMLA_raisedException_behavioralFeature.apply _)
     val result = e9  
     result
   }
@@ -5364,27 +5364,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_reclassifyObjectAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_reclassifyObjectAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.newClassifier, OTIUMLA_newClassifier_reclassifyObjectAction)
+      toReferenceLinkExtent(e7, ud, u, u.newClassifier, OTIUMLA_newClassifier_reclassifyObjectAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.oldClassifier, OTIUMLA_oldClassifier_reclassifyObjectAction)
+      toReferenceLinkExtent(e8, ud, u, u.oldClassifier, OTIUMLA_oldClassifier_reclassifyObjectAction.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -5400,15 +5400,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeOrderedLinkExtent(e2, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
+      toCompositeOrderedLinkExtent(e2, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.extendedSignature, OTIUMLA_extendedSignature_redefinableTemplateSignature)
+      toReferenceLinkExtent(e3, ud, u, u.extendedSignature, OTIUMLA_extendedSignature_redefinableTemplateSignature.apply _)
     val e5 =
-      toReferenceOrderedLinkExtent(e4, ud, u, u.parameter, OTIUMLA_parameter_templateSignature)
+      toReferenceOrderedLinkExtent(e4, ud, u, u.parameter, OTIUMLA_parameter_templateSignature.apply _)
     val result = e5  
     result
   }
@@ -5424,25 +5424,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collection, OTIUMLA_collection_reduceAction)
+      toCompositeLinkExtent(e0, ud, u, u.collection, OTIUMLA_collection_reduceAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_reduceAction)
+      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_reduceAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -5458,19 +5458,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e0, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e3, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e4, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.subvertex, OTIUMLA_subvertex_container)
+      toCompositeLinkExtent(e5, ud, u, u.subvertex, OTIUMLA_subvertex_container.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.transition, OTIUMLA_transition_container)
+      toCompositeLinkExtent(e6, ud, u, u.transition, OTIUMLA_transition_container.apply _)
     val result = e7  
     result
   }
@@ -5486,29 +5486,29 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_structuralFeatureAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_structuralFeatureAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.removeAt, OTIUMLA_removeAt_removeStructuralFeatureValueAction)
+      toCompositeLinkExtent(e6, ud, u, u.removeAt, OTIUMLA_removeAt_removeStructuralFeatureValueAction.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_writeStructuralFeatureAction)
+      toCompositeLinkExtent(e7, ud, u, u.result, OTIUMLA_result_writeStructuralFeatureAction.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.value, OTIUMLA_value_writeStructuralFeatureAction)
+      toCompositeLinkExtent(e8, ud, u, u.value, OTIUMLA_value_writeStructuralFeatureAction.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e9, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e10, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e12 =
-      toReferenceLinkExtent(e11, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e11, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e12  
     result
   }
@@ -5524,25 +5524,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.removeAt, OTIUMLA_removeAt_removeVariableValueAction)
+      toCompositeLinkExtent(e5, ud, u, u.removeAt, OTIUMLA_removeAt_removeVariableValueAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.value, OTIUMLA_value_writeVariableAction)
+      toCompositeLinkExtent(e6, ud, u, u.value, OTIUMLA_value_writeVariableAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -5558,27 +5558,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeOrderedLinkExtent(e5, ud, u, u.replyValue, OTIUMLA_replyValue_replyAction)
+      toCompositeOrderedLinkExtent(e5, ud, u, u.replyValue, OTIUMLA_replyValue_replyAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.returnInformation, OTIUMLA_returnInformation_replyAction)
+      toCompositeLinkExtent(e6, ud, u, u.returnInformation, OTIUMLA_returnInformation_replyAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.replyToCall, OTIUMLA_replyToCall_replyAction)
+      toReferenceLinkExtent(e10, ud, u, u.replyToCall, OTIUMLA_replyToCall_replyAction.apply _)
     val result = e11  
     result
   }
@@ -5594,25 +5594,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.request, OTIUMLA_request_sendObjectAction)
+      toCompositeLinkExtent(e5, ud, u, u.request, OTIUMLA_request_sendObjectAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.target, OTIUMLA_target_sendObjectAction)
+      toCompositeLinkExtent(e6, ud, u, u.target, OTIUMLA_target_sendObjectAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -5628,25 +5628,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.target, OTIUMLA_target_sendSignalAction)
+      toCompositeLinkExtent(e6, ud, u, u.target, OTIUMLA_target_sendSignalAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -5662,37 +5662,37 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
+      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeOrderedLinkExtent(e2, ud, u, u.executableNode, OTIUMLA_executableNode_sequenceNode)
+      toCompositeOrderedLinkExtent(e2, ud, u, u.executableNode, OTIUMLA_executableNode_sequenceNode.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e3, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e5, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e6, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode)
+      toCompositeLinkExtent(e10, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.structuredNodeOutput, OTIUMLA_structuredNodeOutput_structuredActivityNode)
+      toCompositeLinkExtent(e11, ud, u, u.structuredNodeOutput, OTIUMLA_structuredNodeOutput_structuredActivityNode.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.variable, OTIUMLA_variable_scope)
+      toCompositeLinkExtent(e12, ud, u, u.variable, OTIUMLA_variable_scope.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e13, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e14, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e15, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e16  
     result
   }
@@ -5708,37 +5708,37 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_owningSignal)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_owningSignal.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e6, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e7, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e10, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e11, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e13 =
-      toReferenceLinkExtent(e12, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e12, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e13, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e14, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e15, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e16  
     result
   }
@@ -5754,11 +5754,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -5774,9 +5774,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeOrderedLinkExtent(e1, ud, u, u.value, OTIUMLA_value_owningSlot)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.value, OTIUMLA_value_owningSlot.apply _)
     val result = e2  
     result
   }
@@ -5792,23 +5792,23 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_startClassifierBehaviorAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_startClassifierBehaviorAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e6, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e7, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e8, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e9  
     result
   }
@@ -5824,27 +5824,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction)
+      toCompositeOrderedLinkExtent(e0, ud, u, u.argument, OTIUMLA_argument_invocationAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u._object, OTIUMLA_object_startObjectBehaviorAction)
+      toCompositeLinkExtent(e5, ud, u, u._object, OTIUMLA_object_startObjectBehaviorAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e6, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e8 = 
-      toCompositeOrderedLinkExtent(e7, ud, u, u.result, OTIUMLA_result_callAction)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.result, OTIUMLA_result_callAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -5860,31 +5860,31 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state)
+      toCompositeLinkExtent(e0, ud, u, u.connection, OTIUMLA_connection_state.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_state)
+      toCompositeLinkExtent(e1, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_state.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.deferrableTrigger, OTIUMLA_deferrableTrigger_state)
+      toCompositeLinkExtent(e2, ud, u, u.deferrableTrigger, OTIUMLA_deferrableTrigger_state.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.doActivity, OTIUMLA_doActivity_state)
+      toCompositeLinkExtent(e3, ud, u, u.doActivity, OTIUMLA_doActivity_state.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e4, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.entry, OTIUMLA_entry_state)
+      toCompositeLinkExtent(e5, ud, u, u.entry, OTIUMLA_entry_state.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.exit, OTIUMLA_exit_state)
+      toCompositeLinkExtent(e6, ud, u, u.exit, OTIUMLA_exit_state.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e8, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.stateInvariant)
+      toCompositeLinkExtent(e9, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.stateInvariant)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e10, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.region, OTIUMLA_region_state)
+      toCompositeLinkExtent(e11, ud, u, u.region, OTIUMLA_region_state.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.stateInvariant, OTIUMLA_stateInvariant_owningState)
+      toCompositeLinkExtent(e12, ud, u, u.stateInvariant, OTIUMLA_stateInvariant_owningState.apply _)
     val result = e13  
     result
   }
@@ -5900,13 +5900,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment)
+      toCompositeLinkExtent(e0, ud, u, u.generalOrdering, OTIUMLA_generalOrdering_interactionFragment.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.invariant, OTIUMLA_invariant_stateInvariant)
+      toCompositeLinkExtent(e1, ud, u, u.invariant, OTIUMLA_invariant_stateInvariant.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e2, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e3, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e4  
     result
   }
@@ -5922,67 +5922,67 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_stateMachine)
+      toCompositeLinkExtent(e1, ud, u, u.connectionPoint, OTIUMLA_connectionPoint_stateMachine.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e2, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e3, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e8 = 
-      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e12 = 
-      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e13 = 
-      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior)
+      toCompositeOrderedLinkExtent(e12, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_behavior.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior)
+      toCompositeLinkExtent(e13, ud, u, u.ownedParameterSet, OTIUMLA_ownedParameterSet_behavior.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e14, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.postcondition, u.precondition)
+      toCompositeLinkExtent(e15, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.postcondition, u.precondition)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e16, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e17, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e18, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e20 = 
-      toCompositeLinkExtent(e19, ud, u, u.postcondition, OTIUMLA_postcondition_behavior)
+      toCompositeLinkExtent(e19, ud, u, u.postcondition, OTIUMLA_postcondition_behavior.apply _)
     val e21 = 
-      toCompositeLinkExtent(e20, ud, u, u.precondition, OTIUMLA_precondition_behavior)
+      toCompositeLinkExtent(e20, ud, u, u.precondition, OTIUMLA_precondition_behavior.apply _)
     val e22 = 
-      toCompositeLinkExtent(e21, ud, u, u.region, OTIUMLA_region_stateMachine)
+      toCompositeLinkExtent(e21, ud, u, u.region, OTIUMLA_region_stateMachine.apply _)
     val e23 = 
-      toCompositeLinkExtent(e22, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e22, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e24 = 
-      toCompositeLinkExtent(e23, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e23, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e25 =
-      toReferenceLinkExtent(e24, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e24, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e26 =
-      toReferenceLinkExtent(e25, ud, u, u.extendedStateMachine, OTIUMLA_extendedStateMachine_stateMachine)
+      toReferenceLinkExtent(e25, ud, u, u.extendedStateMachine, OTIUMLA_extendedStateMachine_stateMachine.apply _)
     val e27 =
-      toReferenceLinkExtent(e26, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e26, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e28 =
-      toReferenceLinkExtent(e27, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier, u.extendedStateMachine)
+      toReferenceLinkExtent(e27, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _, u.extendedStateMachine)
     val e29 =
-      toReferenceLinkExtent(e28, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e28, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e30 =
-      toReferenceLinkExtent(e29, ud, u, u.submachineState, OTIUMLA_submachineState_submachine)
+      toReferenceLinkExtent(e29, ud, u, u.submachineState, OTIUMLA_submachineState_submachine.apply _)
     val e31 =
-      toReferenceLinkExtent(e30, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e30, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e31  
     result
   }
@@ -5998,53 +5998,53 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e2, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.icon, OTIUMLA_icon_stereotype)
+      toCompositeLinkExtent(e3, ud, u, u.icon, OTIUMLA_icon_stereotype.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e4, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.nestedClassifier, OTIUMLA_nestedClassifier_nestingClass.apply _)
     val e8 = 
-      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class)
+      toCompositeOrderedLinkExtent(e7, ud, u, u.ownedAttribute, OTIUMLA_ownedAttribute_class.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier)
+      toCompositeLinkExtent(e10, ud, u, u.ownedConnector, OTIUMLA_ownedConnector_structuredClassifier.apply _)
     val e12 = 
-      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class)
+      toCompositeOrderedLinkExtent(e11, ud, u, u.ownedOperation, OTIUMLA_ownedOperation_class.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedReception, OTIUMLA_ownedReception_class)
+      toCompositeLinkExtent(e12, ud, u, u.ownedReception, OTIUMLA_ownedReception_class.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e13, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e14, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e15, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e17 = 
-      toCompositeLinkExtent(e16, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e16, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e18 = 
-      toCompositeLinkExtent(e17, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e17, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e19 = 
-      toCompositeLinkExtent(e18, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e18, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e20 =
-      toReferenceLinkExtent(e19, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e19, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e20, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e21, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e23 =
-      toReferenceLinkExtent(e22, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e22, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e24 =
-      toReferenceLinkExtent(e23, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e23, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e24  
     result
   }
@@ -6060,19 +6060,19 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.operand, OTIUMLA_operand_expression.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template)
+      toCompositeLinkExtent(e3, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_template.apply _)
     val e5 = 
-      toCompositeOrderedLinkExtent(e4, ud, u, u.subExpression, OTIUMLA_subExpression_owningExpression)
+      toCompositeOrderedLinkExtent(e4, ud, u, u.subExpression, OTIUMLA_subExpression_owningExpression.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e5, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e6, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e7  
     result
   }
@@ -6088,37 +6088,37 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode)
+      toCompositeLinkExtent(e0, ud, u, u.edge, OTIUMLA_edge_inStructuredNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e2, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e4, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e5, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.node, OTIUMLA_node_inStructuredNode)
+      toCompositeLinkExtent(e6, ud, u, u.node, OTIUMLA_node_inStructuredNode.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e7, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e8, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e9, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode)
+      toCompositeLinkExtent(e10, ud, u, u.structuredNodeInput, OTIUMLA_structuredNodeInput_structuredActivityNode.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.structuredNodeOutput, OTIUMLA_structuredNodeOutput_structuredActivityNode)
+      toCompositeLinkExtent(e11, ud, u, u.structuredNodeOutput, OTIUMLA_structuredNodeOutput_structuredActivityNode.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.variable, OTIUMLA_variable_scope)
+      toCompositeLinkExtent(e12, ud, u, u.variable, OTIUMLA_variable_scope.apply _)
     val e14 =
-      toReferenceLinkExtent(e13, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e13, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e15 =
-      toReferenceLinkExtent(e14, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e14, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e16 =
-      toReferenceLinkExtent(e15, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e15, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e16  
     result
   }
@@ -6134,17 +6134,17 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction)
+      toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e3, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e4, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e6 =
-      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e5, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e6  
     result
   }
@@ -6160,9 +6160,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.parameterSubstitution, OTIUMLA_parameterSubstitution_templateBinding)
+      toCompositeLinkExtent(e1, ud, u, u.parameterSubstitution, OTIUMLA_parameterSubstitution_templateBinding.apply _)
     val result = e2  
     result
   }
@@ -6178,11 +6178,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter)
+      toCompositeLinkExtent(e1, ud, u, u.ownedDefault, OTIUMLA_ownedDefault_templateParameter.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter)
+      toCompositeLinkExtent(e2, ud, u, u.ownedParameteredElement, OTIUMLA_ownedParameteredElement_owningTemplateParameter.apply _)
     val result = e3  
     result
   }
@@ -6198,9 +6198,9 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedActual, OTIUMLA_ownedActual_owningTemplateParameterSubstitution)
+      toCompositeLinkExtent(e0, ud, u, u.ownedActual, OTIUMLA_ownedActual_owningTemplateParameterSubstitution.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val result = e2  
     result
   }
@@ -6216,11 +6216,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e0, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e2 = 
-      toCompositeOrderedLinkExtent(e1, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature)
+      toCompositeOrderedLinkExtent(e1, ud, u, u.ownedParameter, OTIUMLA_ownedParameter_signature.apply _)
     val e3 =
-      toReferenceOrderedLinkExtent(e2, ud, u, u.parameter, OTIUMLA_parameter_templateSignature)
+      toReferenceOrderedLinkExtent(e2, ud, u, u.parameter, OTIUMLA_parameter_templateSignature.apply _)
     val result = e3  
     result
   }
@@ -6236,27 +6236,27 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.first, OTIUMLA_first_testIdentityAction)
+      toCompositeLinkExtent(e0, ud, u, u.first, OTIUMLA_first_testIdentityAction.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e1, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e3, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e4, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_testIdentityAction)
+      toCompositeLinkExtent(e6, ud, u, u.result, OTIUMLA_result_testIdentityAction.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.second, OTIUMLA_second_testIdentityAction)
+      toCompositeLinkExtent(e7, ud, u, u.second, OTIUMLA_second_testIdentityAction.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e8, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e9, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e11 =
-      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e10, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e11  
     result
   }
@@ -6272,15 +6272,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_timeConstraint)
+      toCompositeLinkExtent(e2, ud, u, u.specification, OTIUMLA_specification_timeConstraint.apply _)
     val e4 =
-      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint)
+      toReferenceOrderedLinkExtent(e3, ud, u, u.constrainedElement, OTIUMLA_constrainedElement_constraint.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -6296,13 +6296,13 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.when, OTIUMLA_when_timeEvent)
+      toCompositeLinkExtent(e2, ud, u, u.when, OTIUMLA_when_timeEvent.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e3, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e4  
     result
   }
@@ -6318,15 +6318,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_timeExpression)
+      toCompositeLinkExtent(e0, ud, u, u.expr, OTIUMLA_expr_timeExpression.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.observation, OTIUMLA_observation_timeExpression)
+      toReferenceLinkExtent(e3, ud, u, u.observation, OTIUMLA_observation_timeExpression.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -6342,11 +6342,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -6362,11 +6362,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e2, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e3  
     result
   }
@@ -6382,21 +6382,21 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition)
+      toCompositeLinkExtent(e0, ud, u, u.effect, OTIUMLA_effect_transition.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.guard, OTIUMLA_guard_transition)
+      toCompositeLinkExtent(e2, ud, u, u.guard, OTIUMLA_guard_transition.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context, u.guard)
+      toCompositeLinkExtent(e5, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _, u.guard)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e6, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.trigger, OTIUMLA_trigger_transition)
+      toCompositeLinkExtent(e7, ud, u, u.trigger, OTIUMLA_trigger_transition.apply _)
     val result = e8  
     result
   }
@@ -6412,11 +6412,11 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.port, OTIUMLA_port_trigger)
+      toReferenceLinkExtent(e2, ud, u, u.port, OTIUMLA_port_trigger.apply _)
     val result = e3  
     result
   }
@@ -6432,25 +6432,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_unmarshallAction)
+      toCompositeLinkExtent(e4, ud, u, u._object, OTIUMLA_object_unmarshallAction.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e5, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e7 = 
-      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_unmarshallAction)
+      toCompositeOrderedLinkExtent(e6, ud, u, u.result, OTIUMLA_result_unmarshallAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -6466,15 +6466,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e0, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e1, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e3 =
-      toReferenceLinkExtent(e2, ud, u, u.client, OTIUMLA_clientDependency_client)
+      toReferenceLinkExtent(e2, ud, u, u.client, OTIUMLA_clientDependency_client.apply _)
     val e4 =
-      toReferenceLinkExtent(e3, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency)
+      toReferenceLinkExtent(e3, ud, u, u.supplier, OTIUMLA_supplier_supplierDependency.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_parameteredElement_templateParameter.apply _)
     val result = e5  
     result
   }
@@ -6490,49 +6490,49 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier)
+      toCompositeLinkExtent(e0, ud, u, u.collaborationUse, OTIUMLA_collaborationUse_classifier.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace)
+      toCompositeLinkExtent(e1, ud, u, u.elementImport, OTIUMLA_elementImport_importingNamespace.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.extend, OTIUMLA_extend_extension)
+      toCompositeLinkExtent(e2, ud, u, u.extend, OTIUMLA_extend_extension.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.extensionPoint, OTIUMLA_extensionPoint_useCase)
+      toCompositeLinkExtent(e3, ud, u, u.extensionPoint, OTIUMLA_extensionPoint_useCase.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.generalization, OTIUMLA_generalization_specific)
+      toCompositeLinkExtent(e4, ud, u, u.generalization, OTIUMLA_generalization_specific.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.include, OTIUMLA_include_includingCase)
+      toCompositeLinkExtent(e5, ud, u, u.include, OTIUMLA_include_includingCase.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier)
+      toCompositeLinkExtent(e6, ud, u, u.interfaceRealization, OTIUMLA_interfaceRealization_implementingClassifier.apply _)
     val e8 = 
-      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e7, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e9 = 
-      toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier)
+      toCompositeLinkExtent(e8, ud, u, u.ownedBehavior, OTIUMLA_ownedBehavior_behavioredClassifier.apply _)
     val e10 = 
-      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e9, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e11 = 
-      toCompositeLinkExtent(e10, ud, u, u.ownedRule, OTIUMLA_ownedRule_context)
+      toCompositeLinkExtent(e10, ud, u, u.ownedRule, OTIUMLA_ownedRule_context.apply _)
     val e12 = 
-      toCompositeLinkExtent(e11, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier)
+      toCompositeLinkExtent(e11, ud, u, u.ownedTemplateSignature, OTIUMLA_ownedTemplateSignature_classifier.apply _)
     val e13 = 
-      toCompositeLinkExtent(e12, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier)
+      toCompositeLinkExtent(e12, ud, u, u.ownedUseCase, OTIUMLA_ownedUseCase_classifier.apply _)
     val e14 = 
-      toCompositeLinkExtent(e13, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace)
+      toCompositeLinkExtent(e13, ud, u, u.packageImport, OTIUMLA_packageImport_importingNamespace.apply _)
     val e15 = 
-      toCompositeLinkExtent(e14, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier)
+      toCompositeLinkExtent(e14, ud, u, u.substitution, OTIUMLA_substitution_substitutingClassifier.apply _)
     val e16 = 
-      toCompositeLinkExtent(e15, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement)
+      toCompositeLinkExtent(e15, ud, u, u.templateBinding, OTIUMLA_templateBinding_boundElement.apply _)
     val e17 =
-      toReferenceLinkExtent(e16, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier)
+      toReferenceLinkExtent(e16, ud, u, u.classifierBehavior, OTIUMLA_classifierBehavior_behavioredClassifier.apply _)
     val e18 =
-      toReferenceLinkExtent(e17, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype)
+      toReferenceLinkExtent(e17, ud, u, u.powertypeExtent, OTIUMLA_powertypeExtent_powertype.apply _)
     val e19 =
-      toReferenceLinkExtent(e18, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier)
+      toReferenceLinkExtent(e18, ud, u, u.redefinedClassifier, OTIUMLA_redefinedClassifier_classifier.apply _)
     val e20 =
-      toReferenceLinkExtent(e19, ud, u, u.representation, OTIUMLA_representation_classifier)
+      toReferenceLinkExtent(e19, ud, u, u.representation, OTIUMLA_representation_classifier.apply _)
     val e21 =
-      toReferenceLinkExtent(e20, ud, u, u.subject, OTIUMLA_subject_useCase)
+      toReferenceLinkExtent(e20, ud, u, u.subject, OTIUMLA_subject_useCase.apply _)
     val e22 =
-      toReferenceLinkExtent(e21, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e21, ud, u, u.templateParameter, OTIUMLA_classifier_templateParameter_parameteredElement.apply _)
     val result = e22  
     result
   }
@@ -6548,25 +6548,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode)
+      toCompositeLinkExtent(e3, ud, u, u.upperBound, OTIUMLA_upperBound_objectNode.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e4, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.value, OTIUMLA_value_valuePin)
+      toCompositeLinkExtent(e5, ud, u, u.value, OTIUMLA_value_valuePin.apply _)
     val e7 =
-      toReferenceLinkExtent(e6, ud, u, u.inState, OTIUMLA_inState_objectNode)
+      toReferenceLinkExtent(e6, ud, u, u.inState, OTIUMLA_inState_objectNode.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -6582,25 +6582,25 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode)
+      toCompositeLinkExtent(e0, ud, u, u.handler, OTIUMLA_handler_protectedNode.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action)
+      toCompositeLinkExtent(e1, ud, u, u.localPostcondition, OTIUMLA_localPostcondition_action.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action)
+      toCompositeLinkExtent(e2, ud, u, u.localPrecondition, OTIUMLA_localPrecondition_action.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e3, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e5 = 
-      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e4, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e6 = 
-      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_valueSpecificationAction)
+      toCompositeLinkExtent(e5, ud, u, u.result, OTIUMLA_result_valueSpecificationAction.apply _)
     val e7 = 
-      toCompositeLinkExtent(e6, ud, u, u.value, OTIUMLA_value_valueSpecificationAction)
+      toCompositeLinkExtent(e6, ud, u, u.value, OTIUMLA_value_valueSpecificationAction.apply _)
     val e8 =
-      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node)
+      toReferenceLinkExtent(e7, ud, u, u.incoming, OTIUMLA_incoming_target_node.apply _)
     val e9 =
-      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node)
+      toReferenceLinkExtent(e8, ud, u, u.outgoing, OTIUMLA_outgoing_source_node.apply _)
     val e10 =
-      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode)
+      toReferenceLinkExtent(e9, ud, u, u.redefinedNode, OTIUMLA_redefinedNode_activityNode.apply _)
     val result = e10  
     result
   }
@@ -6616,15 +6616,15 @@ case class OTIJsonSerializationHelper
         extent.elementExtent :+
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
-      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower)
+      toCompositeLinkExtent(e0, ud, u, u.lowerValue, OTIUMLA_lowerValue_owningLower.apply _)
     val e2 = 
-      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement)
+      toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
-      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement)
+      toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
     val e4 = 
-      toCompositeLinkExtent(e3, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper)
+      toCompositeLinkExtent(e3, ud, u, u.upperValue, OTIUMLA_upperValue_owningUpper.apply _)
     val e5 =
-      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement)
+      toReferenceLinkExtent(e4, ud, u, u.templateParameter, OTIUMLA_connectableElement_templateParameter_parameteredElement.apply _)
     val result = e5  
     result
   }
