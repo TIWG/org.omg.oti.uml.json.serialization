@@ -59,6 +59,7 @@ import org.omg.oti.uml.characteristics.OTICharacteristicsProvider
 import org.omg.oti.uml.write.api.{UMLFactory, UMLUpdate}
 import org.omg.oti.uml.xmi.Document
 
+import scala.language.implicitConversions
 import scala.collection.immutable._
 import scala.{Boolean, Double, Function1, Int, Option, Some}
 import scala.Predef.Integer2int
@@ -475,7 +476,7 @@ case class OTIJsonSerializationHelper
           otiJsonElementHelper.toOTIMOFElement(u, Some(ud)))
     val e1 = 
       toCompositeLinkExtent(e0, ud, u, u.mapping, OTIUMLA_mapping_abstraction.apply _)
-    val e2 = 
+    val e2 =
       toCompositeLinkExtent(e1, ud, u, u.nameExpression, OTIUMLA_nameExpression_namedElement.apply _)
     val e3 = 
       toCompositeLinkExtent(e2, ud, u, u.ownedComment, OTIUMLA_ownedComment_owningElement.apply _)
