@@ -177,6 +177,7 @@ case class OTIJsonElementHelper
     case uu: UMLDestroyObjectAction[Uml] => toOTIUMLDestroyObjectAction(uu, context)
     case uu: UMLDestructionOccurrenceSpecification[Uml] => toOTIUMLDestructionOccurrenceSpecification(uu, context)
     case uu: UMLDevice[Uml] => toOTIUMLDevice(uu, context)
+    case uu: UMLDiagram[Uml] => toOTIUMLDiagram(uu, context)
     case uu: UMLDuration[Uml] => toOTIUMLDuration(uu, context)
     case uu: UMLDurationConstraint[Uml] => toOTIUMLDurationConstraint(uu, context)
     case uu: UMLDurationInterval[Uml] => toOTIUMLDurationInterval(uu, context)
@@ -1559,6 +1560,21 @@ case class OTIJsonElementHelper
      isActive = u.isActive,
      isFinalSpecialization = u.isFinalSpecialization,
      isLeaf = u.isLeaf,
+     name = u.name,
+     visibility = u.visibility)
+
+
+  implicit def toOTIUMLDiagram
+  (u: Uml#Diagram)
+  : OTIMOFElement.OTIUMLDiagram
+  = toOTIUMLDiagram(u, Option.empty[Document[Uml]])
+
+  def toOTIUMLDiagram
+  (u: UMLDiagram[Uml],
+   context: Option[Document[Uml]] = None)
+  : OTIMOFElement.OTIUMLDiagram
+  = OTIMOFElement.OTIUMLDiagram(
+     otiMOFElementLocation = getElementLocationOf(u, context),
      name = u.name,
      visibility = u.visibility)
 
