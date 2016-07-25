@@ -49,7 +49,6 @@ package org.omg.oti.json.uml.serialization
 import org.omg.oti.uml.read.api._
 import org.omg.oti.uml.read.operations._
 import org.omg.oti.json.common._
-import org.omg.oti.json.common.OTIPrimitiveTypes.TOOL_SPECIFIC_ID
 import org.omg.oti.json.uml._
 import org.omg.oti.json.uml.OTIMOFLink._
 import org.omg.oti.json.extent._
@@ -61,8 +60,7 @@ import org.omg.oti.uml.xmi.Document
 
 import scala.language.implicitConversions
 import scala.collection.immutable._
-import scala.{Boolean, Double, Function1, Int, Option, Some}
-import scala.Predef.Integer2int
+import scala.{Int, Option, Some}
 // <!-- End of user code imports -->
 
 object OTIJsonSerializationHelper {

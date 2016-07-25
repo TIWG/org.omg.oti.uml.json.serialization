@@ -55,10 +55,9 @@ import org.omg.oti.uml.canonicalXMI.helper.OTIAdapter
 import org.omg.oti.uml.write.api.{UMLFactory, UMLUpdate}
 import org.omg.oti.uml.xmi.Document
 import org.omg.oti.json.common._
-import org.omg.oti.json.common.OTIPrimitiveTypes.TOOL_SPECIFIC_ID
 import org.omg.oti.json.uml._
 
-import scala.{Boolean,Double,Int,Option,None}
+import scala.{Option,None}
 import scala.Predef.{require,Integer2int}
 // <!-- End of user code imports -->
 

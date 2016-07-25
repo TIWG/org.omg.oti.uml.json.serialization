@@ -9,6 +9,8 @@ import gov.nasa.jpl.imce.sbt.ProjectHelper._
 
 useGpg := true
 
+updateOptions := updateOptions.value.withCachedResolution(true)
+
 developers := List(
   Developer(
     id="rouquett",
@@ -101,7 +103,7 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
   .enablePlugins(IMCEReleasePlugin)
   .settings(dynamicScriptsResourceSettings(Some("org.omg.oti.uml.json.serialization")))
   .settings(IMCEPlugin.strictScalacFatalWarningsSettings)
-  .settings(docSettings(diagrams=false))
+  //.settings(docSettings(diagrams=false))
   .settings(IMCEReleasePlugin.packageReleaseProcessSettings)
   .settings(
     IMCEKeys.licenseYearOrRange := "2014-2016",
