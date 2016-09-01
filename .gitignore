@@ -5,7 +5,9 @@
 *.bak
 *~
 bin
-off.links.json
+*links.json
+local.*
 project/project
 project/target
 target
+gh-pages/

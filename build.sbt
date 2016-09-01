@@ -7,16 +7,7 @@ import spray.json._, DefaultJsonProtocol._
 import gov.nasa.jpl.imce.sbt._
 import gov.nasa.jpl.imce.sbt.ProjectHelper._
 
-useGpg := true
-
 updateOptions := updateOptions.value.withCachedResolution(true)
-
-developers := List(
-  Developer(
-    id="rouquett",
-    name="Nicolas F. Rouquette",
-    email="nicolas.f.rouquette@jpl.nasa.gov",
-    url=url("https://gateway.jpl.nasa.gov/personal/rouquett/default.aspx")))
 
 import scala.io.Source
 import scala.util.control.Exception._
@@ -110,10 +101,6 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
     IMCEKeys.organizationInfo := IMCEPlugin.Organizations.oti,
     IMCEKeys.targetJDK := IMCEKeys.jdk18.value,
 
-    organization := "org.omg.tiwg",
-    organizationHomepage :=
-      Some(url("http://www.omg.org/members/sysml-rtf-wiki/doku.php?id=rtf5:groups:tools_infrastructure:index")),
-
     buildInfoPackage := "org.omg.oti.uml.json.serialization",
     buildInfoKeys ++= Seq[BuildInfoKey](BuildInfoKey.action("buildDateUTC") { buildUTCDate.value }),
 
@@ -126,9 +113,6 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
 
     git.baseVersion := Versions.version,
 
-    scalaSource in Compile :=
-      baseDirectory.value / "src",
-      
     unmanagedSourceDirectories in Compile +=
       baseDirectory.value / "src-gen",
     
@@ -148,21 +132,16 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
 
     extractArchives := {},
 
-    IMCEKeys.nexusJavadocRepositoryRestAPIURL2RepositoryName := Map(
-      "https://oss.sonatype.org/service/local" -> "releases",
-      "https://cae-nexuspro.jpl.nasa.gov/nexus/service/local" -> "JPL",
-      "https://cae-nexuspro.jpl.nasa.gov/nexus/content/groups/jpl.beta.group" -> "JPL Beta Group",
-      "https://cae-nexuspro.jpl.nasa.gov/nexus/content/groups/jpl.public.group" -> "JPL Public Group"),
-    IMCEKeys.pomRepositoryPathRegex := """\<repositoryPath\>\s*([^\"]*)\s*\<\/repositoryPath\>""".r
-
+    resolvers += Resolver.bintrayRepo("jpl-imce", "gov.nasa.jpl.imce"),
+    resolvers += Resolver.bintrayRepo("tiwg", "org.omg.tiwg")
   )
   .dependsOnSourceProjectOrLibraryArtifacts(
     "oti-uml-canonical_xmi-serialization",
     "org.omg.oti.uml.canonical_xmi.serialization",
     Seq(
-      "org.omg.tiwg" %% "oti-uml-canonical_xmi-serialization"
+      "org.omg.tiwg" %% "org.omg.oti.uml.canonical_xmi.serialization"
         % Versions_oti_uml_canonical_xmi_serialization.version % "compile" withSources() withJavadoc() artifacts
-        Artifact("oti-uml-canonical_xmi-serialization", "zip", "zip", Some("resource"), Seq(), None, Map())
+        Artifact("org.omg.oti.uml.canonical_xmi.serialization", "zip", "zip", Some("resource"), Seq(), None, Map())
     )
   )
 

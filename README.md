@@ -1,5 +1,8 @@
 # OTI UML Json serialization
 
+[![Build Status](https://travis-ci.org/TIWG/org.omg.oti.uml.json.serialization.svg?branch=master)](https://travis-ci.org/TIWG/org.omg.oti.uml.json.serialization)
+ [ ![Download](https://api.bintray.com/packages/tiwg/org.omg.tiwg/org.omg.oti.uml.json.serialization/images/download.svg) ](https://bintray.com/tiwg/org.omg.tiwg/org.omg.oti.uml.json.serialization/_latestVersion)
+
 This project provides support for constructing a Json representation of a set of OTI Documents corresponding
 to UML Packages or Profiles. The Json representation is based on simple data structures
 corresponding to a normalized database schema where:
