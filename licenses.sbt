@@ -9,7 +9,7 @@ import scala.util.matching.Regex
 licenses in GlobalScope += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html")
 
 val oti_uml_json_serialization_license =
-  s"""|Copyright 2014 California Institute of Technology ("Caltech").
+  s"""|Copyright 2016 California Institute of Technology ("Caltech").
       |U.S. Government sponsorship acknowledged.
       |
       |Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +26,7 @@ val oti_uml_json_serialization_license =
       |License Terms
       |""".stripMargin
 
-startYear := Some(2014)
+startYear := Some(2016)
 
 headers := Map("scala" -> (HeaderPattern.cStyleBlockComment, CommentBlock.cStyle(oti_uml_json_serialization_license)))
 
