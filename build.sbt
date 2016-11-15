@@ -22,7 +22,7 @@ shellPrompt in ThisBuild := { state => Project.extract(state).currentRef.project
 lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
   .enablePlugins(IMCEGitPlugin)
   .enablePlugins(IMCEReleasePlugin)
-  .settings(dynamicScriptsResourceSettings(Some("org.omg.oti.uml.json.serialization")))
+  .settings(dynamicScriptsResourceSettings("org.omg.oti.uml.json.serialization"))
   .settings(IMCEPlugin.strictScalacFatalWarningsSettings)
   .settings(IMCEReleasePlugin.packageReleaseProcessSettings)
   .settings(
@@ -57,7 +57,7 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
     // disable publishing the test sources jar
     publishArtifact in(Test, packageSrc) := false,
 
-    unmanagedClasspath in Compile <++= unmanagedJars in Compile,
+    unmanagedClasspath in Compile ++= (unmanagedJars in Compile).value,
 
     extractArchives := {},
 
@@ -74,7 +74,7 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
     )
   )
 
-def dynamicScriptsResourceSettings(dynamicScriptsProjectName: Option[String] = None): Seq[Setting[_]] = {
+def dynamicScriptsResourceSettings(projectName: String): Seq[Setting[_]] = {
 
   import com.typesafe.sbt.packager.universal.UniversalPlugin.autoImport._
 
@@ -85,21 +85,15 @@ def dynamicScriptsResourceSettings(dynamicScriptsProjectName: Option[String] = N
   val QUALIFIED_NAME = "^[a-zA-Z][\\w_]*(\\.[a-zA-Z][\\w_]*)*$".r
 
   Seq(
-    // the '*-resource.zip' archive will start from: 'dynamicScripts/<dynamicScriptsProjectName>'
-    com.typesafe.sbt.packager.Keys.topLevelDirectory in Universal := {
-      val projectName = dynamicScriptsProjectName.getOrElse(baseDirectory.value.getName)
-      require(
-        QUALIFIED_NAME.pattern.matcher(projectName).matches,
-        s"The project name, '$projectName` is not a valid Java qualified name")
-      Some(projectName)
-    },
+    // the '*-resource.zip' archive will start from: 'dynamicScripts'
+    com.typesafe.sbt.packager.Keys.topLevelDirectory in Universal := None,
 
     // name the '*-resource.zip' in the same way as other artifacts
     com.typesafe.sbt.packager.Keys.packageName in Universal :=
       normalizedName.value + "_" + scalaBinaryVersion.value + "-" + version.value + "-resource",
 
     // contents of the '*-resource.zip' to be produced by 'universal:packageBin'
-    mappings in Universal in packageBin ++= {
+    mappings in Universal ++= {
       val dir = baseDirectory.value
       val bin = (packageBin in Compile).value
       val src = (packageSrc in Compile).value
@@ -108,14 +102,15 @@ def dynamicScriptsResourceSettings(dynamicScriptsProjectName: Option[String] = N
       val srcT = (packageSrc in Test).value
       val docT = (packageDoc in Test).value
 
-      addIfExists(dir / ".classpath", ".classpath") ++
-        addIfExists(dir / "README.md", "README.md") ++
-        addIfExists(bin, "lib/" + bin.name) ++
-        addIfExists(binT, "lib/" + binT.name) ++
-        addIfExists(src, "lib.sources/" + src.name) ++
-        addIfExists(srcT, "lib.sources/" + srcT.name) ++
-        addIfExists(doc, "lib.javadoc/" + doc.name) ++
-        addIfExists(docT, "lib.javadoc/" + docT.name)
+      (dir * ".classpath").pair(rebase(dir, projectName)) ++
+        (dir * "*.md").pair(rebase(dir, projectName)) ++
+        (dir / "resources" ***).pair(rebase(dir, projectName)) ++
+        addIfExists(bin, projectName + "/lib/" + bin.name) ++
+        addIfExists(binT, projectName + "/lib/" + binT.name) ++
+        addIfExists(src, projectName + "/lib.sources/" + src.name) ++
+        addIfExists(srcT, projectName + "/lib.sources/" + srcT.name) ++
+        addIfExists(doc, projectName + "/lib.javadoc/" + doc.name) ++
+        addIfExists(docT, projectName + "/lib.javadoc/" + docT.name)
     },
 
     artifacts += {
