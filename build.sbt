@@ -62,7 +62,14 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
     extractArchives := {},
 
     resolvers += Resolver.bintrayRepo("jpl-imce", "gov.nasa.jpl.imce"),
-    resolvers += Resolver.bintrayRepo("tiwg", "org.omg.tiwg")
+    resolvers += Resolver.bintrayRepo("tiwg", "org.omg.tiwg"),
+
+    resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases",
+    scalacOptions in (Compile, compile) += s"-P:artima-supersafe:config-file:${baseDirectory.value}/project/supersafe.cfg",
+    scalacOptions in (Test, compile) += s"-P:artima-supersafe:config-file:${baseDirectory.value}/project/supersafe.cfg",
+    scalacOptions in (Compile, doc) += "-Xplugin-disable:artima-supersafe",
+    scalacOptions in (Test, doc) += "-Xplugin-disable:artima-supersafe"
+
   )
   .dependsOnSourceProjectOrLibraryArtifacts(
     "oti-uml-canonical_xmi-serialization",
@@ -70,7 +77,7 @@ lazy val core = Project("org-omg-oti-uml-json-serialization", file("."))
     Seq(
       "org.omg.tiwg" %% "org.omg.oti.uml.canonical_xmi.serialization"
         % Versions_oti_uml_canonical_xmi_serialization.version % "compile" withSources() withJavadoc() artifacts
-        Artifact("org.omg.oti.uml.canonical_xmi.serialization", "zip", "zip", Some("resource"), Seq(), None, Map())
+        Artifact("org.omg.oti.uml.canonical_xmi.serialization", "zip", "zip", "resource")
     )
   )
 
